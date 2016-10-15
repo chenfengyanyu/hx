@@ -1,0 +1,317 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:url("../image/2.png");font-family:Arial;font-size:14px;}
+/*首页框架*/
+.container{
+width:1000px;
+background: none repeat scroll 0 0 #FFFFFF;
+background:url("../image/container.png");
+}
+
+
+.top{width:1000px;height:155px;position:relative;background:url("../image/topImage2.png");}
+.topLeft{width:150px;height:150px;float:left;background:url("../image/newLogo.png") no-repeat 0 0; }
+.topRight{width:712px;height:34px;line-height:35px;float:right;position:absolute;bottom:7px;right:0;}
+
+.showList1{background:#003ac1;border:1px solid #fff;left: -2%;position: absolute;z-index: 999;display:none;top:1%;}
+.showList1 a{display:block;border-bottom:1px dashed #FFD700;text-align:left;margin:0 5px;}
+.showList2{background:#003ac1;border:1px solid #fff;left: 11%;position: absolute;z-index: 999;display:none;top:1%;}
+.showList2 a{display:block;border-bottom:1px dashed #FFD700;text-align:left;margin:0 5px;}
+.showList3{background:#003ac1;left: 35%;border:1px solid #fff;width:136px;position: absolute;z-index: 999;display:none;top:1%;}
+.showList3 a{display:block;border-bottom:1px dashed #FFD700;text-align:left;margin:0 5px;}
+.showList4{background:#003ac1;left: 61%;border:1px solid #fff;width:88px;position: absolute;z-index: 999;display:none;top:1%;}
+.showList4 a{display:block;border-bottom:1px dashed #FFD700;text-align:left;margin:0 5px;}
+.showList5{background:#003ac1;left: 79%;border:1px solid #fff;width:100px;position: absolute;z-index: 999;display:none;top:1%;}
+.showList5 a{display:block;border-bottom:1px dashed #FFD700;text-align:left;margin:0 5px;}
+#topRightList a{color:#fff;font-size:18px;text-decoration:none;}
+#topRightList a:hover{color:#FFD700;}
+.header{
+width:1000px;
+height:180px;
+background:url("../image/header00.png");
+}
+.nav{
+	background: url("../image/nav.png") no-repeat scroll 0 0 transparent;
+    height: 330px;
+    margin: 10px 0;
+    width: 230px;
+}
+.content{
+width:980px;
+margin:10px;
+}
+.footer {
+    background-color: rgb(0, 97, 165);
+    margin: 0 0 10px;
+    width: 1000px;
+}
+.footer p{color:#fff;font-weight:bold;font-size:13px;}
+.footer span{margin-right:25px;}
+.footer a{
+		color:#fff;
+		font-weight:bold;
+		text-decoration:none;
+		}
+.footer a:hover{color:#FFD700;}	
+/*图片展播区域*/
+.picMsg{
+		/*border-bottom:1px dotted #cdcdcd;
+		border-top:1px dotted #cdcdcd;*/
+		height:150px;
+		width:205px;
+	}
+	.picList {
+    border: 5px solid #fff;
+    float: left;
+    height: 130px;
+    margin: 5px 0 0 8px;
+    width: 180px;
+}
+	.picList1{
+		height:140px;
+		width:180px;
+		float:left;
+		margin:5px 0;				
+	}
+	.picList1 p{
+		padding:0 5px;
+		line-height:20px;
+		text-align:left;
+		color:#fff;
+		font-size:13px;
+	}
+	.picList1 a{
+		color:#fff;
+		font-weight:bold;
+		text-decoration:none;
+	}
+	.picList1 a:hover{color:#FFD700;}
+	/*左侧菜单*/ 
+	.conLeft {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 230px;
+	}
+	.conRight {
+    float: right;
+    width: 740px;
+	}
+/* service-menu */
+.service-menu .menu-title,.service-menu .menu-p,.service-menu .menu-p .menu-i{background:url("../image/li_01.png") repeat-x;}
+.service-menu{background:url("../image/li_01.png") repeat-x;width:230px;margin:0;float:left;text-align:left;}
+.service-menu .menu-title{height:21px;overflow:hidden;padding:6px 8px;background-position:0 0;background-repeat:repeat-x;color:#444;font-size:14px;font-weight:bold;}
+.service-menu .menu-p{display:block;height:21px;overflow:hidden;padding:10px 0 10px 19px;background-position:0 -30px;background-repeat:repeat-x;color:#fff;font-size:14px;font-weight:blod;cursor:pointer;}
+.service-menu .menu-p .menu-i{float:left;display:none;width:11px;height:15px;overflow:hidden;margin:5px 6px 0 0;}
+.service-menu .menu-p a:link,.service-menu .menu-p a:visited{color:#fff;text-decoration:none;font-size:15px;}
+.service-menu .menu-p a:hover{color:#FFD700;font-weight:bold;text-decoration:none;}
+.service-menu .menu-p-current .menu-i{background-position:-20px -103px;}
+.service-menu .menu-p-current a:link,.service-menu .menu-p-current a:visited{color:#FFD700;font-weight:bold;}
+.service-menu .menu-p-current a:hover{color:#FFD700;font-weight:bold;}
+.service-menu .menu-c{border-top:solid 1px rgb(0, 97, 165);display:none;padding:4px 0 4px 54px;}
+.service-menu .menu-c-current{display:block;background:url("../image/li_01.png") repeat-x 0px -8px transparent;}
+.service-menu .menu-c ul{display:block;}
+.service-menu .menu-c li{padding:2px 0;height:20px;overflow:hidden;background-position:0 0;}
+.service-menu .menu-c a:link,.service-menu .menu-c a:visited{color:#fff;text-decoration:none;}
+.service-menu .menu-c a:hover{color:#FFD700;text-decoration:none;}
+.service-menu .menu-c .current:link,.service-menu .menu-c .current:visited{color:#FFD700;font-weight:bold;}
+.service-menu .menu-c .current:hover{color:#FFD700;font-weight:bold;} 
+
+
+
+.cleanBoth{
+	clear:both;
+}
+
+
+#sddm
+{	margin: 0 auto;
+	padding: 0;
+	z-index: 30;
+	
+	width: 715px;
+	height:23px;
+	
+	}
+
+#sddm li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+	background:url("../image/navbg.png") repeat scroll 0 400px transparent;
+	display:inline-block;
+	}
+
+#sddm li a
+{	display: block;
+	margin: 0 1px 0 0;
+	padding: 4px 14px;
+	width: 60px;
+	background:url("../image/navbg.png") repeat scroll 0 360px transparent;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none}
+
+#sddm li a:hover
+{	background:url("../image/navbg.png") repeat-x scroll 0 400px transparent;}
+
+#sddm div
+{	position: absolute;
+	visibility: hidden;
+	top:40px;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #3E64A0;
+	z-index:999;
+	}
+
+	#sddm div a
+	{	position: relative;
+		display: block;
+		margin: 0;
+		padding: 5px 10px;
+		width: auto;
+		white-space: nowrap;
+		text-align: left;
+		text-decoration: none;
+		background:#fff;
+		color: #2875DE;
+		font: 12px arial;
+		border-bottom: 1px dashed rgb(0,0,0);}
+
+	#sddm div a:hover
+	{	background:#3E64A0;
+		color: #fff;
+		}
+		/*菜单更新*/
+	.new_pro{
+		background:#fff;
+		width: 228px;
+	}
+	.np_01{
+	background: none repeat scroll 0 0 #0061A5;
+    color: #FFFFFF;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 0 0 10px;
+    text-align: left;
+	}
+	.np_02{
+	background: none repeat scroll 0 0 #E4E4E4;
+    color: #000;
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0;
+	text-align:left;
+	padding: 0 0 0 10px;
+	width:220px;
+	cursor:pointer;
+	}
+	.np_02 div{
+	background: url("../image/icoNav.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    float: right;
+    height: 13px;
+    margin: 14px 20px 0 0;
+    width: 11px;
+	}
+	.np_02 a{
+	color:#000;
+	text-decoration:none;
+	}
+	.curr{
+	background: none  no-repeat scroll 0 0 #0061A5;
+	font-weight:bold;
+	}
+	.curr a{
+	color:#FFD700;
+	}	
+	.new_type{
+	background: none repeat scroll 0 0 #FFFFFF;
+    min-height: 300px;
+    width: 735px;
+	}
+	.nt_01{
+	  background: none repeat scroll 0 0 #0061A5;
+    float: left;
+    height: 135px;
+    margin: 8px 5px 5px 6px;
+    width: 355px;
+	}
+	.nt_01 img{
+	float:left;
+	}	
+	.nt_02{
+	
+    font-size: 17px;
+    font-weight: bold;
+    margin: 35px 0 20px;
+	}
+	.nt_02 a{
+	color: #FFD700;
+	text-decoration:none;
+	}
+	.nt_03 a{
+	color:#fff;
+	font-size:12px;
+	text-decoration:none;
+	}
+	.nt_03 a:hover{
+	text-decoration:underline;
+	}	
+	
+	/*返回顶部特效*/
+	p#back-to-top{
+      position:fixed;
+      bottom:25px;
+      right:80px;
+	  z-index:9999;
+}
+p#back-to-top a{
+      text-align:center;
+      text-decoration:none;
+      color:#d1d1d1;
+      display:block;
+      width:80px;
+      -moz-transition:color 1s;
+      -webkit-transition:color 1s;
+      -o-transition:color 1s;
+}
+p#back-to-top a:hover{
+      color:#979797;
+}
+p#back-to-top a span{
+      background:#d1d1d1 url("../image/top.png") no-repeat center center;
+      border-radius:6px;
+      display:block;
+      height:80px;
+      width:80px;
+      margin-bottom:5px;
+      -moz-transition:background 1s;
+      -webkit-transition:background 1s;
+      -o-transition:background 1s;
+}
+#back-to-top a:hover span{
+      background:#979797 url("../image/top.png") no-repeat center center;
+}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
