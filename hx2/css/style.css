@@ -335,7 +335,7 @@ a:hover{
 }
 .cp_ul li a{
   color: #3d5c5e;
-  display: block;
+  display: inline-block;
 }
 .cp_ul li a:hover{
   color: #3d5c5e;
@@ -402,6 +402,15 @@ a:hover{
   width: 635px;
   box-shadow: 5px 5px 5px #999;
   background: url('../images/about/a7.jpg') no-repeat 0 0;
+}
+.ci_show8{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 423px;
+  margin: 15px 5px;
+  width: 635px;
+  box-shadow: 5px 5px 5px #999;
+  background: url('../images/about/a8.jpg') no-repeat 0 0;
 }
 /*contact*/
 .telephone{
