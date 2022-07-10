@@ -21,17 +21,25 @@ export default {
 
 <style scoped>
 .list {
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     list-style: none;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     border-radius: 0.5rem;
+    flex-wrap: row wrap;
 }
-.list li {
-    width: 15rem;
+.list>li {
+    flex: 0.25;
+    /* width: 15rem; */
     height: 15rem;
     border: 1px solid green;
     margin: 0 1.5rem 0 0;
-    flex: 1;
+    
+}
+.list>li:nth-of-type(4n+0) {
+    margin-right: 0;
 }
 </style>
