@@ -1,5 +1,6 @@
 <template>
     <div class="header">
+        <ProductDropdownMenu/>
         <vsm-menu :menu="menu">
             <!-- <template #default="{ item }">
                 <div style="width: 300px; padding: 30px">
@@ -7,7 +8,7 @@
                 </div>
             </template> -->
             <template #default="data">
-                <div style="width: 100vw;padding: 1rem;border-radius: 0.5rem;">
+                <div style="width: 100vw;padding-right: 1.2rem;border-radius: 0.5rem;">
                     <!-- https://codesandbox.io/s/vq355?file=/src/App.vue:889-913 -->
                     <component :is="data.item.content" class="content" />
                     <component :is="data.item.secondaryContent" class="content--secondary" />
