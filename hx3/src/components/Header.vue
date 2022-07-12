@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <ProductDropdownMenu/>
+        <!-- <ProductDropdownMenu/> -->
         <vsm-menu :menu="menu">
             <!-- <template #default="{ item }">
                 <div style="width: 300px; padding: 30px">
