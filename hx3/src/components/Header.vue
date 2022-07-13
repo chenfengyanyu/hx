@@ -52,7 +52,7 @@ export default {
                 { title: 'Home', attributes: { href: '/' } },
                 { title: 'Products', dropdown: 'dropdown-1', content: ProductDropdownMenu },
                 { title: 'Package', dropdown: 'dropdown-2', content: PackageDropdownMenu },
-                { title: 'Service', dropdown: 'dropdown-3', content: ServiceDropdownMenu },
+                { title: 'Service', dropdown: 'dropdown-3', content: PackageDropdownMenu },
                 { title: 'Contact', attributes: { href: '#contact' } },
             ]
         }
@@ -71,7 +71,7 @@ export default {
 
 .vsm-menu {
     max-width: 1024px;
-    width: 100%;
+    // width: 100%;
     margin: 0 auto;
 }
 

@@ -104,13 +104,13 @@ export default {
     align-items: center;
     border-radius: 5px;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .list>li {
     /* flex: 0.25; */
     width: 24%;
     height: 15rem;
-    /* border: 1px solid green; */
     margin: 0.5rem 0;
 
 }
@@ -128,13 +128,13 @@ export default {
     transform: scale(2.5);
     position: absolute;
     top: 3rem;
-    left: 3rem;
+    left: 7rem;
 }
 
 .title>.desc {
     font-size: 1.5rem;
     color: #1e88e5;
-    margin: 1rem 0 0 4.5rem;
+    margin: 1rem 0 0 1.5rem;
     display: inline-block;
 }
 
