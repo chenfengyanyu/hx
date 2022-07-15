@@ -13,10 +13,10 @@ import SupportIcon from './icons/IconSupport.vue'
 </template>
 
 <style>
-.banner {
+/* .banner {
   width: 100%;
   height: 53rem;
   background: url(../assets/banner/1.jpg);
   background-size: cover;
-}
+} */
 </style>

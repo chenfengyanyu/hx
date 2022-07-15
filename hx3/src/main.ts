@@ -2,9 +2,6 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import VueStripeMenu from 'vue-stripe-menu'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
-   
-
 import App from './App.vue'
 import router from './router'
 
