@@ -1,12 +1,11 @@
 <template>
     <div class="header">
+        <div class="nv-search">
+            <input class="box" type="search" placeholder="Keyword" />
+            <a class="btn" href="#" title="Search Now"></a>
+        </div>
         <!-- <ProductDropdownMenu/> -->
         <vsm-menu :menu="menu">
-            <!-- <template #default="{ item }">
-                <div style="width: 300px; padding: 30px">
-                    Dropdown content - {{ item.title }}
-                </div>
-            </template> -->
             <template #default="data">
                 <div style="width: 100vw;padding-right: 1.2rem;border-radius: 0.5rem;">
                     <!-- https://codesandbox.io/s/vq355?file=/src/App.vue:889-913 -->
@@ -120,5 +119,36 @@ export default {
     .vsm-mob-full {
         flex-grow: 1;
     }
+}
+
+.nv-search {
+    position: absolute;
+    top: 0.5rem;
+    right: 16rem;
+    border: none;
+    z-index: 999999999;
+}
+
+.nv-search input {
+    border: 1px solid #ccc;
+    padding: 0.6rem 0.5rem 0.6rem 2.5rem;
+    border-radius: 0.3rem;
+    width: 15rem;
+    color: #999;
+}
+
+.nv-search .btn {
+    display: inline-block;
+    content: "";
+    width: 3rem;
+    height: 4rem;
+    background-image: url(/src/assets/iconset.svg);
+    background-position: -19rem -6.5rem;
+    background-repeat: no-repeat;
+    font-size: 0;
+    position: absolute;
+    left: 0rem;
+    top: -0.5rem;
+    transform: scale(0.6);
 }
 </style>

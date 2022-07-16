@@ -3,15 +3,14 @@
     <swiper class="swiper" :style="{
         '--swiper-navigation-color': '#000000cf',
         '--swiper-pagination-color': '#000000cf'
-    }" :modules="modules" :speed="600" :parallax="true"  :navigation="true"
-        :pagination="{ clickable: true }" autoplay>
+    }" :modules="modules" :speed="600" :parallax="true" :navigation="true" :pagination="{ clickable: true }" autoplay>
         <template #container-start>
             <div class="parallax-bg" data-swiper-parallax="-23%"
-                :style="{ backgroundImage: 'url(../src/assets/banner/2.jpeg)' }"></div>
+                :style="{ backgroundImage: 'url(../src/assets/banner/3.jpg)' }"></div>
         </template>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">Slide 1</h1>
-            <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2>
+            <h1 class="title" data-swiper-parallax="-300">WE DELIVER VALUES</h1>
+            <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
@@ -24,8 +23,8 @@
             </div>
         </swiper-slide>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">Slide 2</h1>
-            <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2>
+            <h1 class="title" data-swiper-parallax="-300">WE OFFER PROFESSIONAL SERVICE</h1>
+            <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
@@ -38,8 +37,8 @@
             </div>
         </swiper-slide>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">Slide 3</h1>
-            <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2>
+            <h1 class="title" data-swiper-parallax="-300">WE KNOW METAL</h1>
+            <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
@@ -56,7 +55,7 @@
 
 <script lang="ts">
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
@@ -84,7 +83,7 @@ export default {
         return {
             onSwiper,
             onSlideChange,
-            modules: [Navigation, Pagination, Scrollbar, A11y],
+            modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
         };
     },
 };
@@ -103,13 +102,28 @@ export default {
     background-size: cover;
     background-position: center;
 }
+
 .slide {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: #fff;
-      box-sizing: border-box;
-      padding: 0 100px;
-      background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 0 8rem;
+    background-color: transparent;
+}
+
+.slide .title {
+    background: rgb(0 0 0 / 40%);
+    font-size: 4rem;
+    padding: 0 0 0 2rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.slide p {
+    background: rgb(0 0 0 / 40%);
+    font-size: 1.4rem;
+    padding: 0 1.5rem 1.5rem 2rem;
+    border-radius: 0 0 0.5rem 0.5rem;
 }
 </style>
