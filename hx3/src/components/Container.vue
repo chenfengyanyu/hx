@@ -1,22 +1,58 @@
-<script setup lang="ts">
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
-</script>
-
 <template>
   <div class="banner">
-    <!-- <img src="../assets/banner/1.jpg" /> -->
+    <tabs @clicked="tabClicked" @changed="tabChanged">
+      <tab name="Stainless Steel">
+        <img src="../assets/tab/1.svg">
+      </tab>
+      <tab name="Carbon Steel">
+        2 tab content
+      </tab>
+      <tab name="Coated Steel">
+        3 tab content
+      </tab>
+      <tab name="Pipe/ Tube">
+        4 tab content
+      </tab>
+      <tab name="Bar">
+        5 tab content
+      </tab>
+      <tab name="Wire Rod">
+        6 tab content
+      </tab>
+    </tabs>
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  methods: {
+    tabClicked(selectedTab) {
+      console.log('Current tab re-clicked:' + selectedTab.tab.name)
+    },
+    tabChanged(selectedTab) {
+      console.log('Tab changed to:' + selectedTab.tab.name)
+    }
+  }
+}
+</script>
+
 <style>
-/* .banner {
-  width: 100%;
-  height: 53rem;
-  background: url(../assets/banner/1.jpg);
-  background-size: cover;
-} */
+.tabs-component-tabs {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tabs-component-tab {
+  height: 8rem;
+  text-align: center;
+  width: 25%;
+  border: 1px solid green;
+  background: url(../assets/tab/1.svg);
+}
+.tabs-component-panel{
+  height: 40rem;
+}
 </style>

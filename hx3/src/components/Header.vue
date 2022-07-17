@@ -65,7 +65,7 @@ export default {
 .header {
     /* margin: 0 auto; */
     height: 6.5rem;
-    z-index: 99999;
+    z-index: 9999999;
 }
 
 .vsm-menu {
