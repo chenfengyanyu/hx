@@ -10,6 +10,6 @@
     color: #ffffffc9;
     margin: 0 auto;
     width: 100%;
-    height: 8rem;
+    height: 12rem;
 }
 </style>

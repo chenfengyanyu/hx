@@ -65,13 +65,14 @@ export default {
 .header {
     /* margin: 0 auto; */
     height: 6.5rem;
-    z-index: 9999999;
 }
 
 .vsm-menu {
     max-width: 1024px;
     // width: 100%;
     margin: 0 auto;
+    position: relative;
+    z-index: 99999999999999999;
 }
 
 .vsm-logo-img {

@@ -2,22 +2,22 @@
   <div class="banner">
     <tabs @clicked="tabClicked" @changed="tabChanged">
       <tab name="Stainless Steel">
-        <img src="../assets/tab/1.svg">
+        <img src="../assets/tab/1.jpeg" width="100%" height="100%">
       </tab>
       <tab name="Carbon Steel">
-        2 tab content
+        <img src="../assets/tab/2.jpeg" width="100%" height="100%">
       </tab>
       <tab name="Coated Steel">
-        3 tab content
+        <img src="../assets/tab/3.jpeg" width="100%" height="100%">
       </tab>
       <tab name="Pipe/ Tube">
-        4 tab content
+        <img src="../assets/tab/4.jpeg" width="100%" height="100%">
       </tab>
       <tab name="Bar">
-        5 tab content
+        <img src="../assets/tab/5.jpeg" width="100%" height="100%">
       </tab>
       <tab name="Wire Rod">
-        6 tab content
+        <img src="../assets/tab/6.jpeg" width="100%" height="100%">
       </tab>
     </tabs>
   </div>
@@ -52,7 +52,13 @@ export default {
   border: 1px solid green;
   background: url(../assets/tab/1.svg);
 }
-.tabs-component-panel{
+
+.tabs-component-panel {
   height: 40rem;
+}
+
+.tabs-component-panel>img {
+  width: 100%;
+  height: 100%;
 }
 </style>
