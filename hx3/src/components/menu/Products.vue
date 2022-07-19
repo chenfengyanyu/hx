@@ -128,7 +128,7 @@ export default {
     transform: scale(2.5);
     position: absolute;
     top: 3rem;
-    left: 7rem;
+    left: 5rem;
 }
 
 .title>.desc {
