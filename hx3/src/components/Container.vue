@@ -45,11 +45,15 @@ export default {
   padding: 0;
 }
 
+.tabs-component-tabs .is-active{
+  color: #1e88e5;
+  filter: grayscale(0) !important;
+}
+
 .tabs-component-tab {
   height: 8rem;
   text-align: center;
   width: 25%;
-  border: 1px solid green;
   background: url(../assets/tab/1.svg);
 }
 
@@ -60,5 +64,62 @@ export default {
 .tabs-component-panel>img {
   width: 100%;
   height: 100%;
+}
+
+.tabs-component-tab-a {
+  text-decoration: none;
+  line-height: 13rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.tabs-component-tab-a:hover {
+  color: #1e88e5;
+  filter: grayscale(0);
+}
+
+.tabs-component-tabs>li {
+  cursor: pointer;
+
+}
+
+.tabs-component-tabs>li:hover {
+  filter: grayscale(0) !important;
+}
+
+.tabs-component-tabs>li:nth-child(1) {
+  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
+}
+
+.tabs-component-tabs>li:nth-child(2) {
+  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
+}
+
+.tabs-component-tabs>li:nth-child(3) {
+  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
+}
+
+.tabs-component-tabs>li:nth-child(4) {
+  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
+}
+
+.tabs-component-tabs>li:nth-child(5) {
+  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
+}
+
+.tabs-component-tabs>li:nth-child(6) {
+  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background-size: 25%;
+  filter: grayscale(1);
 }
 </style>
