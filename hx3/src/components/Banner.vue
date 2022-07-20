@@ -116,14 +116,15 @@ export default {
 .slide .title {
     background: rgb(0 0 0 / 40%);
     font-size: 4rem;
-    padding: 0 0 0 2rem;
+    padding: 2rem 2rem 0;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .slide p {
     background: rgb(0 0 0 / 40%);
     font-size: 1.4rem;
-    padding: 0 1.5rem 1.5rem 2rem;
+    padding: 0 2rem 3rem;
     border-radius: 0 0 0.5rem 0.5rem;
+    text-align: justify;
 }
 </style>

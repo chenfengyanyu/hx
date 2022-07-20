@@ -20,7 +20,10 @@ import Banner from '@/components/Banner.vue'
 @import '@/assets/base.css';
 
 #app {
+  min-width: 1024px;
+  max-width: 1700px;
   height: 100vh;
   position: relative;
+  margin: 0 auto;
 }
 </style>

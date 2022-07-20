@@ -52,6 +52,7 @@ export default {
                 { title: 'Products', dropdown: 'dropdown-1', content: ProductDropdownMenu },
                 { title: 'Package', dropdown: 'dropdown-2', content: PackageDropdownMenu },
                 { title: 'Service', dropdown: 'dropdown-3', content: PackageDropdownMenu },
+                { title: 'Quality', dropdown: 'dropdown-4', content: PackageDropdownMenu },
                 { title: 'Contact', attributes: { href: '#contact' } },
             ]
         }
@@ -64,15 +65,18 @@ export default {
 
 .header {
     /* margin: 0 auto; */
-    height: 6.5rem;
+    height: 7.5rem;
 }
 
 .vsm-menu {
-    max-width: 1024px;
+    min-width: 1024px;
     // width: 100%;
     margin: 0 auto;
     position: relative;
     z-index: 99999999999999999;
+}
+.vsm-mob-full{
+    margin: 0 0 0 1.5rem;
 }
 
 .vsm-logo-img {
@@ -106,6 +110,7 @@ export default {
     display: flex;
     flex: 1 1 auto;
     justify-content: right;
+    margin-top: 0.6rem
 }
 
 @media screen and (max-width: 768px) {
@@ -124,8 +129,8 @@ export default {
 
 .nv-search {
     position: absolute;
-    top: 0.5rem;
-    right: 16rem;
+    top: 1rem;
+    right: 1.6rem;
     border: none;
     z-index: 999999999;
 }
@@ -134,7 +139,7 @@ export default {
     border: 1px solid #ccc;
     padding: 0.6rem 0.5rem 0.6rem 2.5rem;
     border-radius: 0.3rem;
-    width: 15rem;
+    width: 20.2rem;
     color: #999;
 }
 

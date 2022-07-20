@@ -45,7 +45,7 @@ export default {
   padding: 0;
 }
 
-.tabs-component-tabs .is-active{
+.tabs-component-tabs .is-active {
   color: #1e88e5;
   filter: grayscale(0) !important;
 }
@@ -67,10 +67,15 @@ export default {
 }
 
 .tabs-component-tab-a {
-  text-decoration: none;
-  line-height: 13rem;
-  display: inline-block;
-  width: 100%;
+ text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    height: 7rem;
+    line-height: 13rem;
+    vertical-align: text-bottom;
 }
 
 .tabs-component-tab-a:hover {
@@ -122,4 +127,50 @@ export default {
   background-size: 25%;
   filter: grayscale(1);
 }
+
+@media (max-width: 1024px) {
+  .tabs-component-tabs>li {
+    background-size: 38% !important;
+  }
+}
+@media (min-width: 1024px) {
+  .tabs-component-tabs>li {
+    background-size: 34% !important;
+  }
+}
+@media (min-width: 1200px) {
+  .tabs-component-tabs>li {
+    background-size: 32% !important;
+  }
+}
+@media (min-width: 1300px) {
+  .tabs-component-tabs>li {
+    background-size: 28% !important;
+  }
+}
+@media (min-width: 1400px) {
+  .tabs-component-tabs>li {
+    background-size: 26% !important;
+  }
+}
+@media (min-width: 1500px) {
+  .tabs-component-tabs>li {
+    background-size: 24% !important;
+  }
+}
+@media (min-width: 1600px) {
+  .tabs-component-tabs>li {
+    background-size: 22% !important;
+  }
+}
+/* @media (min-width: 1700px) {
+  .tabs-component-tabs>li {
+    background-size: 20% !important;
+  }
+}
+@media (min-width: 1800px) {
+  .tabs-component-tabs>li {
+    background-size: 18% !important;
+  }
+} */
 </style>
