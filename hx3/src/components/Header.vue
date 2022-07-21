@@ -5,6 +5,7 @@
             <a class="btn" href="#" title="Search Now"></a>
         </div>
         <!-- <ProductDropdownMenu/> -->
+        <!-- <QualityDropdownMenu/> -->
         <vsm-menu :menu="menu">
             <template #default="data">
                 <div style="width: 100vw;padding-right: 1.2rem;border-radius: 0.5rem;">
@@ -38,12 +39,14 @@ import ProductDropdownMenu from '@/components/menu/Products.vue'
 import PackageDropdownMenu from '@/components/menu/Package.vue'
 import ServiceDropdownMenu from '@/components/menu/Service.vue'
 import MobileContent from "@/components/MobileContent.vue";
+import QualityDropdownMenu from '@/components/menu/Quality.vue'
 export default {
     components: {
         ProductDropdownMenu,
         PackageDropdownMenu,
         ServiceDropdownMenu,
-        MobileContent
+        MobileContent,
+        QualityDropdownMenu
     },
     data() {
         return {
@@ -52,7 +55,7 @@ export default {
                 { title: 'Products', dropdown: 'dropdown-1', content: ProductDropdownMenu },
                 { title: 'Package', dropdown: 'dropdown-2', content: PackageDropdownMenu },
                 { title: 'Service', dropdown: 'dropdown-3', content: PackageDropdownMenu },
-                { title: 'Quality', dropdown: 'dropdown-4', content: PackageDropdownMenu },
+                { title: 'Quality', dropdown: 'dropdown-4', content: QualityDropdownMenu },
                 { title: 'Contact', attributes: { href: '#contact' } },
             ]
         }
