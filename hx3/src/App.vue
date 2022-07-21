@@ -9,10 +9,9 @@ import Banner from '@/components/Banner.vue'
 
 <template>
   <Header />
-  <Banner />
-  <Container>
-    <RouterView />
-  </Container>
+  <div class="content">
+     <RouterView/>
+  </div>
   <Footer />
 </template>
 
