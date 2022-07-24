@@ -56,7 +56,7 @@ export default {
                 { title: 'Package', dropdown: 'dropdown-2', content: PackageDropdownMenu },
                 { title: 'Service', dropdown: 'dropdown-3', content: PackageDropdownMenu },
                 { title: 'Quality', dropdown: 'dropdown-4', content: QualityDropdownMenu },
-                { title: 'Contact', attributes: { href: '#contact' } },
+                { title: 'Contact', attributes: { href: 'contact' } },
             ]
         }
     }
