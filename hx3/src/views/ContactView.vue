@@ -5,6 +5,6 @@ import InfoImg from '@/assets/bg.jpeg'
 
 <template>
   <main>
-    <Infobox :imgsrc=InfoImg />
+    <Infobox :imgsrc=InfoImg title="Contact"/>
   </main>
 </template>

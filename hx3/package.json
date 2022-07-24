@@ -19,7 +19,9 @@
     "vue-awesome-swiper": "^5.0.1",
     "vue-router": "^4.0.16",
     "vue-stripe-menu": "^2.1.1",
-    "vue3-tabs-component": "^1.1.0"
+    "vue3-tabs-component": "^1.1.0",
+    "vxe-table": "^4.2.8",
+    "xe-utils": "^3.5.4"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",

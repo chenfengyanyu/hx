@@ -1,33 +1,39 @@
 <template>
     <div class="about">
-    <img :src=imgsrc width="100%">
-  </div>
+        <img :src=imgsrc width="100%">
+        <div class="title">{{title}}</div>
+    </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import imgsrc from '../assets/bg.jpeg'
 
-export default defineComponent ({
+export default defineComponent({
     name: 'InfoboxComponent',
     data() {
         console.log(this.$props.imgsrc);
         return {
-           defaultImg: imgsrc
+            defaultImg: imgsrc
         }
     },
-    props:['imgsrc']
+    props: ['imgsrc','title']
 })
 
 </script>
 
 <style scoped>
-@media (min-width: 1024px) {
-  .about {
+/* .about {
     min-height: 100vh;
-  }
-  .about img{
+} */
+
+.about img {
     width: 100%;
-  }
+}
+
+.title {
+    font-size: 2.5rem;
+    margin: -6rem 0 0 1.5rem;
+    color: #ffffffd4;
 }
 </style>

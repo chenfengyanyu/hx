@@ -7,11 +7,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
             <li>
@@ -20,11 +20,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
             <li>
@@ -33,11 +33,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
             <li>
@@ -46,11 +46,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
             <li>
@@ -59,11 +59,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
             <li>
@@ -72,11 +72,11 @@
                     <span class="desc">Carbon Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="#">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
                 </ol>
             </li>
         </ul>
