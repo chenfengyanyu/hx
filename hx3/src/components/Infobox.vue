@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-        <img :src=imgsrc width="100%">
+        <img :src=defaultImg width="100%">
         <div class="title">{{title}}</div>
     </div>
 </template>
@@ -12,7 +12,7 @@ import imgsrc from '../assets/bg.jpeg'
 export default defineComponent({
     name: 'InfoboxComponent',
     data() {
-        console.log(this.$props.imgsrc);
+        // console.log(this.$props.imgsrc);
         return {
             defaultImg: imgsrc
         }

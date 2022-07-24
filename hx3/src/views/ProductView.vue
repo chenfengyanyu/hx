@@ -1,12 +1,6 @@
-<script setup lang="ts">
-import Infobox from '@/components/Infobox.vue'
-import InfoImg from '@/assets/bg.jpeg'
-import StainlessSteelBarVue from '@/components/product/StainlessSteelBar.vue';
-</script>
-
 <template>
   <main>
-    <Infobox :imgsrc=InfoImg title="Product" />
+    <Infobox :imgsrc="InfoImg" title="Product" />
     <div class="show">
       <div class="left">
         <img src="../assets/product/stainless-steel-round-bar/1.jpg" />
@@ -22,10 +16,153 @@ import StainlessSteelBarVue from '@/components/product/StainlessSteelBar.vue';
     </div>
     <div class="mytable">
       <div class="title">Available Products</div>
-      <StainlessSteelBarVue/>
+      <BasicTable :productdatas="availableProducts" />
+    </div>
+    <div class="mytable">
+      <div class="title">Chemical Composition</div>
+      <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div>
+      <BasicTable :productdatas="chemicalComposition" />
+    </div>
+    <div class="mytable">
+      <div class="title">Mechanical Properties</div>
+      <div class="subtitle">Long Products, Annealed</div>
+      <BasicTable :productdatas="chemicalComposition" />
+    </div>
+    <div class="mytable">
+      <div class="title">Related Products</div>
+      <!-- <div class="subtitle">Long Products, Annealed</div> -->
     </div>
   </main>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Infobox from '@/components/Infobox.vue'
+import InfoImg from '@/assets/bg.jpeg'
+import BasicTable from '@/components/product/BasicTable.vue';
+
+export default defineComponent({
+  components: {
+    Infobox,
+    BasicTable
+  },
+  data() {
+    return {
+      InfoImg: InfoImg,
+      availableProducts: {
+        config: [
+          { field: 'shape', title: 'Stainless Steel Bar Shape' },
+          { field: 'type', title: 'Stainless Steel Bar Grade/Type' },
+          { field: 'size', title: 'Stainless Steel Bar Sizes' }
+        ],
+        moredata: [
+          { id: 10001, shape: 'Stainless Steel Flat Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A, Edge Conditioned, True Mill Edge', size: 'Thickness: 3.175mm - 50.8mm\nWidths: 12.7mm - 203.2mm' },
+          { id: 10002, shape: 'Stainless Steel Half Round Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 4.76mm - 19.3mm' },
+          { id: 10003, shape: 'Stainless Steel Hexagon Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 9.6mm - 76mm' },
+          { id: 10004, shape: 'Stainless Steel Round Bar', type: 'Grades: 303, 304/304L, 316/316L, 410, 416, 440C, 13-8 , 15-5 , 17-4 (630), 17-4 H1150, 2205\nType: Accuracy, Annealed, BSQ, Coiled, Cold Finished, Cond A, Hot Rolled, Rough Turned, TGP, PSQ, Forged', size: 'Diameter: 3.175mm-304.8mm' },
+          { id: 10005, shape: 'Stainless Steel Square Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 3.175mm - 76.2mm' },
+          { id: 10006, shape: 'Stainless Steel Angle Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Thickness :2mm-16mm\nWidth: 15mm-94mm' }
+        ]
+      },
+      chemicalComposition: {
+        config: [
+          { field: 'col1', title: 'UNS' },
+          { field: 'col2', title: 'ASTM' },
+          { field: 'col3', title: 'EN' },
+          { field: 'col4', title: 'JIS' },
+          { field: 'col5', title: 'C%' },
+          { field: 'col6', title: 'Mn%' },
+          { field: 'col7', title: 'P%' },
+          { field: 'col8', title: 'S%' },
+          { field: 'col9', title: 'Si%' },
+          { field: 'col10', title: 'Cr%' },
+          { field: 'col11', title: 'Ni%' },
+          { field: 'col12', title: 'Mo%' }
+        ],
+        moredata: [
+          {
+            id: 10003, col1: 'S30100', col2: '301', col3: '1.4319', col4: 'SUS301', col5: '≤0.15', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤1.00', col10: '16.0-18.0', col11: '6.0-8.0', col12: '-'
+          },
+          {
+            id: 10004, col1: 'S30400', col2: '304', col3: '1.4301', col4: 'SUS304', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-10.5', col12: '-'
+          },
+          {
+            id: 10005, col1: 'S30403', col2: '304L', col3: '1.4306', col4: 'SUS304L', col5: '≤0.03', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-12.0', col12: '-'
+          },
+          {
+            id: 10006, col1: 'S30908', col2: '309S', col3: '1.4833', col4: 'SUS309S', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '22.0-24.0', col11: '12.0-15.0', col12: '-'
+          },
+          {
+            id: 10007, col1: 'S31008', col2: '310S', col3: '1.4845', col4: 'SUS310S', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤1.50', col10: '24.0-26.0', col11: '19.0-22.0', col12: '-'
+          },
+          {
+            id: 10008, col1: 'S31600', col2: '316', col3: '1.4401', col4: 'SUS316', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
+          },
+          {
+            id: 10009, col1: 'S31603', col2: '316L', col3: '1.4404', col4: 'SUS316L', col5: '≤0.03', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
+          },
+          {
+            id: 10010, col1: 'S31703', col2: '317L', col3: '1.4438', col4: 'SUS317L', col5: '≤0.03', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '11.0-15.0', col12: '3.0-4.0'
+          },
+          {
+            id: 10011, col1: 'S32100', col2: '321', col3: '1.4541', col4: 'SUS321', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-12.0', col12: '-'
+          },
+          {
+            id: 10012, col1: 'S34700', col2: '347', col3: '1.4550', col4: 'SUS347', col5: '≤0.08', col6: '≤2.00',
+            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-13.0', col12: '-'
+          },
+          {
+            id: 10013, col1: 'S32750', col2: 'SAD2507', col3: '1.4410', col4: '-', col5: '≤0.03', col6: '≤1.2',
+            col7: '≤0.035', col8: '≤0.02', col9: '≤0.80', col10: '24.0-26.0', col11: '6.0-8.0', col12: '3.0-5.0'
+          },
+          {
+            id: 10014, col1: 'S31803', col2: 'SAF2205', col3: '1.4462', col4: '-', col5: '≤0.03', col6: '≤2.0',
+            col7: '≤0.03', col8: '≤0.02', col9: '≤1.00', col10: '21.0-23.0', col11: '4.0-6.5', col12: '2.5-3.5'
+          },
+          {
+            id: 10015, col1: 'N08904', col2: '904L', col3: '1.4539', col4: '-', col5: '≤0.03', col6: '≤2.0',
+            col7: '≤0.035', col8: '≤0.03', col9: '≤1.00', col10: '18.0-20.0', col11: '23.0-25.0', col12: '3.0-4.0'
+          },
+        ]
+      },
+      mechanicalProperties: {
+        config: [
+          { field: 'col1', title: 'Type No.' },
+          { field: 'col2', title: 'Tensile Strength, Ksi' },
+          { field: 'col3', title: 'Yield Strength, Ksi' },
+          { field: 'col4', title: 'Elongation in 1 inch,%' },
+          { field: 'col5', title: 'Reduction of Area,%' },
+          { field: 'col6', title: 'Brinell Hardness' }
+        ],
+        moredata: [
+          { id: 10001, col1: '301', col2: '110', col3: '40', col4: '60', col5: '70', col6: '165' },
+          { id: 10002, col1: '302', col2: '90', col3: '40', col4: '55', col5: '70', col6: '150' },
+          { id: 10003, col1: '303', col2: '90', col3: '35', col4: '50', col5: '55', col6: '160' },
+          { id: 10004, col1: '304', col2: '85', col3: '35', col4: '55', col5: '70', col6: '150' },
+          { id: 10005, col1: '304L', col2: '80', col3: '30', col4: '55', col5: '70', col6: '140' },
+          { id: 10006, col1: '316', col2: '85', col3: '35', col4: '60', col5: '70', col6: '150' },
+          { id: 10007, col1: '316L', col2: '78', col3: '30', col4: '55', col5: '65', col6: '145' },
+          { id: 10008, col1: '321', col2: '85', col3: '35', col4: '55', col5: '65', col6: '150' },
+          { id: 10009, col1: '410', col2: '75', col3: '40', col4: '35', col5: '70', col6: '155' },
+          { id: 100010, col1: '416', col2: '75', col3: '40', col4: '30', col5: '65', col6: '155' },
+          { id: 100011, col1: '420', col2: '95', col3: '50', col4: '25', col5: '-', col6: '241' },
+          { id: 100012, col1: '2205', col2: '90', col3: '65', col4: '25', col5: '-', col6: '217' },
+        ]
+      }
+    }
+  }
+})
+
+</script>
 
 <style scoped>
 .show {
@@ -71,7 +208,12 @@ import StainlessSteelBarVue from '@/components/product/StainlessSteelBar.vue';
 
 .mytable .title {
   font-size: 1.5rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0 0;
   /* border-bottom: 1px dashed #86909c4a; */
+}
+
+.mytable .subtitle {
+  color: #4a4a4a91;
+  margin: 0 0 0.4rem;
 }
 </style>
