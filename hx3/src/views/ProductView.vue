@@ -31,20 +31,32 @@
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
+      <ImageBox :lists="productList" />
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 import Infobox from '@/components/Infobox.vue'
 import InfoImg from '@/assets/bg.jpeg'
-import BasicTable from '@/components/product/BasicTable.vue';
+import BasicTable from '@/components/product/BasicTable.vue'
+import ImageBox from '@/components/ImageBox.vue'
+
+import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
+import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
+import ssrb3 from '@/assets/product/stainless-steel-round-bar/3.webp'
+import ssrb4 from '@/assets/product/stainless-steel-round-bar/4.webp'
+import ssrb5 from '@/assets/product/stainless-steel-round-bar/5.jpeg'
+import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
+import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
+import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
 
 export default defineComponent({
   components: {
     Infobox,
-    BasicTable
+    BasicTable,
+    ImageBox
   },
   data() {
     return {
@@ -157,7 +169,8 @@ export default defineComponent({
           { id: 100011, col1: '420', col2: '95', col3: '50', col4: '25', col5: '-', col6: '241' },
           { id: 100012, col1: '2205', col2: '90', col3: '65', col4: '25', col5: '-', col6: '217' },
         ]
-      }
+      },
+      productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
     }
   }
 })
