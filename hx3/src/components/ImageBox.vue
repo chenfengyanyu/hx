@@ -4,7 +4,7 @@
             <img :src="item" alt="" />
         </div>
     </div>
-    <!-- <ImagesView v-model:visible="show" :images="srcArr" :src="imgSrc" /> -->
+    <ImagesView v-model:visible="show" :images="srcArr" :src="imgSrc" />
 </template>
 
 <script lang="ts">
@@ -24,10 +24,8 @@ export default defineComponent({
         }
     },
     setup() {
-        console.log(111)
-
         const show = ref(false)
-        const srcArr = ref([])
+        const srcArr: any = ref([])
         const imgSrc = ref('');
         const getData = (imgBox: HTMLDivElement) => {
             const imgs = imgBox.querySelectorAll('img');
@@ -35,7 +33,7 @@ export default defineComponent({
         }
 
         onMounted(() => {
-            const imgBox: HTMLDivElement = document.querySelector('#imgBox');
+            const imgBox: any = document.querySelector('#imgBox');
             getData(imgBox);
             imgBox.addEventListener('click', (e: any) => {
                 if (e.target.nodeName == 'IMG') {
@@ -45,6 +43,11 @@ export default defineComponent({
             })
         });
 
+        return {
+            srcArr,
+            imgSrc,
+            show
+        }
     }
 })
 </script>
@@ -58,6 +61,10 @@ export default defineComponent({
 #imgBox .imggrid {
     flex: 25%;
     padding: 0.5rem 1.5rem 1rem 0;
+}
+
+#imgBox .imggrid:nth-child(4n){
+    padding-right: 0;
 }
 
 .imggrid img {

@@ -13,7 +13,6 @@ import type { VxeTablePropTypes } from 'vxe-table'
 export default defineComponent({
     setup(props) {
         const { productdatas } = toRefs(props)
-        console.log(productdatas.value)
         const demo1 = reactive({
             tableData: productdatas.value.moredata
         })
