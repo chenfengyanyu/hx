@@ -1,14 +1,20 @@
 <template>
   <div class="quality-dropdown-menu">
-    <div class="imgbox"><img src="../../assets/package/1.jpeg" /></div>
-    <div class="imgdesc">
-      Products's package is an very important step during transportation. Professional packaging can
-      avoid the damage in the transportation.
-      Advanced Metals Co., Ltd, try our best to do every step more professional. We choose the good wooden box
-      (Fumigation free box) to package our products. May be our package is cost more than other package, but this is
-      worth cost. We want our customers order are safe during the shipping. We will try our best to avoid all the risks
-      we could think.
-    </div>
+    <ul class="package-list">
+      <li>
+        <img src="../../assets/package/1.jpeg" />
+        <div class="desc">Coil Exchange Center</div>
+      </li>
+      <li>
+        <img src="../../assets/package/1.jpeg" />
+        <div class="desc">Coil Exchange Center</div>
+      </li>
+      <li>
+        <img src="../../assets/package/1.jpeg" />
+        <div class="desc">Coil Exchange Center</div>
+      </li>
+
+    </ul>
   </div>
 </template>
 
@@ -19,21 +25,28 @@ export default {
 </script>
 
 <style scoped>
-.quality-dropdown-menu {
+.package-list {
+  max-width: 1024px;
+  list-style: none;
+  margin: 3rem auto;
   display: flex;
-  padding: 2rem;
+  padding: 0;
+  text-align: center;
+  justify-content: space-between;
 }
 
-.imgbox {
-  flex: 1;
-  text-align: right;
-  padding-right: 3rem;
+.package-list>li {
+  /* flex: 25%; */
+  cursor: pointer;
 }
-
-.imgdesc {
-  flex: 1;
-  font-size: 1.2rem;
-  text-align: justify;
-  padding-right: 8rem;
+.package-list>li>img {
+ width: 18rem;
+}
+.package-list .desc{
+  color: #000;
+  font-size: 1.5rem;
+}
+.package-list .desc:hover{
+  color: #1e88e5;
 }
 </style>
