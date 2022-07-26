@@ -16,7 +16,7 @@
             </template>
             <template #before-nav>
                 <li class="vsm-mob-full">
-                    <img class="vsm-logo-img" src="../assets/logo.svg" />
+                    <img class="vsm-logo-img" src="../assets/logo.png" />
                 </li>
             </template>
             <template #after-nav>
@@ -78,13 +78,14 @@ export default {
     position: relative;
     z-index: 99999999999999999;
 }
-.vsm-mob-full{
+
+.vsm-mob-full {
     margin: 0 0 0 1.5rem;
 }
 
 .vsm-logo-img {
-    height: 3rem;
-    margin-top: 1rem;
+    margin-top: -2rem;
+    width: 16rem;
 }
 
 .vsm-link {
@@ -113,7 +114,7 @@ export default {
     display: flex;
     flex: 1 1 auto;
     justify-content: right;
-    margin-top: 0.6rem
+    margin-top: -2.2rem;
 }
 
 @media screen and (max-width: 768px) {

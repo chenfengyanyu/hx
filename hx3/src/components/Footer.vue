@@ -2,7 +2,7 @@
     <div class="footer">
         <div class="info">
             <div class="logo">
-                <img src="../assets/logo-w.svg" />
+                <img src="../assets/logo.png" />
             </div>
             <ul class="navlist">
 
@@ -13,7 +13,7 @@
                 <li>About HX</li>
             </ul>
         </div>
-        <div class="copyright">Copyright © HX. All Rights Reserved. </div>
+        <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. </div>
     </div>
 </template>
 
@@ -38,10 +38,11 @@
     flex: 2;
 }
 
-.info>.logo>img{
-    margin: 3.5rem 0 0 0;
-    transform: scale(1.5);
-    opacity: 0.8;
+.info>.logo>img {
+    width: 15rem;
+    margin: -1.5rem 0 0 0;
+    opacity: 0.9;
+    filter: brightness(5);
 }
 
 .info .navlist {
