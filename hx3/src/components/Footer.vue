@@ -5,12 +5,12 @@
                 <img src="../assets/logo.png" />
             </div>
             <ul class="navlist">
-
+                <li>Home</li>
                 <li>Products</li>
-                <li>Service</li>
                 <li>Package</li>
-                <li>Contact Us</li>
-                <li>About HX</li>
+                <li>Service</li>
+                <li>Quality</li>
+                <li>Contact</li>
             </ul>
         </div>
         <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. </div>

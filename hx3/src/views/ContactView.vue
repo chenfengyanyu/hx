@@ -16,17 +16,21 @@ export default defineComponent({
       InfoImg: InfoImg,
       contactInfo: {
         config: [
-          { field: 'shape', title: 'Stainless Steel Bar Shape' },
-          { field: 'type', title: 'Stainless Steel Bar Grade/Type' },
-          { field: 'size', title: 'Stainless Steel Bar Sizes' }
+          { field: 'adress', title: 'Adress' },
+          { field: 'tel', title: 'Tel' },
+          { field: 'app', title: 'WhatsApp' },
+          { field: 'email', title: 'Email' },
+          { field: 'web', title: 'Web' }
         ],
         moredata: [
-          { id: 10001, shape: 'Stainless Steel Flat Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A, Edge Conditioned, True Mill Edge', size: 'Thickness: 3.175mm - 50.8mm\nWidths: 12.7mm - 203.2mm' },
-          { id: 10002, shape: 'Stainless Steel Half Round Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 4.76mm - 19.3mm' },
-          { id: 10003, shape: 'Stainless Steel Hexagon Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 9.6mm - 76mm' },
-          { id: 10004, shape: 'Stainless Steel Round Bar', type: 'Grades: 303, 304/304L, 316/316L, 410, 416, 440C, 13-8 , 15-5 , 17-4 (630), 17-4 H1150, 2205\nType: Accuracy, Annealed, BSQ, Coiled, Cold Finished, Cond A, Hot Rolled, Rough Turned, TGP, PSQ, Forged', size: 'Diameter: 3.175mm-304.8mm' },
-          { id: 10005, shape: 'Stainless Steel Square Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 3.175mm - 76.2mm' },
-          { id: 10006, shape: 'Stainless Steel Angle Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Thickness :2mm-16mm\nWidth: 15mm-94mm' }
+          {
+            id: 10001,
+            adress: 'Tongda International Building, Hi-Tech Development Zone Xi\'an Shaanxi 710065 China',
+            tel: '(+86)-134 8493 6283',
+            app: '(+86)134 8493 6283',
+            email: 'sales@amctitanium.com\ninfo@amctitanium.com',
+            web: 'www@amctitanium.com'
+          },
         ]
       }
     }
@@ -37,8 +41,26 @@ export default defineComponent({
 
 <template>
   <main>
-    <Infobox :imgsrc=InfoImg title="Contact"/>
-    <QualityVue />
+    <Infobox :imgsrc=InfoImg title="Contact" />
+    <div class="show">
+      <div class="left">
+        <img src="../assets/contact.jpeg" />
+      </div>
+      <div class="right">
+        <div class="title">ADVANCED METALS CO., LTD</div>
+        <div class="subtitle">We welcome the Sales Agent in your local markets</div>
+        <div class="desc">Please contact with us if you have any metals products. We produce, stocked and supply
+          titanium, stainless steel, Nickell alloy. Zr702, Niobium. Tantalum, Tungsten, carbon steel products. Our
+          metals products include the bar. Plate & sheet. Tube & pipe. Wire, coil and forged metals products.
+          So please send me your enquiry (with products standard, Grade, Size, Quantity and other request you need).
+          We will reply you within half an hour after received your enquiry. We respect every enquiry and order no
+          matter
+          the order is small or large. We will try our best to supply the best quality and service to every customer.
+          We are looking for the sales agent in your local markets. We give you the best price, quality and delivery
+          time to you. We avoid all the risks to you. You could sales our products in your local markets
+        </div>
+      </div>
+    </div>
     <div class="mytable">
       <div class="title">Contact Us</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -48,6 +70,45 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.show {
+  margin: 3rem 1.5rem;
+  display: flex;
+}
+
+.show .left {
+  flex: 1.3;
+  margin-right: 1.2rem;
+  overflow: hidden;
+  padding: 0;
+}
+
+.left img {
+  height: 23rem;
+  border-radius: 0.5rem;
+  filter: hue-rotate(348deg);
+}
+
+.show .right {
+  flex: 2;
+  text-align: justify;
+}
+
+.right .title {
+  font-size: 2rem;
+  color: #1e88e5;
+}
+
+.right .subtitle {
+  font-size: 1.2rem;
+  color: #4a4a4a91;
+}
+
+.right .desc {
+  font-size: 1.2rem;
+  color: #000000c9;
+  margin-top: 1rem;
+}
+
 .mytable {
   margin: -1.5rem 1.5rem 1.5rem;
 }
