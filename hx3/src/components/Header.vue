@@ -6,6 +6,7 @@
         </div>
         <!-- <ProductDropdownMenu/> -->
         <!-- <QualityDropdownMenu/> -->
+        <!-- <PackageDropdownMenu/> -->
         <vsm-menu :menu="menu">
             <template #default="data">
                 <div style="width: 100vw;padding-right: 1.2rem;border-radius: 0.5rem;">

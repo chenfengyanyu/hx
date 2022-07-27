@@ -13,7 +13,7 @@
                 <li>Contact</li>
             </ul>
         </div>
-        <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. </div>
+        <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. Shaanxi ICP File 16009787-1</div>
     </div>
 </template>
 

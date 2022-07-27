@@ -1,6 +1,6 @@
 <template>
   <div class="package-dropdown-menu">
-    <div class="imgbox"><img src="../../assets/package/1.jpeg" /></div>
+    <div class="imgbox"><img src="../../assets/package/2.webp" /></div>
     <div class="imgdesc">
       Products's package is an very important step during transportation. Professional packaging can
       avoid the damage in the transportation.
@@ -28,6 +28,11 @@ export default {
   flex: 1;
   text-align: right;
   padding-right: 3rem;
+}
+
+.imgbox img {
+  height: 15rem;
+    border-radius: 0.5rem;
 }
 
 .imgdesc {
