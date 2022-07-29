@@ -2,8 +2,10 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import VueStripeMenu from 'vue-stripe-menu'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-import {Tabs, Tab} from 'vue3-tabs-component';
+import {Tabs, Tab} from 'vue3-tabs-component'
 import { useTable } from './plugins/vxe-table'
+import VideoBackground from 'vue-responsive-video-background-player'
+
 
 import App from './App.vue'
 import router from './router'
@@ -22,6 +24,9 @@ app.use(useTable)
 // https://www.npmjs.com/package/vue3-tabs-component
 app.component('tabs', Tabs)
 app.component('tab', Tab)
+
+// https://github.com/avidofood/vue-responsive-video-background-player#readme
+app.component('video-background', VideoBackground)
 
 
 

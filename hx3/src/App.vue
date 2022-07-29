@@ -8,8 +8,11 @@ import Footer from '@/components/Footer.vue'
 <template>
   <Header />
   <div class="content">
-     <RouterView/>
+    <RouterView />
   </div>
+  <video-background src="src/assets/show.mp4" class="videobox">
+    <h1>Integrity · Profession · Efficiency</h1>
+  </video-background>
   <Footer />
 </template>
 
@@ -22,5 +25,19 @@ import Footer from '@/components/Footer.vue'
   height: 100vh;
   position: relative;
   margin: 0 auto;
+}
+
+.videobox {
+  /* max-height: 400px; */
+  height: 40rem;
+}
+
+.videobox h1 {
+  color: white;
+  font-size: 5rem;
+  text-align: center;
+  height: 40rem;
+  line-height: 40rem;
+  background: linear-gradient(rgb(0 0 0 / 16%), #2286ee);
 }
 </style>
