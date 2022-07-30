@@ -9,44 +9,29 @@
                 :style="{ backgroundImage: 'url(../src/assets/banner/4.jpeg)'}"></div>
         </template>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">WE DELIVER VALUES</h1>
+            <h1 class="title" data-swiper-parallax="-300">PROFESSIONAL IN METALS</h1>
             <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
-                    velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor
-                    porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac
-                    laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-                    libero. Aenean feugiat non eros quis feugiat.
+                   We know metals over 20 years. We control every step from raw material to the finished products. We supply the good quality products to our customers.
                 </p>
             </div>
         </swiper-slide>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">WE OFFER PROFESSIONAL SERVICE</h1>
+            <h1 class="title" data-swiper-parallax="-300">DELIVEY IN TIME</h1>
             <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
-                    velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor
-                    porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac
-                    laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-                    libero. Aenean feugiat non eros quis feugiat.
+                    We have the professional supply team and shipping Agent. We will delivery in time for every order.
                 </p>
             </div>
         </swiper-slide>
         <swiper-slide class="slide">
-            <h1 class="title" data-swiper-parallax="-300">WE KNOW METAL</h1>
+            <h1 class="title" data-swiper-parallax="-300">SUPPLY GOOD PACKAGE</h1>
             <!-- <h2 class="subtitle" data-swiper-parallax="-200">Subtitle</h2> -->
             <div class="text" data-swiper-parallax="-100">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam dictum mattis
-                    velit, sit amet faucibus felis iaculis nec. Nulla laoreet justo vitae porttitor
-                    porttitor. Suspendisse in sem justo. Integer laoreet magna nec elit suscipit, ac
-                    laoreet nibh euismod. Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-                    ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec, tincidunt ut
-                    libero. Aenean feugiat non eros quis feugiat.
+                    We supply professional package. Avoid any damage during the shipping.
                 </p>
             </div>
         </swiper-slide>

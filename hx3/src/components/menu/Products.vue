@@ -4,79 +4,41 @@
             <li>
                 <div class="title">
                     <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
+                    <span class="desc">Titanium</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Titanium Bar</a></li>
+                    <li><a href="product">Titanium Plate/Sheet</a></li>
+                    <li><a href="product">Titanium Pipe/Tube</a></li>
+                    <li><a href="product">Titanium Wire</a></li>
+                    <li><a href="product">Titanium Forging</a></li>
+                    <li><a href="product">Titanium Fitting/Flange</a></li>
+                    <li><a href="product">Titanium & Titanium Alloy Clad plate</a></li>
                 </ol>
             </li>
             <li>
                 <div class="title">
                     <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
+                    <span class="desc">Stainless Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Stainless Steel Pipe/Tube</a></li>
+                    <li><a href="product">Stainless Steel Plate/sheet</a></li>
+                    <li><a href="product">Stainless Steel Bar</a></li>
+                    <li><a href="product">Stainless Steel Flange/Fitting</a></li>
                 </ol>
             </li>
             <li>
                 <div class="title">
                     <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
+                    <span class="desc">Other Metals</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                </ol>
-            </li>
-            <li>
-                <div class="title">
-                    <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
-                </div>
-                <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                </ol>
-            </li>
-            <li>
-                <div class="title">
-                    <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
-                </div>
-                <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                </ol>
-            </li>
-            <li>
-                <div class="title">
-                    <ProductIcon class="icon" />
-                    <span class="desc">Carbon Steel</span>
-                </div>
-                <ol class="products">
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
-                    <li><a href="product">Stainless Steel Hot Rolled No.1 Coil</a></li>
+                    <li><a href="product">Nickel Alloy</a></li>
+                    <li><a href="product">Zr702 Products</a></li>
+                    <li><a href="product">Niobium Products</a></li>
+                    <li><a href="product">Tantalum Products</a></li>
+                    <li><a href="product">Tungsten Products</a></li>
                 </ol>
             </li>
         </ul>
@@ -97,7 +59,7 @@ export default {
 .list {
     /* width: 100%; */
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 4rem;
     list-style: none;
     display: flex;
     justify-content: flex-start;
@@ -105,19 +67,26 @@ export default {
     border-radius: 5px;
     flex-wrap: wrap;
     text-align: center;
+    font-size: 1.1rem;
 }
 
 .list>li {
     /* flex: 0.25; */
-    width: 24%;
-    height: 15rem;
+    width: 33%;
+    height: 18rem;
     margin: 0.5rem 0;
-
+    border-left: 1px solid #cccccc69;
+    text-align: left;
+    padding-left: 5rem;
 }
 
-.list>li:not(:nth-child(4n)) {
+.list>li:nth-child(1) {
+   border-left: none; 
+}
+
+/* .list>li:not(:nth-child(4n)) {
     margin-right: calc(4%/3)
-}
+} */
 
 .title {
     position: relative;
@@ -128,13 +97,14 @@ export default {
     transform: scale(2.5);
     position: absolute;
     top: 3rem;
-    left: 5rem;
+    left: 3rem;
+    z-index: -1;
 }
 
 .title>.desc {
     font-size: 1.5rem;
     color: #1e88e5;
-    margin: 1rem 0 0 1.5rem;
+    margin: 1rem 0 0 4.5rem;
     display: inline-block;
 }
 
@@ -144,8 +114,9 @@ export default {
     margin: 1.5rem 0.5rem;
     list-style: none;
     padding: 0;
-    line-height: 1.8rem;
+    line-height: 2rem;
     background-color: #fff;
+    z-index: 999;
 }
 
 .products>li>a {
