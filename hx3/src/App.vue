@@ -10,7 +10,7 @@ import Footer from '@/components/Footer.vue'
   <div class="content">
     <RouterView />
   </div>
-  <video-background src="src/assets/show.mp4" class="videobox">
+  <video-background src="src/assets/show2.mp4" class="videobox">
     <h1>Integrity · Profession · Efficiency</h1>
   </video-background>
   <Footer />
@@ -38,6 +38,6 @@ import Footer from '@/components/Footer.vue'
   text-align: center;
   height: 40rem;
   line-height: 40rem;
-  background: linear-gradient(rgb(0 0 0 / 16%), #2286ee);
+  background: linear-gradient(rgb(0 0 0 / 24%), #1e88e5);
 }
 </style>
