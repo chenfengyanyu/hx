@@ -7,5 +7,8 @@ import Banner from '@/components/Banner.vue'
   <main>
     <Banner />
     <TheContainer />
+    <video-background src="src/assets/show2.mp4" class="videobox">
+      <h1>Integrity · Profession · Efficiency</h1>
+    </video-background>
   </main>
 </template>

@@ -1,12 +1,12 @@
 
   <template>
     <swiper class="swiper" :style="{
-        '--swiper-navigation-color': '#000000cf',
-        '--swiper-pagination-color': '#000000cf'
+        '--swiper-navigation-color': '#fff',
+        '--swiper-pagination-color': '#fff'
     }" :modules="modules" :speed="600" :parallax="true" :navigation="true" :pagination="{ clickable: true }" autoplay>
         <template #container-start>
             <div class="parallax-bg" data-swiper-parallax="-23%"
-                :style="{ backgroundImage: 'url(../src/assets/banner/3.jpg)' }"></div>
+                :style="{ backgroundImage: 'url(../src/assets/banner/4.jpeg)'}"></div>
         </template>
         <swiper-slide class="slide">
             <h1 class="title" data-swiper-parallax="-300">WE DELIVER VALUES</h1>
@@ -97,7 +97,7 @@ export default {
     position: absolute;
     left: 0;
     top: 0;
-    width: 130%;
+    width: 110%;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -114,16 +114,16 @@ export default {
 }
 
 .slide .title {
-    background: rgb(0 0 0 / 40%);
+    background: rgb(0 0 0 / 50%);
     font-size: 4rem;
-    padding: 2rem 2rem 0;
+    padding: 3rem 3rem 0;
     border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .slide p {
-    background: rgb(0 0 0 / 40%);
-    font-size: 1.4rem;
-    padding: 0 2rem 3rem;
+    background: rgb(0 0 0 / 50%);
+    font-size: 1.6rem;
+    padding: 0 3rem 3rem;
     border-radius: 0 0 0.5rem 0.5rem;
     text-align: justify;
 }

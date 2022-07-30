@@ -10,9 +10,6 @@ import Footer from '@/components/Footer.vue'
   <div class="content">
     <RouterView />
   </div>
-  <video-background src="src/assets/show2.mp4" class="videobox">
-    <h1>Integrity · Profession · Efficiency</h1>
-  </video-background>
   <Footer />
 </template>
 
