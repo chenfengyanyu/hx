@@ -1,22 +1,22 @@
 <template>
   <div class="banner">
     <tabs @clicked="tabClicked" @changed="tabChanged">
-      <tab name="Stainless Steel">
+      <tab name="Titanium">
         <img src="../assets/tab/1.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Carbon Steel">
+      <tab name="Stainless Steel">
         <img src="../assets/tab/2.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Coated Steel">
+      <tab name="Nickel Alloy">
         <img src="../assets/tab/3.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Pipe/ Tube">
+      <tab name="Zirconium">
         <img src="../assets/tab/4.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Bar">
+      <tab name="Niobium">
         <img src="../assets/tab/5.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Wire Rod">
+      <tab name="Tantalum">
         <img src="../assets/tab/6.jpeg" width="100%" height="100%">
       </tab>
     </tabs>
@@ -38,6 +38,7 @@ export default {
 
 <style>
 .tabs-component-tabs {
+  height: 10rem;
   display: flex;
   list-style: none;
   margin: 0;
@@ -73,13 +74,17 @@ export default {
     position: absolute;
     bottom: 1rem;
     left: 0;
-    height: 7rem;
+    height: 5rem;
     line-height: 13rem;
     vertical-align: text-bottom;
 }
 
 .tabs-component-tab-a:hover {
   color: #1e88e5;
+  filter: grayscale(0);
+}
+.tabs-component-tab-a:visited {
+  color: #000;
   filter: grayscale(0);
 }
 
@@ -93,74 +98,81 @@ export default {
 }
 
 .tabs-component-tabs>li:nth-child(1) {
-  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/11.jpeg) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 .tabs-component-tabs>li:nth-child(2) {
-  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/12.jpg) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 .tabs-component-tabs>li:nth-child(3) {
-  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/13.jpg) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 .tabs-component-tabs>li:nth-child(4) {
-  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/14.jpg) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 .tabs-component-tabs>li:nth-child(5) {
-  background: url(/src/assets/tab/icon1.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/15.webp) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 .tabs-component-tabs>li:nth-child(6) {
-  background: url(/src/assets/tab/icon2.svg) no-repeat center 1rem;
+  background: url(/src/assets/tab/16.jpg) no-repeat center 1rem;
   background-size: 25%;
-  filter: grayscale(1);
+  /* filter: grayscale(1); */
+  filter: opacity(0.6);
 }
 
 @media (max-width: 1024px) {
   .tabs-component-tabs>li {
-    background-size: 38% !important;
+    background-size: 88% !important;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
   .tabs-component-tabs>li {
-    background-size: 34% !important;
+    background-size: 78% !important;
   }
 }
 @media (min-width: 1200px) {
   .tabs-component-tabs>li {
-    background-size: 32% !important;
+    background-size: 78% !important;
   }
 }
 @media (min-width: 1300px) {
   .tabs-component-tabs>li {
-    background-size: 28% !important;
+    background-size: 68% !important;
   }
 }
 @media (min-width: 1400px) {
   .tabs-component-tabs>li {
-    background-size: 26% !important;
+    /* background-size: 26% !important; */
+    background-size: 65% !important;
   }
 }
 @media (min-width: 1500px) {
   .tabs-component-tabs>li {
-    background-size: 24% !important;
+    background-size: 60% !important;
   }
 }
 @media (min-width: 1600px) {
   .tabs-component-tabs>li {
-    background-size: 22% !important;
+    background-size: 55% !important;
   }
 }
 /* @media (min-width: 1700px) {
