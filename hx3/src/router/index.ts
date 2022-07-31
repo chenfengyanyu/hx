@@ -23,6 +23,21 @@ const router = createRouter({
       component: () => import('../views/ProductView.vue')
     },
     {
+      path: '/pdf',
+      name: 'pdf',
+      component: () => import('../views/PDFView.vue')
+    },
+    {
+      path: '/pdf2',
+      name: 'pdf2',
+      component: () => import('../views/PDF2View.vue')
+    },
+    {
+      path: '/iso',
+      name: 'iso',
+      component: () => import('../views/ISOView.vue')
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue')

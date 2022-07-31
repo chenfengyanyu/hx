@@ -18,9 +18,11 @@
     "vue": "^3.2.37",
     "vue-awesome-swiper": "^5.0.1",
     "vue-imageview": "^3.1.9",
+    "vue-pdf-embed": "^1.1.4",
     "vue-responsive-video-background-player": "^2.2.3",
     "vue-router": "^4.0.16",
     "vue-stripe-menu": "^2.1.1",
+    "vue3-pdfjs": "^0.1.6",
     "vue3-tabs-component": "^1.1.0",
     "vxe-table": "^4.2.8",
     "xe-utils": "^3.5.4"

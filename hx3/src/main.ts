@@ -5,6 +5,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import {Tabs, Tab} from 'vue3-tabs-component'
 import { useTable } from './plugins/vxe-table'
 import VideoBackground from 'vue-responsive-video-background-player'
+// import VuePdf from 'vue3-pdfjs'
 
 
 import App from './App.vue'
@@ -28,8 +29,8 @@ app.component('tab', Tab)
 // https://github.com/avidofood/vue-responsive-video-background-player#readme
 app.component('video-background', VideoBackground)
 
-
-
+// https://www.npmjs.com/package/vue3-pdfjs/v/latest
+// app.use(VuePdf)
 
 app.mount('#app')
 

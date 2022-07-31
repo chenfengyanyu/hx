@@ -1,17 +1,17 @@
 <template>
   <div class="quality-dropdown-menu">
-    <ul class="package-list">
+    <ul class="quality-list">
       <li>
-        <img src="../../assets/package/1.jpeg" />
-        <div class="desc">Coil Exchange Center</div>
+        <img src="../../assets/quality/iso1.png" />
+        <div class="desc"><a href="iso">SGS Inspection Report</a></div>
       </li>
       <li>
-        <img src="../../assets/package/1.jpeg" />
-        <div class="desc">Coil Exchange Center</div>
+        <img src="../../assets/quality/sgs.avif" />
+        <div class="desc"><a href="pdf2">Stainless Steel 316L Square Pipe Inpeection Report</a></div>
       </li>
       <li>
-        <img src="../../assets/package/1.jpeg" />
-        <div class="desc">Coil Exchange Center</div>
+        <img src="../../assets/quality/sgs.avif" />
+        <div class="desc"><a href="pdf">Stainless Steel 316L Square Pipe UT Testing Report</a></div>
       </li>
 
     </ul>
@@ -25,8 +25,7 @@ export default {
 </script>
 
 <style scoped>
-.package-list {
-  max-width: 1024px;
+.quality-list {
   list-style: none;
   margin: 3rem auto;
   display: flex;
@@ -35,18 +34,30 @@ export default {
   justify-content: space-between;
 }
 
-.package-list>li {
-  /* flex: 25%; */
-  cursor: pointer;
+.quality-list>li {
+  flex: 33%;
+  /* margin: 0 0 5rem 0; */
+  /* cursor: pointer; */
 }
-.package-list>li>img {
- width: 18rem;
+
+.quality-list>li>img {
+  height: 12rem;
+  width: 18rem;
+  border-radius: 0.5rem;
+  filter: opacity(0.9);
 }
-.package-list .desc{
+
+.quality-list .desc {
   color: #000;
   font-size: 1.5rem;
 }
-.package-list .desc:hover{
+
+.desc a {
+  color: #525253;
+  text-decoration: none;
+}
+
+.desc a:hover {
   color: #1e88e5;
 }
 </style>
