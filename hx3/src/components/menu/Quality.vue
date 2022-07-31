@@ -2,15 +2,15 @@
   <div class="quality-dropdown-menu">
     <ul class="quality-list">
       <li>
-        <img src="../../assets/quality/iso1.png" />
+        <img src="../../assets/quality/iso.jpeg" />
         <div class="desc"><a href="iso">SGS Inspection Report</a></div>
       </li>
       <li>
-        <img src="../../assets/quality/sgs.avif" />
+        <img src="../../assets/quality/sgs.png" />
         <div class="desc"><a href="pdf2">Stainless Steel 316L Square Pipe Inpeection Report</a></div>
       </li>
       <li>
-        <img src="../../assets/quality/sgs.avif" />
+        <img src="../../assets/quality/sgs.png" />
         <div class="desc"><a href="pdf">Stainless Steel 316L Square Pipe UT Testing Report</a></div>
       </li>
 
@@ -27,11 +27,14 @@ export default {
 <style scoped>
 .quality-list {
   list-style: none;
-  margin: 3rem auto;
+  margin: 3rem auto 0;
   display: flex;
   padding: 0;
   text-align: center;
   justify-content: space-between;
+  /* border: 1px solid green; */
+  background: #fff;
+  padding-bottom: 3rem;
 }
 
 .quality-list>li {
@@ -41,7 +44,7 @@ export default {
 }
 
 .quality-list>li>img {
-  height: 12rem;
+  height: 18rem;
   width: 18rem;
   border-radius: 0.5rem;
   filter: opacity(0.9);
