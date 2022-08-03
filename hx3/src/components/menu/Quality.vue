@@ -58,6 +58,8 @@ export default {
 .desc a {
   color: #525253;
   text-decoration: none;
+  width: 24rem;
+  display: inline-block;
 }
 
 .desc a:hover {

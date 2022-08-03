@@ -1,6 +1,7 @@
 <template>
   <div>
     <Infobox :imgsrc="InfoImg" title="Quality Control" />
+    <Quality/>
     <vue-pdf-embed :source="source1" />
   </div>
 </template>
@@ -9,6 +10,7 @@
 import Infobox from '@/components/Infobox.vue'
 import VuePdfEmbed from 'vue-pdf-embed'
 import InfoImg from '@/assets/bg.jpeg'
+import Quality from '../components/menu/Quality.vue'
 
 // OR THE FOLLOWING IMPORT FOR VUE 2
 // import VuePdfEmbed from 'vue-pdf-embed/dist/vue2-pdf-embed'
@@ -16,8 +18,9 @@ import InfoImg from '@/assets/bg.jpeg'
 export default {
   components: {
     Infobox,
-    VuePdfEmbed
-  },
+    VuePdfEmbed,
+    Quality
+},
   data() {
     return {
       InfoImg: InfoImg,
