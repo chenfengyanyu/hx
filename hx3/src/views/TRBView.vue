@@ -1,26 +1,37 @@
 <template>
   <main>
-    <Infobox :imgsrc="InfoImg" title="Product" />
+    <Infobox :imgsrc="InfoImg" title="Titanium Round Bar" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/stainless-steel-round-bar/1.jpg" />
+        <img src="../assets/product/trb/1.jpg" />
       </div>
       <div class="right">
-        <div class="title">Stainless Steel Bar</div>
-        <div class="subtitle">Stainless Steel Round Bar/ Flat Bar/ Hexagon Bar/Square Bar/ Angle Bar</div>
-        <div class="desc">High quality stainless steel bar supplier, Competitive price, ISO system certification, Can
-          accept any Third Party Testing inspection quality. Have 25000 tons inventory of stainless steel products every
-          month, Can delivery within 5 days, 3 times quality detection before shipping
+        <div class="title">Titanium Round Bar</div>
+        <div class="subtitle">Titanium Industry Bar/ Medical Bar/ 3D Printing Spherical Powder Bar/ Military Bar</div>
+        <div class="desc">Advanced Metals Co., Ltd is manufacture and export large quantities of all kinds of titanium
+          Bar and Rod to the world markets every year. Our titanium bar products system includes: Commercially bar and
+          6AL-4V bar including round, square and rectangular bars. Titanium bars are forged by the 2500KN, 3150t
+          Hydraulic forging press or GMF Precision forging machine or followed by rolled and swaged. All of our titanium
+          bar are produce by 100% titanium sponge. Never add any titanium scrap to make sure the quality is very good.
+          We welcome any Third Party to inspect our quality. We also do the UT testing and PMI testing to make sure
+          The quality will never have any problem risks. We will supply an MTC together with our titanium bar.
+          <br>Most of time, we have stock the material for all the kinds of titanium bar that our Clients usually to
+          buy. If
+          we have the stock titanium bar and we could ship the bar to you the same day or the next days. We also have no
+          minimum order requirements, so whether you need a single round bar or a major shipment, we can provide the
+          materials you need. If you have any other need of request. Such as cut the bar, or want to ship by the
+          Express. What you do is just tell me and you could wait the bar in your office
+
         </div>
       </div>
     </div>
     <div class="mytable">
-      <div class="title">Available Products</div>
+      <div class="title">Titanium Bar</div>
       <BasicTable :productdatas="availableProducts" />
     </div>
     <div class="mytable">
-      <div class="title">Chemical Composition</div>
-      <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div>
+      <div class="title">Titanium Bar for 3D Printing Spherical Powder</div>
+      <!-- <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div> -->
       <BasicTable :productdatas="chemicalComposition" />
     </div>
     <div class="mytable">
@@ -63,17 +74,16 @@ export default defineComponent({
       InfoImg: InfoImg,
       availableProducts: {
         config: [
-          { field: 'shape', title: 'Stainless Steel Bar Shape' },
-          { field: 'type', title: 'Stainless Steel Bar Grade/Type' },
-          { field: 'size', title: 'Stainless Steel Bar Sizes' }
+          { field: 'grade', title: 'Grade' },
+          { field: 'spec', title: 'SPECIFICATIONS' }
         ],
         moredata: [
-          { id: 10001, shape: 'Stainless Steel Flat Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A, Edge Conditioned, True Mill Edge', size: 'Thickness: 3.175mm - 50.8mm\nWidths: 12.7mm - 203.2mm' },
-          { id: 10002, shape: 'Stainless Steel Half Round Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 4.76mm - 19.3mm' },
-          { id: 10003, shape: 'Stainless Steel Hexagon Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 9.6mm - 76mm' },
-          { id: 10004, shape: 'Stainless Steel Round Bar', type: 'Grades: 303, 304/304L, 316/316L, 410, 416, 440C, 13-8 , 15-5 , 17-4 (630), 17-4 H1150, 2205\nType: Accuracy, Annealed, BSQ, Coiled, Cold Finished, Cond A, Hot Rolled, Rough Turned, TGP, PSQ, Forged', size: 'Diameter: 3.175mm-304.8mm' },
-          { id: 10005, shape: 'Stainless Steel Square Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 3.175mm - 76.2mm' },
-          { id: 10006, shape: 'Stainless Steel Angle Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Thickness :2mm-16mm\nWidth: 15mm-94mm' }
+          { id: 10001, grade: 'Ti6AL4V; 6AL4VELI, TC4', spec: 'ASTM B348; AMS 4928; AMS 6931; ASTM F136 ; ISO 5832-3;\nAMS 4967; AMS 4965; AMS-T-9047; AMS 6931; GB/T 3620.1; GB/T 2965; BS 2TA11' },
+          { id: 10002, grade: 'Ti-6242', spec: 'AMS4975, AMS-T-9047' },
+          { id: 10003, grade: 'Ti-6242; TC19', spec: 'AMS4981; AMS-T-9047; GB/T 2965' },
+          { id: 10004, grade: 'TA 15 Ti-6.5Al-1Mo-1V-2Zr', spec: 'GB/T 3620.1; GB/T 2965' },
+          { id: 10005, grade: 'CP-GRADES 1,2,3,4,7,12', spec: 'ASTM B348; GB/T 3620.1; GB/T 2965, ASTM F67; ISO5832-2' },
+          { id: 10006, grade: 'Size', spec: 'Dia.4mm-350mm x L 6000mm' }
         ]
       },
       chemicalComposition: {

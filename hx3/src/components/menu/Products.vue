@@ -7,13 +7,13 @@
                     <span class="desc">Titanium</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Titanium Bar</a></li>
+                    <li><a href="trb">Titanium Round Bar</a></li>
                     <li><a href="product">Titanium Plate/Sheet</a></li>
                     <li><a href="product">Titanium Pipe/Tube</a></li>
-                    <li><a href="product">Titanium Wire</a></li>
+                    <li><a href="product">Titanium Welding wire</a></li>
                     <li><a href="product">Titanium Forging</a></li>
                     <li><a href="product">Titanium Fitting/Flange</a></li>
-                    <li><a href="product">Titanium & Titanium Alloy Clad plate</a></li>
+                    <li><a href="product">Ti & Ti Alloy Clad plate</a></li>
                 </ol>
             </li>
             <li>
@@ -22,10 +22,11 @@
                     <span class="desc">Stainless Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Stainless Steel Pipe/Tube</a></li>
-                    <li><a href="product">Stainless Steel Plate/sheet</a></li>
-                    <li><a href="product">Stainless Steel Bar</a></li>
+                    <li><a href="product">Stainless Steel Pipe</a></li>
+                    <li><a href="product">Stainless Steel Plate & Sheet</a></li>
+                    <li><a href="product">Stainless Steel Round Bar</a></li>
                     <li><a href="product">Stainless Steel Flange/Fitting</a></li>
+                    <li><a href="product">Stainless Steel Filler Wire</a></li>
                 </ol>
             </li>
             <li>
@@ -35,10 +36,10 @@
                 </div>
                 <ol class="products">
                     <li><a href="product">Nickel Alloy</a></li>
-                    <li><a href="product">Zr702 Products</a></li>
-                    <li><a href="product">Niobium Products</a></li>
-                    <li><a href="product">Tantalum Products</a></li>
-                    <li><a href="product">Tungsten Products</a></li>
+                    <li><a href="product">Niobium </a></li>
+                    <li><a href="product">Tantalum</a></li>
+                    <li><a href="product">Tungsten</a></li>
+                    <li><a href="product">Zirconium</a></li>
                 </ol>
             </li>
         </ul>
