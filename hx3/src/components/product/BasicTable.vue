@@ -45,5 +45,6 @@ export default defineComponent({
 .mytable-style .vxe-header--column.col-blue {
     background-color: #1e88e5;
     color: #fff;
+    /* text-align: center; */
 }
 </style>

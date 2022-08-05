@@ -32,12 +32,24 @@
     <div class="mytable">
       <div class="title">Titanium Bar for 3D Printing Spherical Powder</div>
       <!-- <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div> -->
-      <BasicTable :productdatas="chemicalComposition" />
+      <BasicTable :productdatas="spherical" />
     </div>
     <div class="mytable">
-      <div class="title">Mechanical Properties</div>
-      <div class="subtitle">Long Products, Annealed</div>
-      <BasicTable :productdatas="chemicalComposition" />
+      <div class="title">Chemical Composition(max) (For Your Reference)</div>
+      <!-- <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div> -->
+      <!-- <BasicTable :productdatas="composition" /> -->
+      <vxe-table
+          border
+          height="300"
+          :column-config="{resizable: true}"
+          :scroll-y="{enabled: false}"
+          :span-method="mergeRowMethod"
+          :data="mergeCol.tableData">
+          <vxe-column type="seq" width="60"></vxe-column>
+          <vxe-column field="key" title="Key"></vxe-column>
+          <vxe-column field="content" title="Translate"></vxe-column>
+          <vxe-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN' }, {label: 'English', value: 'en_US'}]"></vxe-column>
+        </vxe-table>
     </div>
     <div class="mytable">
       <div class="title">Related Products</div>
@@ -48,11 +60,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, reactive } from 'vue'
 import Infobox from '@/components/Infobox.vue'
 import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
+import type { VxeTablePropTypes } from 'vxe-table'
 
 import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
 import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
@@ -68,6 +81,48 @@ export default defineComponent({
     Infobox,
     BasicTable,
     ImageBox
+  },
+  setup() {
+    const mergeCol = reactive({
+      tableData: [
+        { id: 10001, key: 'app.label.name', content: '名称', language: 'zh_CN' },
+        { id: 10002, key: 'app.label.name', content: 'Name', language: 'en_US' },
+        { id: 10003, key: 'app.label.sex', content: '性别', language: 'zh_CN' },
+        { id: 10004, key: 'app.label.sex', content: 'Sex', language: 'en_US' },
+        { id: 10005, key: 'app.label.age', content: '年龄', language: 'zh_CN' },
+        { id: 10006, key: 'app.label.age', content: 'Age', language: 'en_US' },
+        { id: 10007, key: 'app.label.role', content: '角色', language: 'zh_CN' },
+        { id: 10008, key: 'app.label.role', content: 'Role', language: 'en_US' },
+        { id: 10009, key: 'app.label.address', content: '地址', language: 'zh_CN' },
+        { id: 10010, key: 'app.label.address', content: 'Address', language: 'en_US' },
+        { id: 10011, key: 'app.label.nickname', content: '昵称', language: 'zh_CN' },
+        { id: 10012, key: 'app.label.nickname', content: 'Nickname', language: 'en_US' }
+      ]
+    })
+    // 通用行合并函数（将相同多列数据合并为一行）
+    const mergeRowMethod: VxeTablePropTypes.SpanMethod = ({ row, _rowIndex, column, visibleData }) => {
+      const fields = ['key']
+      const cellValue = row[column.field]
+      if (cellValue && fields.includes(column.field)) {
+        const prevRow = visibleData[_rowIndex - 1]
+        let nextRow = visibleData[_rowIndex + 1]
+        if (prevRow && prevRow[column.field] === cellValue) {
+          return { rowspan: 0, colspan: 0 }
+        } else {
+          let countRowspan = 1
+          while (nextRow && nextRow[column.field] === cellValue) {
+            nextRow = visibleData[++countRowspan + _rowIndex]
+          }
+          if (countRowspan > 1) {
+            return { rowspan: countRowspan, colspan: 1 }
+          }
+        }
+      }
+    }
+    return {
+      mergeCol,
+      mergeRowMethod
+    }
   },
   data() {
     return {
@@ -86,74 +141,17 @@ export default defineComponent({
           { id: 10006, grade: 'Size', spec: 'Dia.4mm-350mm x L 6000mm' }
         ]
       },
-      chemicalComposition: {
+      spherical: {
         config: [
-          { field: 'col1', title: 'UNS' },
-          { field: 'col2', title: 'ASTM' },
-          { field: 'col3', title: 'EN' },
-          { field: 'col4', title: 'JIS' },
-          { field: 'col5', title: 'C%' },
-          { field: 'col6', title: 'Mn%' },
-          { field: 'col7', title: 'P%' },
-          { field: 'col8', title: 'S%' },
-          { field: 'col9', title: 'Si%' },
-          { field: 'col10', title: 'Cr%' },
-          { field: 'col11', title: 'Ni%' },
-          { field: 'col12', title: 'Mo%' }
+          { field: 'type', title: 'Type' },
+          { field: 'info', title: 'Info' }
         ],
         moredata: [
-          {
-            id: 10003, col1: 'S30100', col2: '301', col3: '1.4319', col4: 'SUS301', col5: '≤0.15', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤1.00', col10: '16.0-18.0', col11: '6.0-8.0', col12: '-'
-          },
-          {
-            id: 10004, col1: 'S30400', col2: '304', col3: '1.4301', col4: 'SUS304', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-10.5', col12: '-'
-          },
-          {
-            id: 10005, col1: 'S30403', col2: '304L', col3: '1.4306', col4: 'SUS304L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-12.0', col12: '-'
-          },
-          {
-            id: 10006, col1: 'S30908', col2: '309S', col3: '1.4833', col4: 'SUS309S', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '22.0-24.0', col11: '12.0-15.0', col12: '-'
-          },
-          {
-            id: 10007, col1: 'S31008', col2: '310S', col3: '1.4845', col4: 'SUS310S', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤1.50', col10: '24.0-26.0', col11: '19.0-22.0', col12: '-'
-          },
-          {
-            id: 10008, col1: 'S31600', col2: '316', col3: '1.4401', col4: 'SUS316', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
-          },
-          {
-            id: 10009, col1: 'S31603', col2: '316L', col3: '1.4404', col4: 'SUS316L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
-          },
-          {
-            id: 10010, col1: 'S31703', col2: '317L', col3: '1.4438', col4: 'SUS317L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '11.0-15.0', col12: '3.0-4.0'
-          },
-          {
-            id: 10011, col1: 'S32100', col2: '321', col3: '1.4541', col4: 'SUS321', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-12.0', col12: '-'
-          },
-          {
-            id: 10012, col1: 'S34700', col2: '347', col3: '1.4550', col4: 'SUS347', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-13.0', col12: '-'
-          },
-          {
-            id: 10013, col1: 'S32750', col2: 'SAD2507', col3: '1.4410', col4: '-', col5: '≤0.03', col6: '≤1.2',
-            col7: '≤0.035', col8: '≤0.02', col9: '≤0.80', col10: '24.0-26.0', col11: '6.0-8.0', col12: '3.0-5.0'
-          },
-          {
-            id: 10014, col1: 'S31803', col2: 'SAF2205', col3: '1.4462', col4: '-', col5: '≤0.03', col6: '≤2.0',
-            col7: '≤0.03', col8: '≤0.02', col9: '≤1.00', col10: '21.0-23.0', col11: '4.0-6.5', col12: '2.5-3.5'
-          },
-          {
-            id: 10015, col1: 'N08904', col2: '904L', col3: '1.4539', col4: '-', col5: '≤0.03', col6: '≤2.0',
-            col7: '≤0.035', col8: '≤0.03', col9: '≤1.00', col10: '18.0-20.0', col11: '23.0-25.0', col12: '3.0-4.0'
-          },
+          { id: 10003, type: 'Application', info: 'Titanium Spherical Powder, Additive Manufacturing Powders' },
+          { id: 10004, type: 'Specification', info: 'ASTM F136, ISO5832-3, ASTM B348' },
+          { id: 10005, type: 'Designation', info: 'Grade 5, Grad5 ELI, Ti-6A-4V, Grade7, Grade9, Grade12' },
+          { id: 10006, type: 'Diameter', info: 'Φ2mm-Φ250mm' },
+          { id: 10007, type: 'Length', info: 'Max.6000mm' }
         ]
       },
       mechanicalProperties: {
@@ -178,6 +176,44 @@ export default defineComponent({
           { id: 100010, col1: '416', col2: '75', col3: '40', col4: '30', col5: '65', col6: '155' },
           { id: 100011, col1: '420', col2: '95', col3: '50', col4: '25', col5: '-', col6: '241' },
           { id: 100012, col1: '2205', col2: '90', col3: '65', col4: '25', col5: '-', col6: '217' },
+        ]
+      },
+      composition: {
+        config: [
+          { field: 'specification', title: 'Specification' },
+          { field: 'material', title: 'Material' },
+          { field: 'col3', title: 'C(max)' },
+          { field: 'col4', title: 'O(max)' },
+          { field: 'col5', title: 'N(max)' },
+          { field: 'col6', title: 'H(max)' },
+          { field: 'col7', title: 'Fe(max)' },
+          { field: 'col8', title: 'Al' },
+          { field: 'col9', title: 'V' },
+          { field: 'col10', title: 'Pd' },
+          { field: 'col11', title: 'Ni' },
+          { field: 'col12', title: 'Mo' }
+        ],
+        moredata: [
+          {
+            id: 10001, specification: 'ASTM B-348\nASTM F67', material: 'Gr1', col3: '0.08', col4: '0.18',
+            col5: '0.03', col6: '0.015', col7: '0.20', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+          },
+          {
+            id: 10002, specification: 'ASTM B-348\nASTM F67', material: 'Gr2', col3: '0.08', col4: '0.25',
+            col5: '0.03', col6: '0.015', col7: '0.30', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+          },
+          {
+            id: 10003, specification: 'ASTM B-348\nASTM F67', material: 'Gr3', col3: '0.08', col4: '0.35',
+            col5: '0.05', col6: '0.015', col7: '0.30', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+          },
+          {
+            id: 10004, specification: 'ASTM B-348\nASTM F67', material: 'Gr4', col3: '0.08', col4: '0.40',
+            col5: '0.05', col6: '0.015', col7: '0.50', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+          },
+          {
+            id: 10005, specification: 'ASTM B-348\nASTM F67', material: 'Gr5', col3: '0.08', col4: '0.20',
+            col5: '0.05', col6: '0.015', col7: '0.40', col8: '5.5-6.75', col9: '3.5-4.5', col10: '-', col11: '-', col12: '-'
+          },
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
