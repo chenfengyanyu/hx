@@ -42,10 +42,16 @@ const router = createRouter({
       name: 'contact',
       component: () => import('../views/ContactView.vue')
     },
+    // Titanium 
     {
       path: '/trb',
       name: 'trb',
       component: () => import('../views/TRBView.vue')
+    },
+    {
+      path: '/tps',
+      name: 'tps',
+      component: () => import('../views/TPSView.vue')
     }
   ]
 })

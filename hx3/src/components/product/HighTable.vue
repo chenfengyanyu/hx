@@ -13,7 +13,7 @@ import type { VxeTablePropTypes } from 'vxe-table'
 export default defineComponent({
     setup(props) {
         const { productdatas, merge} = toRefs(props)
-        console.log(merge.value);
+        // console.log(merge.value);
         const mergeCol = reactive({
             tableData: productdatas.value.moredata
         })
