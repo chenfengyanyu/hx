@@ -16,12 +16,12 @@
           We welcome any Third Party to inspect our quality. We also do the UT testing and PMI testing to make sure
           The quality will never have any problem risks. We will supply an MTC together with our titanium bar.
           <br>Most of time, we have stock the material for all the kinds of titanium bar that our Clients usually to
-          buy. If
-          we have the stock titanium bar and we could ship the bar to you the same day or the next days. We also have no
+          buy.
+          If we have the stock titanium bar and we could ship the bar to you the same day or the next days. We also have
+          no
           minimum order requirements, so whether you need a single round bar or a major shipment, we can provide the
           materials you need. If you have any other need of request. Such as cut the bar, or want to ship by the
           Express. What you do is just tell me and you could wait the bar in your office
-
         </div>
       </div>
     </div>
@@ -37,19 +37,11 @@
     <div class="mytable">
       <div class="title">Chemical Composition(max) (For Your Reference)</div>
       <!-- <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div> -->
-      <!-- <BasicTable :productdatas="composition" /> -->
-      <vxe-table
-          border
-          height="300"
-          :column-config="{resizable: true}"
-          :scroll-y="{enabled: false}"
-          :span-method="mergeRowMethod"
-          :data="mergeCol.tableData">
-          <vxe-column type="seq" width="60"></vxe-column>
-          <vxe-column field="key" title="Key"></vxe-column>
-          <vxe-column field="content" title="Translate"></vxe-column>
-          <vxe-column field="language" title="Language" :filters="[{label: '中文', value: 'zh_CN' }, {label: 'English', value: 'en_US'}]"></vxe-column>
-        </vxe-table>
+      <HighTable :productdatas="composition" merge="spec"/>
+    </div>
+    <div class="mytable">
+      <div class="title">Mechanical Property (For Reference)</div>
+      <HighTable :productdatas="composition2" merge="spec"/>
     </div>
     <div class="mytable">
       <div class="title">Related Products</div>
@@ -60,12 +52,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive } from 'vue'
+import { defineComponent } from 'vue'
 import Infobox from '@/components/Infobox.vue'
 import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
-import type { VxeTablePropTypes } from 'vxe-table'
 
 import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
 import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
@@ -75,54 +66,14 @@ import ssrb5 from '@/assets/product/stainless-steel-round-bar/5.jpeg'
 import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
 import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
 import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
+import HighTable from '../components/product/HighTable.vue'
 
 export default defineComponent({
   components: {
     Infobox,
     BasicTable,
-    ImageBox
-  },
-  setup() {
-    const mergeCol = reactive({
-      tableData: [
-        { id: 10001, key: 'app.label.name', content: '名称', language: 'zh_CN' },
-        { id: 10002, key: 'app.label.name', content: 'Name', language: 'en_US' },
-        { id: 10003, key: 'app.label.sex', content: '性别', language: 'zh_CN' },
-        { id: 10004, key: 'app.label.sex', content: 'Sex', language: 'en_US' },
-        { id: 10005, key: 'app.label.age', content: '年龄', language: 'zh_CN' },
-        { id: 10006, key: 'app.label.age', content: 'Age', language: 'en_US' },
-        { id: 10007, key: 'app.label.role', content: '角色', language: 'zh_CN' },
-        { id: 10008, key: 'app.label.role', content: 'Role', language: 'en_US' },
-        { id: 10009, key: 'app.label.address', content: '地址', language: 'zh_CN' },
-        { id: 10010, key: 'app.label.address', content: 'Address', language: 'en_US' },
-        { id: 10011, key: 'app.label.nickname', content: '昵称', language: 'zh_CN' },
-        { id: 10012, key: 'app.label.nickname', content: 'Nickname', language: 'en_US' }
-      ]
-    })
-    // 通用行合并函数（将相同多列数据合并为一行）
-    const mergeRowMethod: VxeTablePropTypes.SpanMethod = ({ row, _rowIndex, column, visibleData }) => {
-      const fields = ['key']
-      const cellValue = row[column.field]
-      if (cellValue && fields.includes(column.field)) {
-        const prevRow = visibleData[_rowIndex - 1]
-        let nextRow = visibleData[_rowIndex + 1]
-        if (prevRow && prevRow[column.field] === cellValue) {
-          return { rowspan: 0, colspan: 0 }
-        } else {
-          let countRowspan = 1
-          while (nextRow && nextRow[column.field] === cellValue) {
-            nextRow = visibleData[++countRowspan + _rowIndex]
-          }
-          if (countRowspan > 1) {
-            return { rowspan: countRowspan, colspan: 1 }
-          }
-        }
-      }
-    }
-    return {
-      mergeCol,
-      mergeRowMethod
-    }
+    ImageBox,
+    HighTable
   },
   data() {
     return {
@@ -130,7 +81,7 @@ export default defineComponent({
       availableProducts: {
         config: [
           { field: 'grade', title: 'Grade' },
-          { field: 'spec', title: 'SPECIFICATIONS' }
+          { field: 'spec', title: 'Specifications' }
         ],
         moredata: [
           { id: 10001, grade: 'Ti6AL4V; 6AL4VELI, TC4', spec: 'ASTM B348; AMS 4928; AMS 6931; ASTM F136 ; ISO 5832-3;\nAMS 4967; AMS 4965; AMS-T-9047; AMS 6931; GB/T 3620.1; GB/T 2965; BS 2TA11' },
@@ -180,39 +131,111 @@ export default defineComponent({
       },
       composition: {
         config: [
-          { field: 'specification', title: 'Specification' },
+          { field: 'spec', title: 'Specification' },
           { field: 'material', title: 'Material' },
-          { field: 'col3', title: 'C(max)' },
-          { field: 'col4', title: 'O(max)' },
-          { field: 'col5', title: 'N(max)' },
-          { field: 'col6', title: 'H(max)' },
-          { field: 'col7', title: 'Fe(max)' },
-          { field: 'col8', title: 'Al' },
-          { field: 'col9', title: 'V' },
-          { field: 'col10', title: 'Pd' },
-          { field: 'col11', title: 'Ni' },
-          { field: 'col12', title: 'Mo' }
+          { field: 'cmax', title: 'C(max)' },
+          { field: 'omax', title: 'O(max)' },
+          { field: 'nmax', title: 'N(max)' },
+          { field: 'hmax', title: 'H(max)' },
+          { field: 'femax', title: 'Fe(max)' },
+          { field: 'al', title: 'Al' },
+          { field: 'v', title: 'V' },
+          { field: 'pd', title: 'Pd' },
+          { field: 'ni', title: 'Ni' },
+          { field: 'mo', title: 'Mo' }
         ],
         moredata: [
           {
-            id: 10001, specification: 'ASTM B-348\nASTM F67', material: 'Gr1', col3: '0.08', col4: '0.18',
-            col5: '0.03', col6: '0.015', col7: '0.20', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+            id: 10001, spec: 'ASTM B-348\nASTM F67', material: 'Gr1', cmax: '0.08', omax: '0.18',
+            nmax: '0.03', hmax: '0.015', femax: '0.20', al: '', v: '', pd: '', ni: '', mo: ''
           },
           {
-            id: 10002, specification: 'ASTM B-348\nASTM F67', material: 'Gr2', col3: '0.08', col4: '0.25',
-            col5: '0.03', col6: '0.015', col7: '0.30', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+            id: 10002, spec: 'ASTM B-348\nASTM F67', material: 'Gr2', cmax: '0.08', omax: '0.25',
+            nmax: '0.03', hmax: '0.015', femax: '0.30', al: '', v: '', pd: '', ni: '', mo: ''
           },
           {
-            id: 10003, specification: 'ASTM B-348\nASTM F67', material: 'Gr3', col3: '0.08', col4: '0.35',
-            col5: '0.05', col6: '0.015', col7: '0.30', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+            id: 10003, spec: 'ASTM B-348\nASTM F67', material: 'Gr3', cmax: '0.08', omax: '0.35',
+            nmax: '0.05', hmax: '0.015', femax: '0.30', al: '', v: '', pd: '', ni: '', mo: ''
+          },
+           {
+            id: 10004, spec: 'ASTM B-348\nASTM F67', material: 'Gr4', cmax: '0.08', omax: '0.40',
+            nmax: '0.05', hmax: '0.015', femax: '0.50', al: '', v: '', pd: '', ni: '', mo: ''
           },
           {
-            id: 10004, specification: 'ASTM B-348\nASTM F67', material: 'Gr4', col3: '0.08', col4: '0.40',
-            col5: '0.05', col6: '0.015', col7: '0.50', col8: '-', col9: '-', col10: '-', col11: '-', col12: '-'
+            id: 10005, spec: 'ASTM B-348\nASTM F67', material: 'Gr5', cmax: '0.08', omax: '0.20',
+            nmax: '0.05', hmax: '0.015', femax: '0.40', al: '5.5-6.75', v: '3.5-4.5', pd: '', ni: '', mo: ''
           },
           {
-            id: 10005, specification: 'ASTM B-348\nASTM F67', material: 'Gr5', col3: '0.08', col4: '0.20',
-            col5: '0.05', col6: '0.015', col7: '0.40', col8: '5.5-6.75', col9: '3.5-4.5', col10: '-', col11: '-', col12: '-'
+            id: 10006, spec: 'ASTM B-348\nASTM F67', material: 'Gr7', cmax: '0.08', omax: '0.25',
+            nmax: '0.03', hmax: '0.015', femax: '0.30', al: '', v: '', pd: '0.12-0.25', ni: '', mo: ''
+          },
+          {
+            id: 10007, spec: 'ASTM B-348\nASTM F67', material: 'Gr12', cmax: '0.08', omax: '0.25',
+            nmax: '0.03', hmax: '0.015', femax: '0.30', al: '', v: '', pd: '', ni: '0.6-0.9', mo: '0.2-0.4'
+          },
+           {
+            id: 10008, spec: 'ASTM B-348\nASTM F67', material: 'Gr23', cmax: '0.08', omax: '0.13',
+            nmax: '0.03', hmax: '0.0125', femax: '0.25', al: '5.5-6.5', v: '3.5-4.5', pd: '', ni: '', mo: ''
+          },
+          {
+            id: 10009, spec: 'ASTM F136', material: 'Gr5 ELI', cmax: '0.08', omax: '0.13',
+            nmax: '0.05', hmax: '0.012', femax: '0.25', al: '5.5-6.5', v: '3.5-4.5', pd: '', ni: '', mo: ''
+          },
+          {
+            id: 10010, spec: 'AMS4928', material: 'Gr5', cmax: '0.08', omax: '0.2',
+            nmax: '0.05', hmax: '0.0125', femax: '0.30', al: '5.5-6.5', v: '3.5-4.5', pd: '', ni: '', mo: ''
+          }
+        ]
+      },
+      composition2: {
+        config: [
+          { field: 'spec', title: 'Specification' },
+          { field: 'material', title: 'Material' },
+          { field: 'tensile', title: 'Tensile Strength (min)\nMpa' },
+          { field: 'yield', title: 'Yield Strength (min)\nMpa' },
+          { field: 'elongation', title: 'Elongation %\n(min)' },
+          { field: 'area', title: 'Reduction Area %\n(min)' }
+        ],
+        moredata: [
+          {
+            id: 10001, spec: 'ASTM B-348\nASTM F67', material: 'Gr1', tensile: '240', yield: '170',
+            elongation: '24', area: '30'
+          },
+          {
+            id: 10002, spec: 'ASTM B-348\nASTM F67', material: 'Gr2', tensile: '345', yield: '275',
+            elongation: '20', area: '30'
+          },
+          {
+            id: 10003, spec: 'ASTM B-348\nASTM F67', material: 'Gr3', tensile: '450', yield: '380',
+            elongation: '18', area: '30'
+          },
+          {
+            id: 10004, spec: 'ASTM B-348\nASTM F67', material: 'Gr4', tensile: '550', yield: '483',
+            elongation: '15', area: '25'
+          },
+           {
+            id: 10005, spec: 'ASTM B-348\nASTM F67', material: 'Gr5', tensile: '895', yield: '828',
+            elongation: '10', area: '25'
+          },
+          {
+            id: 10006, spec: 'ASTM B-348\nASTM F67', material: 'Gr7', tensile: '345', yield: '275',
+            elongation: '20', area: '30'
+          },
+          {
+            id: 10007, spec: 'ASTM B-348\nASTM F67', material: 'Gr12', tensile: '483', yield: '345',
+            elongation: '18', area: '25'
+          },
+          {
+            id: 10008, spec: 'ASTM B-348\nASTM F67', material: 'Gr23', tensile: '828', yield: '759',
+            elongation: '10', area: '15'
+          },
+          {
+            id: 10009, spec: 'ASTM F136', material: 'Gr5ELI', tensile: '860', yield: '795',
+            elongation: '10', area: '20'
+          },
+          {
+            id: 10010, spec: 'AMS 4928', material: 'Gr5', tensile: '931-896', yield: '862-827',
+            elongation: '10', area: '10'
           },
         ]
       },
