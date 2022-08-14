@@ -52,6 +52,11 @@ const router = createRouter({
       path: '/tps',
       name: 'tps',
       component: () => import('../views/TPSView.vue')
+    },
+    {
+      path: '/tpt',
+      name: 'tpt',
+      component: () => import('../views/TPTView.vue')
     }
   ]
 })

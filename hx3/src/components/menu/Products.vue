@@ -9,7 +9,7 @@
                 <ol class="products">
                     <li><a href="trb">Titanium Round Bar</a></li>
                     <li><a href="tps">Titanium Plate/Sheet</a></li>
-                    <li><a href="product">Titanium Pipe/Tube</a></li>
+                    <li><a href="tpt">Titanium Pipe/Tube</a></li>
                     <li><a href="product">Titanium Welding wire</a></li>
                     <li><a href="product">Titanium Forging</a></li>
                     <li><a href="product">Titanium Fitting/Flange</a></li>
