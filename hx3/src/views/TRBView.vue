@@ -257,7 +257,7 @@ export default defineComponent({
   margin-right: 1.5rem;
   overflow: hidden;
   padding: 0;
-  min-width: 44rem;
+  min-width: 35rem;
 }
 
 .left img {
