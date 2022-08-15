@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Titanium Pipe & Tube" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/tpt/1.jpg" />
+        <img src="../assets/product/tpt/1.jpg" width="100%" />
       </div>
       <div class="right">
         <div class="title">Titanium Pipe & Tube ( Seamless & Welded )</div>

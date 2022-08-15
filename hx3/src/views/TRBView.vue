@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Titanium Round Bar" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/trb/1.jpg" />
+        <img src="../assets/product/trb/1.jpg" width="100%"/>
       </div>
       <div class="right">
         <div class="title">Titanium Round Bar</div>
