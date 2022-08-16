@@ -7,7 +7,7 @@
       </div>
       <div class="right">
         <div class="title">Titanium Forging</div>
-        <div class="subtitle">Titanium Ring/ Disc/Other products as your drawing</div>
+        <!-- <div class="subtitle">Titanium Ring/ Disc/Other products as your drawing</div> -->
         <div class="desc">Titanium forged products is our key products. We forged large quantity of titanium products
           for our customers all over the world.We know titanium over 20 years, we are professional in titanium forging.
           we're committed to supplying our clients with high quality titanium forged products. We are capable of

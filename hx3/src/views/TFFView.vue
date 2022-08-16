@@ -7,7 +7,7 @@
       </div>
       <div class="right">
         <div class="title">Titanium Fitting & Flange</div>
-        <div class="subtitle">Titanium Ring/ Disc/Other products as your drawing</div>
+        <!-- <div class="subtitle">Titanium Ring/ Disc/Other products as your drawing</div> -->
         <div class="desc">AMC ( Advanced Metals Co., Ltd) Manufactured in titanium Gr1, Gr2, Gr4, Gr5, Gr7, Gr12 fitting
           and Flange. Our flanges and include: threaded, slip-on, reducing, blind, weld neck, socket weld and lap joint.
           Our Fitting include: Titanium Elbow, Reducer, Tee, stub ends, Caps, Couplings and Plugs. We have nearly 20
