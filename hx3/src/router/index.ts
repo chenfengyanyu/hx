@@ -67,6 +67,11 @@ const router = createRouter({
       path: '/tf',
       name: 'tf',
       component: () => import('../views/TFView.vue')
+    },
+    {
+      path: '/tff',
+      name: 'tff',
+      component: () => import('../views/TFFView.vue')
     }
   ]
 })

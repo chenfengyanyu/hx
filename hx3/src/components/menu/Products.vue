@@ -12,7 +12,7 @@
                     <li><a href="tpt">Titanium Pipe/Tube</a></li>
                     <li><a href="tww">Titanium Welding wire</a></li>
                     <li><a href="tf">Titanium Forging</a></li>
-                    <li><a href="product">Titanium Fitting/Flange</a></li>
+                    <li><a href="tff">Titanium Fitting/Flange</a></li>
                     <li><a href="product">Ti & Ti Alloy Clad plate</a></li>
                 </ol>
             </li>
