@@ -77,7 +77,14 @@ const router = createRouter({
       path: '/ti',
       name: 'ti',
       component: () => import('../views/TIView.vue')
+    },
+    // Stainless Steel
+    {
+      path: '/ssp2',
+      name: 'ssp2',
+      component: () => import('../views/SSP2View.vue')
     }
+
   ]
 })
 

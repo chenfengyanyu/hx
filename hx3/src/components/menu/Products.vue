@@ -23,7 +23,7 @@
                 </div>
                 <ol class="products">
                     <li><a href="product">Stainless Steel Pipe</a></li>
-                    <li><a href="product">Stainless Steel Plate & Sheet</a></li>
+                    <li><a href="ssp2">Stainless Steel Plate & Sheet</a></li>
                     <li><a href="product">Stainless Steel Round Bar</a></li>
                     <li><a href="product">Stainless Steel Flange/Fitting</a></li>
                     <li><a href="product">Stainless Steel Filler Wire</a></li>
