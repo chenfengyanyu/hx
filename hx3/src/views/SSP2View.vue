@@ -21,18 +21,19 @@
     </div>
     <div class="mytable">
       <div class="title">Standard</div>
-      <HighTable :productdatas="availableProducts" merge="grade"/>
+      <HighTable :productdatas="availableProducts" merge="grade" />
       <!-- <div class="subtitle">Surface: Polished (ground)surface</div> -->
     </div>
+    <div class="mytable">
+      <div class="title">Available Products</div>
+      <HighTable :productdatas="composition" merge="standard" />
+    </div>
+    <div class="mytable">
+      <div class="title">Thickness Tolerance</div>
+      <div class="subtitle">ASTM A240 A480 steel sheet's thickness tolerance</div>
+      <MergeTable :productdatas="composition2" merge="application" />
+    </div>
     <!-- <div class="mytable">
-      <div class="title">Refractory Metal clad plate</div>
-      <HighTable :productdatas="composition" merge="application" />
-    </div>
-    <div class="mytable">
-      <div class="title">Clad Bar</div>
-      <HighTable :productdatas="composition2" merge="application" />
-    </div>
-    <div class="mytable">
       <div class="title">Clad Bar</div>
       <HighTable :productdatas="composition3" merge="" />
     </div> -->
@@ -60,13 +61,15 @@ import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
 import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
 import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
 import HighTable from '../components/product/HighTable.vue'
+import MergeTable from '../components/product/MergeTable.vue'
 
 export default defineComponent({
   components: {
     Infobox,
     BasicTable,
     ImageBox,
-    HighTable
+    HighTable,
+    MergeTable
   },
   data() {
     return {
@@ -82,92 +85,124 @@ export default defineComponent({
         moredata: [
           {
             id: 10001, grade: 'Grade', astm: 'S30100',
-            jis: 'SUS301', aisi: '301',en:'1.4310'
+            jis: 'SUS301', aisi: '301', en: '1.4310'
           },
           {
             id: 10002, grade: 'Grade', astm: 'S30400',
-            jis: 'SUS304', aisi: '304',en:'1.4301'
+            jis: 'SUS304', aisi: '304', en: '1.4301'
           },
           {
             id: 10003, grade: 'Grade', astm: 'S30403',
-            jis: '', aisi: '304L',en:'1.4307'
+            jis: '', aisi: '304L', en: '1.4307'
           },
           {
             id: 10004, grade: 'Grade', astm: 'S31008',
-            jis: 'SUS310S', aisi: '310S',en:'1.4845'
+            jis: 'SUS310S', aisi: '310S', en: '1.4845'
           },
           {
             id: 10005, grade: 'Grade', astm: 'S31603',
-            jis: '', aisi: '316L',en:'1.4404'
+            jis: '', aisi: '316L', en: '1.4404'
           },
           {
             id: 10006, grade: 'Grade', astm: 'S32100',
-            jis: 'SUS321', aisi: '321',en:'1.4541'
+            jis: 'SUS321', aisi: '321', en: '1.4541'
           },
           {
             id: 10007, grade: 'Grade', astm: 'S41008',
-            jis: 'SUS410S', aisi: '410S',en:''
+            jis: 'SUS410S', aisi: '410S', en: ''
           },
           {
             id: 10008, grade: 'Grade', astm: 'S43000',
-            jis: 'SUS430', aisi: '430',en:'1.4016'
+            jis: 'SUS430', aisi: '430', en: '1.4016'
           },
           {
             id: 10009, grade: 'Grade', astm: 'S43932',
-            jis: '', aisi: '',en:'1.4510'
+            jis: '', aisi: '', en: '1.4510'
           },
           {
             id: 10010, grade: 'Grade', astm: 'S444000',
-            jis: 'SUS444', aisi: '444',en:'1.4521'
+            jis: 'SUS444', aisi: '444', en: '1.4521'
           },
           {
             id: 10011, grade: 'Grade', astm: 'S31266',
-            jis: 'SUS316', aisi: '316',en:''
+            jis: 'SUS316', aisi: '316', en: ''
           },
         ]
       },
       composition: {
         config: [
           { field: 'products', title: 'Products' },
-          { field: 'material', title: 'Material' },
-          { field: 'specification', title: 'Specification' },
-          { field: 'application', title: 'Application' }
+          { field: 'standard', title: 'Standard' },
+          { field: 'size', title: 'Size' },
+          { field: 'grade', title: 'Grade' }
         ],
         moredata: [
           {
-            id: 10001, products: 'Zr/Steel', material: 'Zr&Zr alloy/all kinds of steel',
-            specification: 'ASTM B898', application: 'Chemical industry\nAcetic acid'
+            id: 10001, products: 'Stainless Steel Cold Rolled Coil', standard: 'ASTM A240/ASTM A240M\nASTM A480/ ASTM A480M\nJISG4304/G4305/4312, AISI',
+            size: 'Thick: 0.3-3mm\nWidth: 610-1500mm\nInner Dia: 610 or 508mm', grade: '304,304L,316,316L, 410,420,430, 2205'
           },
           {
-            id: 10002, products: 'Ta/Steel', material: 'Ta& Ta alloy/ all kinds of steel',
-            specification: 'ASTM B898', application: 'Chemical industry\nAcetic acid'
+            id: 10002, products: 'Stainless Steel Hot Rolled Coil', standard: 'ASTM A240/ASTM A240M\nASTM A480/ ASTM A480M\nJISG4304/G4305/4312, AISI',
+            size: 'Thick: 2.5-10.0mm\nWidth: 610-2000mm\nInner Dia: 610mm', grade: '201,202,304,304L,316, 316L,2205'
           },
           {
-            id: 10003, products: 'Nb/steel', material: 'Nb&Nb alloy/all kinds of steel',
-            specification: 'ASTM B898', application: 'Chemical industry\nAcetic acid'
-          }
+            id: 10003, products: 'Stainless Steel Plate', standard: 'ASTM A240/ASTM A240M\nASTM A480/ ASTM A480M\nJISG4304/G4305/4312, AISI',
+            size: 'Thickness: 15-85mm/3-8mm/8-60mm\nWidth: 914-1500mm/20-1500mm/30-1500mm\nLength: 3048,6000,10M/10M Max/6000mm Max', grade: '304,340L,316\n316L, 410,2205'
+          },
+          {
+            id: 10004, products: 'Stainless Steel Sheet', standard: 'ASTM A240/ASTM A240M\nASTM A480/ ASTM A480M\nJISG4304/G4305/4312, AISI',
+            size: 'Thick: 0.1-3.0 mm\nWidth: 914-1500mm\nLength: 300-6000 mm', grade: '310, 304, 304L, 316, 316L, 2205'
+          },
         ]
       },
       composition2: {
+        align: 'center',
         config: [
-          { field: 'products', title: 'Products' },
-          { field: 'material', title: 'Material' },
-          { field: 'specification', title: 'Specification' },
-          { field: 'application', title: 'Application' }
+          { field: 'thick', title: 'Thickness' },
+          { field: 'col1', title: 'Deviation' },
+          { field: 'col2', title: 'Deviation' }
         ],
         moredata: [
           {
-            id: 10001, products: 'Ti/Cu', material: 'Ti & Ti alloy/Cu & Cu alloy',
-            specification: 'GB/T12769', application: 'Chlor-Alkali industry\nCryogence engineering\nGalvanization, Metallurgy'
+            id: 10001, thick: 'Thickness,in.[mm]', col1: 'Deviation, allowed for the specified width\n(w),±,in.[mm]', col2: 'Deviation, allowed for the specified width\n(w),±,in.[mm]'
           },
           {
-            id: 10002, products: 'Stainless steel/Cu', material: 'SS/Cu & Cu alloy',
-            specification: 'GB/T12769', application: 'Chlor-Alkali industry\nCryogence engineering\nGalvanization, Metallurgy'
+            id: 10002, thick: 'Thickness,in.[mm]', col1: 'w≤60[1525]', col2: 'w>60[1525]'
           },
           {
-            id: 10003, products: 'Ni/Cu', material: 'Ni &Ni alloy/Cu & Cu alloy',
-            specification: 'GB/T12769', application: 'Chlor-Alkali industry\nCryogence engineering\nGalvanization, Metallurgy'
-          }
+            id: 10003, thick: '0.072[1.83]', col1: '0.006[0.15]', col2: '0.009[0.22]'
+          },
+          {
+            id: 10004, thick: '0.072[1.83]-0.083[2.11]', col1: '0.007[0.18]', col2: '0.010[0.25]'
+          },
+          {
+            id: 10005, thick: '0.083[2.11]-0.098[2.49]', col1: '0.008[0.20]', col2: '0.011[0.27]'
+          },
+          {
+            id: 10006, thick: '0.098[2.49]-0.114[2.90]', col1: '0.009[0.23]', col2: '0.012[0.30]'
+          },
+          {
+            id: 10007, thick: '0.114[2.90]-0.130[3.30]', col1: '0.011[0.27]', col2: '0.013[0.33]'
+          },
+          {
+            id: 10008, thick: '0.130[3.30]-0.145[3.68]', col1: '0.012[0.30]', col2: '0.013[0.33]'
+          },
+          {
+            id: 10009, thick: '0.145[3.68]-0.1875[4.76]', col1: '0.013[0.33]', col2: '0.014[0.35]'
+          },
+          {
+            id: 10010, thick: '0.1875[4.76]-0.250[6.35]', col1: '-0.010[0.25],+0.020[0.50]', col2: '-0.010[0.25],+0.020[0.50]'
+          },
+          {
+            id: 10011, thick: '0.250[6.35]-0.3125[7.94]', col1: '-0.010[0.25],+0.022[0.55]', col2: '-0.010[0.25],+0.022[0.55]'
+          },
+          {
+            id: 10012, thick: '0.3125[7.94]', col1: '-0.010[0.25],+0.030[0.75]', col2: '-0.010[0.25],+0.030[0.75]'
+          },
+        ],
+        mergeRule: [
+          { row: 0, col: 1, rowspan: 2, colspan: 0 },
+          { row: 0, col: 2, rowspan: 0, colspan: 2 }
         ]
       },
       composition3: {
