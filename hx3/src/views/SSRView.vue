@@ -23,10 +23,10 @@
       <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div>
       <BasicTable :productdatas="diameterProducts" />
     </div>
-    <!-- <div class="mytable">
-      <div class="title">Chemical Composition AWS A5.16-2013 (For Your Reference)</div>
+    <div class="mytable">
+      <div class="title">Mechanical Properties (Long Products, Annealed)</div>
       <BasicTable :productdatas="composition" />
-    </div> -->
+    </div>
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -128,98 +128,100 @@ export default defineComponent({
             p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '22.0-24.0', ni: '12.0-15.0', mo: '-'
           },
           {
-            id: 10005, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10005, uns: 'S31008', astm: '310S', en: '1.4845', jis: 'SUS310S', c: '≤0.08', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤1.50', cr: '24.0-26.0', ni: '19.0-22.0', mo: '-'
           },
           {
-            id: 10006, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10006, uns: 'S31600', astm: '316', en: '1.4401', jis: 'SUS316', c: '≤0.08', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '16.0-18.0', ni: '10.0-14.0', mo: '2.0-3.0'
           },
           {
-            id: 10007, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10007, uns: 'S31603', astm: '316L', en: '1.4404', jis: 'SUS316L', c: '≤0.03', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '16.0-18.0', ni: '10.0-14.0', mo: '2.0-3.0'
           },
           {
-            id: 10008, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10008, uns: 'S31703', astm: '317L', en: '1.4438', jis: 'SUS317L', c: '≤0.03', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '18.0-20.0', ni: '11.0-15.0', mo: '3.0-4.0'
           },
           {
-            id: 10009, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10009, uns: 'S32100', astm: '321', en: '1.4541', jis: 'SUS321', c: '≤0.08', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '17.0-19.0', ni: '9.0-12.0', mo: '-'
           },
           {
-            id: 10010, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10010, uns: 'S34700', astm: '321', en: '1.4541', jis: 'SUS321', c: '≤0.08', mn: '≤2.00',
+            p: '≤0.045', s: '≤0.03', si: '≤0.75', cr: '17.0-19.0', ni: '9.0-13.0', mo: '-'
           },
           {
-            id: 10011, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10011, uns: 'S32750', astm: 'SAD2507', en: '1.4410', jis: '', c: '≤0.03', mn: '≤1.2',
+            p: '≤0.035', s: '≤0.02', si: '≤0.80', cr: '24.0-26.0', ni: '6.0-8.0', mo: '3.0-5.0'
           },
           {
-            id: 10012, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10012, uns: 'S31803', astm: 'SAF2205', en: '1.4462', jis: '', c: '≤0.03', mn: '≤2.0',
+            p: '≤0.03', s: '≤0.02', si: '≤1.00', cr: '21.0-23.0', ni: '4.0-6.5', mo: '2.5-3.5'
           },
           {
-            id: 10013, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
-          },
-          {
-            id: 10014, uns: '', astm: '', en: '', jis: '', c: '', mn: '',
-            p: '', s: '', si: '', cr: '', ni: '', mo: ''
+            id: 10013, uns: 'N08904', astm: '904L', en: '1.4539', jis: '', c: '≤0.03', mn: '≤2.0',
+            p: '≤0.035', s: '≤0.03', si: '≤1.00', cr: '18.0-20.0', ni: '23.0-25.0', mo: '3.0-4.0'
           }
         ]
       },
       composition: {
         config: [
-          { field: 'material', title: 'Material' },
-          { field: 'chemical', title: 'Chemical' },
-          { field: 'cmax', title: 'C' },
-          { field: 'omax', title: 'O' },
-          { field: 'nmax', title: 'N' },
-          { field: 'hmax', title: 'H' },
-          { field: 'femax', title: 'Fe' },
-          { field: 'al', title: 'Al' },
-          { field: 'v', title: 'V' },
-          { field: 'pd', title: 'Pd' },
-          { field: 'ni', title: 'Ni' },
-          { field: 'mo', title: 'Mo' }
+          { field: 'type', title: 'Type No.' },
+          { field: 'tensile', title: 'Tensile Strength, Ksi' },
+          { field: 'yield', title: 'Yield Strength, Ksi' },
+          { field: 'elongation', title: 'Elongation in 1 inch,%' },
+          { field: 'reduction', title: 'Reduction of Area, %' },
+          { field: 'brinell', title: 'Brinell Hardness' }
         ],
         moredata: [
           {
-            id: 10001, material: 'ERTi-1', chemical: 'Ti99.8', cmax: '0.03', omax: '0.03-0.10',
-            nmax: '0.012', hmax: '0.005', femax: '0.08', al: '', v: '', pd: '', ni: '', mo: ''
+            id: 10001, type: '301', tensile: '110', yield: '40', elongation: '60',
+            reduction: '70', brinell: '165'
           },
           {
-            id: 10002, material: 'ERTi-2', chemical: 'Ti99.6', cmax: '0.03', omax: '0.08-0.16',
-            nmax: '0.015', hmax: '0.008', femax: '0.12', al: '', v: '', pd: '', ni: '', mo: ''
+            id: 10002, type: '302', tensile: '90', yield: '40', elongation: '55',
+            reduction: '70', brinell: '150'
           },
           {
-            id: 10003, material: 'ERTi-3', chemical: 'Ti99.5', cmax: '0.03', omax: '0.13-0.20',
-            nmax: '0.02', hmax: '0.008', femax: '0.16', al: '', v: '', pd: '', ni: '', mo: ''
+            id: 10003, type: '303', tensile: '90', yield: '35', elongation: '50',
+            reduction: '55', brinell: '160'
           },
           {
-            id: 10004, material: 'ERTi-4', chemical: 'Ti99.3', cmax: '0.03', omax: '0.18-0.32',
-            nmax: '0.025', hmax: '0.008', femax: '0.25', al: '', v: '', pd: '', ni: '', mo: ''
+            id: 10004, type: '304', tensile: '85', yield: '35', elongation: '55',
+            reduction: '70', brinell: '150'
           },
           {
-            id: 10005, material: 'ERTi-5', chemical: 'TiAl6V4B', cmax: '0.05', omax: '0.12-0.20',
-            nmax: '0.030', hmax: '0.015', femax: '0.22', al: '5.5-6.75', v: '3.5-4.5', pd: '', ni: '', mo: ''
+            id: 10005, type: '304L', tensile: '80', yield: '30', elongation: '55',
+            reduction: '70', brinell: '140'
           },
           {
-            id: 10007, material: 'ERTi-7', chemical: 'TiPd0.2A', cmax: '0.03', omax: '0.08-0.16',
-            nmax: '0.015', hmax: '0.008', femax: '0.12', al: '', v: '', pd: '0.12-0.25', ni: '', mo: ''
+            id: 10006, type: '316', tensile: '85', yield: '35', elongation: '60',
+            reduction: '70', brinell: '150'
           },
           {
-            id: 10009, material: 'ERTi-9', chemical: 'TiAl3V2.5A', cmax: '0.03', omax: '0.06-0.12',
-            nmax: '0.012', hmax: '0.005', femax: '0.20', al: '2.5-3.5', v: '2.0-3.0', pd: '', ni: '', mo: ''
+            id: 10007, type: '316L', tensile: '78', yield: '30', elongation: '55',
+            reduction: '65', brinell: '145'
           },
           {
-            id: 10012, material: 'ERTi-12', chemical: 'TiNi0.7Mo0.3', cmax: '0.03', omax: '0.08-0.16',
-            nmax: '0.015', hmax: '0.008', femax: '0.15', al: '', v: '', pd: '', ni: '0.6-0.9', mo: '0.2-0.4'
+            id: 10008, type: '321', tensile: '85', yield: '35', elongation: '55',
+            reduction: '65', brinell: '150'
           },
           {
-            id: 10023, material: 'TiAl6V4A', chemical: 'TiAl3V2.5A', cmax: '0.03', omax: '0.03-0.11',
-            nmax: '0.012', hmax: '0.005', femax: '0.20', al: '5.5-6.5', v: '3.5-4.5', pd: '', ni: '', mo: ''
+            id: 10009, type: '410', tensile: '75', yield: '40', elongation: '35',
+            reduction: '70', brinell: '155'
+          },
+          {
+            id: 10010, type: '416', tensile: '75', yield: '40', elongation: '30',
+            reduction: '65', brinell: '155'
+          },
+          {
+            id: 10011, type: '420', tensile: '95', yield: '50', elongation: '25',
+            reduction: '', brinell: '241'
+          },
+          {
+            id: 10012, type: '2205', tensile: '90', yield: '65', elongation: '25',
+            reduction: '', brinell: '217'
           }
         ]
       },
