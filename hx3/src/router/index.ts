@@ -83,8 +83,12 @@ const router = createRouter({
       path: '/ssp2',
       name: 'ssp2',
       component: () => import('../views/SSP2View.vue')
+    },
+    {
+      path: '/ssr',
+      name: 'ssr',
+      component: () => import('../views/SSRView.vue')
     }
-
   ]
 })
 
