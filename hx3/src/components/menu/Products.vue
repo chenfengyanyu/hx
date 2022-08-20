@@ -25,8 +25,8 @@
                     <li><a href="product">Stainless Steel Pipe</a></li>
                     <li><a href="ssp2">Stainless Steel Plate & Sheet</a></li>
                     <li><a href="ssr">Stainless Steel Round Bar</a></li>
-                    <li><a href="product">Stainless Steel Flange/Fitting</a></li>
-                    <li><a href="product">Stainless Steel Filler Wire</a></li>
+                    <li><a href="ssff">Stainless Steel Flange/Fitting</a></li>
+                    <li><a href="ssfw">Stainless Steel Filler Wire</a></li>
                 </ol>
             </li>
             <li>

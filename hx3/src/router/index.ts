@@ -88,6 +88,11 @@ const router = createRouter({
       path: '/ssr',
       name: 'ssr',
       component: () => import('../views/SSRView.vue')
+    },
+    {
+      path: '/ssff',
+      name: 'ssff',
+      component: () => import('../views/SSFFView.vue')
     }
   ]
 })
