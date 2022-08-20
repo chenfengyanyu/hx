@@ -31,12 +31,28 @@
     <div class="mytable">
       <div class="title">Thickness Tolerance</div>
       <div class="subtitle">ASTM A240 A480 steel sheet's thickness tolerance</div>
-      <MergeTable :productdatas="composition2" merge="application" />
+      <MergeTable :productdatas="composition2" />
     </div>
-    <!-- <div class="mytable">
-      <div class="title">Clad Bar</div>
-      <HighTable :productdatas="composition3" merge="" />
-    </div> -->
+    <div class="mytable">
+      <div class="title">Thickness Tolerance</div>
+      <div class="subtitle">ASTM A480 cold rolled sheet/plate thickness tolerance</div>
+      <MergeTable :productdatas="composition3" />
+    </div>
+    <div class="mytable">
+      <div class="title">Thickness Tolerance</div>
+      <div class="subtitle">ASTM A480 hot rolled sheet/plate thickness tolerance</div>
+      <MergeTable :productdatas="composition4" />
+    </div>
+    <div class="mytable">
+      <div class="title">Chemical Composition</div>
+      <!-- <div class="subtitle">ASTM A480 hot rolled sheet/plate thickness tolerance</div> -->
+      <MergeTable :productdatas="composition5" />
+    </div>
+    <div class="mytable">
+      <div class="title">Mechanical Property</div>
+      <!-- <div class="subtitle">ASTM A480 hot rolled sheet/plate thickness tolerance</div> -->
+      <MergeTable :productdatas="composition6" />
+    </div>
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -206,46 +222,301 @@ export default defineComponent({
         ]
       },
       composition3: {
+        align: 'center',
         config: [
-          { field: 'products', title: 'Products' },
-          { field: 'material', title: 'Material' },
-          { field: 'specification', title: 'Specification' },
-          { field: 'application', title: 'Application' }
+          { field: 'thick', title: 'Thickness' },
+          { field: 'col1', title: 'Deviation' },
+          { field: 'col2', title: 'Deviation' },
+          { field: 'col3', title: 'Deviation' }
         ],
         moredata: [
           {
-            id: 10001, products: 'SS/Steel', material: 'Stainless Steel/Carbon steel',
-            specification: 'NB/T47002.1, GB/T8165\nASME SA263, ASME SA264',
-            application: 'Petro-Chemistry, Hydrometallurgy\nElectricity Station\nVacuum Purification of salt'
+            id: 10001, thick: 'Thickness,in.[mm]', col1: 'Deviation, allowed for the specified width\n(w),±,in.[mm]', col2: 'Deviation, allowed for the specified width\n(w),±,in.[mm]',
+            col3: 'Deviation, allowed for the specified width\n(w),±,in.[mm]'
           },
           {
-            id: 10002, products: 'Al/Steel', material: 'Al & Al alloy/Carbon Steel',
-            specification: 'Q/XB1906', application: 'Chemical fertilizer, Ship, Aerospace'
+            id: 10002, thick: 'Thickness,in.[mm]', col1: 'W≤40[1000]', col2: '40[1000]<w≤50[1300]', col3: '50[1300]<w≤84[2100]'
           },
           {
-            id: 10003, products: 'Al/SS', material: 'AI&AI/Stainless Steel',
-            specification: 'Q/XB1906', application: 'Auto industry, Electricity\nVacuum purification of salt'
+            id: 10003, thick: '0.012[0.30]', col1: '0.001[0.030]', col2: '-', col3: '-'
           },
           {
-            id: 10004, products: 'Al/Cu', material: 'Al & Al alloy/Cu & Cu alloy',
-            specification: 'Negotiation', application: 'Electricity industry'
+            id: 10004, thick: '0.016[0.40]', col1: '0.0015[0.04]', col2: '0.0015[0.04]', col3: '-'
           },
           {
-            id: 10005, products: 'Cu/SS', material: 'Cu & Cu alloy/Carbon steel',
-            specification: 'NB/T47002.4, GB13238\nASME B432', application: 'Chemical industry\nAuto industry, Metallurgy'
+            id: 10005, thick: '0.020[0.50]', col1: '0.0015[0.04]', col2: '0.0015[0.04]', col3: '-'
           },
           {
-            id: 10006, products: 'Cu/SS', material: 'Cu & Cu alloy/Stainless Steel',
-            specification: 'NB/T47002.4, GB13238', application: 'Electricity, Cooker'
+            id: 10006, thick: '0.024[0.60]', col1: '0.002[0.05]', col2: '0.002[0.05]', col3: '-'
           },
           {
-            id: 10007, products: 'Ni/Steel', material: 'Ni & Ni alloy/Carbon steel',
-            specification: 'NB/T47002.2 ASME SA265', application: 'Chlor-Alkali, Chemistry, Papermaking'
+            id: 10007, thick: '0.032[0.80]', col1: '0.002[0.05]', col2: '0.002[0.05]', col3: '-'
           },
           {
-            id: 10008, products: 'Ni/SS', material: 'Ni & Ni alloy/Stainless Steel',
-            specification: 'NB/T47002.2, ASME SA265', application: 'Chlor-Alkali, Chemistry, Papermaking'
+            id: 10008, thick: '0.040[1.00]', col1: '0.0025[0.06]', col2: '0.0025[0.06]', col3: '0.003[0.08]'
+          },
+          {
+            id: 10009, thick: '0.047[1.20]', col1: '0.003[0.08]', col2: '0.003[0.08]', col3: '0.003[0.08]'
+          },
+          {
+            id: 10010, thick: '0.059[1.50]', col1: '0.003[0.08]', col2: '0.003[0.08]', col3: '0.004[0.10]'
+          },
+          {
+            id: 10011, thick: '0.079[2.00]', col1: '0.004[0.10]', col2: '0.004[0.10]', col3: '0.0045[0.11]'
+          },
+          {
+            id: 10012, thick: '0.098[2.50]', col1: '0.004[0.10]', col2: '0.004[0.10]', col3: '0.005[0.13]'
+          },
+          {
+            id: 10013, thick: '0.118[3.00]', col1: '0.005[0.13]', col2: '0.005[0.13]', col3: '0.006[0.15]'
+          },
+          {
+            id: 10014, thick: '0.157[4.00]', col1: '0.007[0.17]', col2: '0.007[0.17]', col3: '0.007[0.17]'
+          },
+          {
+            id: 10015, thick: '0.197[5.00]', col1: '0.007[0.17]', col2: '0.007[0.17]', col3: '0.0075[0.19]'
+          },
+          {
+            id: 10016, thick: '0.236[6.00]', col1: '0.007[0.17]', col2: '0.008[0.20]', col3: '0.009[0.23]'
+          },
+          {
+            id: 10017, thick: '0.3125[8.00]', col1: '0.007[0.17]', col2: '0.009[0.23]', col3: '0.010[0.25]'
           }
+        ],
+        mergeRule: [
+          { row: 0, col: 1, rowspan: 2, colspan: 0 },
+          { row: 0, col: 2, rowspan: 0, colspan: 3 }
+        ]
+      },
+      composition4: {
+        align: 'center',
+        config: [
+          { field: 'thick', title: 'Thickness' },
+          { field: 'col1', title: 'Deviation' },
+          { field: 'col2', title: 'Deviation' },
+          { field: 'col3', title: 'Deviation' }
+        ],
+        moredata: [
+          {
+            id: 10001, thick: 'Thickness,in.[mm]', col1: 'Deviation, allowed for the specified width\n(w),±,in.[mm]', col2: 'Deviation, allowed for the specified width\n(w),±,in.[mm]',
+            col3: 'Deviation, allowed for the specified width\n(w),±,in.[mm]'
+          },
+          {
+            id: 10002, thick: 'w≤84[2134]', col1: '84[2134]<w≤120[3048]', col2: '120[3048]<w≤144[3658]', col3: 'w>144[3658]'
+          },
+          {
+            id: 10003, thick: 'Thickness + C, in.[mm]', col1: '-', col2: '-', col3: '-'
+          },
+          {
+            id: 10004, thick: '0.055[1.35]', col1: '0.070[1.78]', col2: '-', col3: '-'
+          },
+          {
+            id: 10005, thick: '0.045[1.14]', col1: '0.050[1.27]', col2: '0.085[2.16]', col3: '-'
+          },
+          {
+            id: 10006, thick: '0.055[1.40]', col1: '0.060[1.52]', col2: '0.085[2.16]', col3: '0.090[2.29]'
+          },
+          {
+            id: 10007, thick: '0.060[1.52]', col1: '0.065[1.65]', col2: '0.085[2.16]', col3: '0.100[2.54]'
+          },
+          {
+            id: 10008, thick: '0.070[1.78]', col1: '0.075[1.90]', col2: '0.095[2.41]', col3: '0.115[2.92]'
+          },
+          {
+            id: 10009, thick: '0.125[3.20]', col1: '0.150[3.80]', col2: '0.175[4.45]', col3: '0.200[5.08]'
+          },
+          {
+            id: 10010, thick: '0.150[3.81]', col1: '0.160[4.06]', col2: '0.200[5.08]', col3: '0.225[5.72]'
+          },
+          {
+            id: 10011, thick: '0.180[4.57]', col1: '0.200[5.08]', col2: '0.335[8.50]', col3: '0.355[9.02]'
+          },
+          {
+            id: 10012, thick: '0.235[6.00]', col1: '0.255[6.48]', col2: '0.355[9.02]', col3: '0.435[11.0]'
+          },
+          {
+            id: 10013, thick: '0.315[8.00]', col1: '0.335[8.50]', col2: '0.435[11.0]', col3: '0.550[14.0]'
+          }
+        ],
+        mergeRule: [
+          { row: 0, col: 2, rowspan: 0, colspan: 3 },
+          { row: 2, col: 1, rowspan: 0, colspan: 4 }
+        ]
+      },
+      composition5: {
+        align: 'center',
+        config: [
+          { field: 'grade1', title: 'Grade' },
+          { field: 'grade2', title: 'Grade' },
+          { field: 'col2', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col3', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col4', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col5', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col6', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col7', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col8', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col9', title: 'ASTM A240 Chemical Composition' },
+          { field: 'col10', title: 'ASTM A240 Chemical Composition' },
+        ],
+        moredata: [
+          {
+            id: 10001, grade1: 'Grade', grade2: '', col2: 'ASTM A240 Chemical Composition', col3: '', col4: '', col5: '', col6: '',
+            col7: '', col8: '', col9: '', col10: ''
+          },
+          {
+            id: 10002, grade1: 'ASTM(A240M)', grade2: 'Others(JIS)', col2: 'C', col3: 'Si', col4: 'Mn', col5: 'P', col6: 'S',
+            col7: 'Ni', col8: 'Cr', col9: 'Mo', col10: 'Others'
+          },
+          {
+            id: 10003, grade1: '304', grade2: 'SUS304', col2: '≤0.07', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '8.0/10.5', col8: '17.5/19.5', col9: '―', col10: 'N≤0.10'
+          },
+          {
+            id: 10004, grade1: '304H', grade2: '', col2: '0.04/0.10', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '8.0/10.5', col8: '18.0/20.0', col9: '-', col10: ''
+          },
+          {
+            id: 10005, grade1: '304L', grade2: 'SUS304L', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '8.0/12.0', col8: '17.5/19.5', col9: '-', col10: 'N≤0.10'
+          },
+          {
+            id: 10006, grade1: '304N', grade2: 'SUS304N1', col2: '≤0.08', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '8.0/10.5', col8: '18.0/20.0', col9: '-', col10: 'N:0.10/0.16'
+          },
+          {
+            id: 10007, grade1: '304LN', grade2: 'SUS304LN', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '8.0/12.0', col8: '18.0/20.0', col9: '-', col10: 'N:0.10/0.16'
+          },
+          {
+            id: 10008, grade1: '309S', grade2: 'SUS309S', col2: '≤0.08', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '12.0/15.0', col8: '22.0/24.0', col9: '-', col10: ''
+          },
+          {
+            id: 10009, grade1: '310S', grade2: 'SUS310S', col2: '≤0.08', col3: '≤1.50', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '19.0/22.0', col8: '24.0/26.0', col9: '-', col10: ''
+          },
+          {
+            id: 10010, grade1: '316', grade2: 'SUS316', col2: '≤0.08', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '10.0/14.0', col8: '16.0/18.0', col9: '2.00/3.00', col10: 'N≤0.10'
+          },
+          {
+            id: 10011, grade1: '316L', grade2: 'SUS316L', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '10.0/14.0', col8: '16.0/18.0', col9: '2.00/3.00', col10: 'N≤0.10'
+          },
+          {
+            id: 10012, grade1: '316H', grade2: '', col2: '0.04/0.10', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '10.0/14.0', col8: '16.0/18.0', col9: '2.00/3.00', col10: ''
+          },
+          {
+            id: 10013, grade1: '316LN', grade2: 'SUS316LN', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '10.0/14.0', col8: '16.0/18.0', col9: '2.00/3.00', col10: 'N:0.10/0.16'
+          },
+          {
+            id: 10014, grade1: '317L', grade2: 'SUS317L', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '11.0/15.0', col8: '18.0/20.0', col9: '3.0/4.0', col10: 'N≤0.10'
+          },
+          {
+            id: 10015, grade1: '317LN', grade2: 'SUS317LN', col2: '≤0.030', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '11.0/15.0', col8: '18.0/20.0', col9: '3.0/4.0', col10: 'N:0.10/0.22'
+          },
+          {
+            id: 10016, grade1: '321', grade2: 'SUS321', col2: '≤0.08', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '9.0/12.0', col8: '17.0/19.0', col9: '―', col10: 'N≤0.10Ti:5ʷʢC+Nʣ/0.70'
+          },
+          {
+            id: 10017, grade1: '347', grade2: 'SUS347', col2: '≤0.08', col3: '≤0.75', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '9.0/13.0', col8: '17.0/19.0', col9: '-', col10: 'Nb:10ʷC/1.00'
+          },
+          {
+            id: 10018, grade1: 'N08904ʢ904L', grade2: 'SUS890L', col2: '≤0.020', col3: '≤1.00', col4: '≤2.00', col5: '≤0.045', col6: '≤0.035',
+            col7: '23.0/28.0', col8: '19.0/23.0', col9: '4.00/5.00', col10: 'N≤0.10Cu:1.0/2.0'
+          },
+          {
+            id: 10019, grade1: 'S31254', grade2: '', col2: '≤0.020', col3: '≤0.80', col4: '≤1.00', col5: '≤0.030', col6: '≤0.010',
+            col7: '17.5/18.5', col8: '19.5/20.5', col9: '6.0/6.5', col10: 'N:0.18/0.25Cu:0.50/1.00'
+          },
+          {
+            id: 10020, grade1: '', grade2: 'SUS317J2', col2: '≤0.06', col3: '≤1.50', col4: '≤2.00', col5: '≤0.045', col6: '≤0.030',
+            col7: '12.00/16.00', col8: '23.00/26.00', col9: '0.50/1.20', col10: 'N:0.25/0.40'
+          }
+        ],
+        mergeRule: [
+          { row: 0, col: 1, rowspan: 0, colspan: 2 },
+          { row: 0, col: 3, rowspan: 0, colspan: 9 }
+        ]
+      },
+      composition6: {
+        align: 'center',
+        config: [
+          { field: 'grade1', title: 'Grade' },
+          { field: 'col1', title: 'Mechanical Property' },
+          { field: 'col2', title: 'Mechanical Property' },
+          { field: 'col3', title: 'Mechanical Property' },
+          { field: 'col4', title: 'Mechanical Property' },
+          { field: 'col5', title: 'Mechanical Property' }
+        ],
+        moredata: [
+          {
+            id: 10001, grade1: 'Steel Grade', col1: 'Mechanical Property', col2: '', col3: '', col4: '', col5: '',
+          },
+          {
+            id: 10002, grade1: 'ASTM(A240M)', col1: 'Tensile Properties', col2: '', col3: '', col4: 'Hardness', col5: '',
+          },
+          {
+            id: 10003, grade1: 'ASTM(A240M)', col1: 'Yield Strength MPa', col2: 'Tensile Strength MPa',
+            col3: 'Elongation%', col4: 'HBW', col5: 'HRBW',
+          },
+          {
+            id: 10004, grade1: '304', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤201', col5: '≤92',
+          },
+          {
+            id: 10005, grade1: '304H', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤201', col5: '≤92',
+          },
+          {
+            id: 10006, grade1: '304L', col1: '≥170', col2: '≥485', col3: '≥40', col4: '≤201', col5: '≤92',
+          },
+          {
+            id: 10007, grade1: '304N', col1: '≤201', col2: '≥550', col3: '≥30', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10008, grade1: '304LN', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10009, grade1: '309S', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10010, grade1: '310S', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10011, grade1: '316', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10012, grade1: '316L', col1: '≥170', col2: '≥485', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10013, grade1: '316H', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10014, grade1: '316LN', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10015, grade1: '317L', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10016, grade1: '317LN', col1: '≥240', col2: '≥550', col3: '≥40', col4: '≤217', col5: '≤95',
+          },
+          {
+            id: 10017, grade1: '321', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤217', col5: '≤92',
+          },
+          {
+            id: 10018, grade1: '347', col1: '≥205', col2: '≥515', col3: '≥40', col4: '≤201', col5: '≤92',
+          }
+        ],
+        mergeRule: [
+          { row: 0, col: 2, rowspan: 0, colspan: 5 },
+          { row: 1, col: 1, rowspan: 2, colspan: 0 },
+          { row: 1, col: 2, rowspan: 0, colspan: 3 },
+          { row: 1, col: 5, rowspan: 0, colspan: 2 }
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
