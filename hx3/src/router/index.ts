@@ -93,7 +93,18 @@ const router = createRouter({
       path: '/ssff',
       name: 'ssff',
       component: () => import('../views/SSFFView.vue')
-    }
+    },
+    {
+      path: '/ssfw',
+      name: 'ssfw',
+      component: () => import('../views/SSFWView.vue')
+    },
+    // Nickel Based Alloy
+    {
+      path: '/na',
+      name: 'na',
+      component: () => import('../views/NAView.vue')
+    },
   ]
 })
 
