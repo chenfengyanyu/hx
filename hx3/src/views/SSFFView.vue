@@ -15,9 +15,9 @@
         </div>
       </div>
     </div>
-    <div class="mytable">
+    <div class="mytable first">
       <div class="title">Stainless Forged Flanges</div>
-      <MergeTable :productdatas="composition5" />
+      <MergeTable1 :productdatas="composition5" />
     </div>
     <div class="mytable">
       <div class="title">Stainless Steel But Welding Pipe Fittings</div>
@@ -25,7 +25,7 @@
     </div>
     <div class="mytable">
       <div class="title">Stainless Steel Forged Fittings</div>
-      <MergeTable :productdatas="composition2" />
+      <MergeTable1 :productdatas="composition2" />
     </div>
     <div class="mytable">
       <div class="title">Stainless Steel Cast Fittings (Threaded/Screwed)</div>
@@ -62,6 +62,7 @@ import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
 import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
 import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
 import HighTable from '../components/product/HighTable.vue'
+import MergeTable1 from '../components/product/MergeTable1.vue'
 
 export default defineComponent({
   components: {
@@ -69,8 +70,9 @@ export default defineComponent({
     BasicTable,
     ImageBox,
     HighTable,
-    MergeTable
-  },
+    MergeTable,
+    MergeTable1
+},
   data() {
     return {
       InfoImg: InfoImg,

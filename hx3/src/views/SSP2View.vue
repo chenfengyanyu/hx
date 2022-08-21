@@ -51,7 +51,7 @@
     <div class="mytable">
       <div class="title">Mechanical Property</div>
       <!-- <div class="subtitle">ASTM A480 hot rolled sheet/plate thickness tolerance</div> -->
-      <MergeTable :productdatas="composition6" />
+      <MergeTable3 :productdatas="composition6" />
     </div>
     <div class="mytable">
       <div class="title">Related Products</div>
@@ -78,6 +78,7 @@ import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
 import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
 import HighTable from '../components/product/HighTable.vue'
 import MergeTable from '../components/product/MergeTable.vue'
+import MergeTable3 from '../components/product/MergeTable3.vue'
 
 export default defineComponent({
   components: {
@@ -85,8 +86,9 @@ export default defineComponent({
     BasicTable,
     ImageBox,
     HighTable,
-    MergeTable
-  },
+    MergeTable,
+    MergeTable3
+},
   data() {
     return {
       InfoImg: InfoImg,

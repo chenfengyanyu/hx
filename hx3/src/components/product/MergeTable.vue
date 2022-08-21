@@ -1,5 +1,5 @@
 <template>
-    <vxe-table border class="mytable-style" :header-cell-class-name="headerCellClassName"  :column-config="{ resizable: true }" :row-config="{ isHover: true }"
+    <vxe-table border class="mytable-style merge-style" :header-cell-class-name="headerCellClassName"  :column-config="{ resizable: true }" :row-config="{ isHover: true }"
         :scroll-y="{ enabled: false }" :show-header="false" :align="mergeCol.allAlign" :data="mergeCol.tableData" :merge-cells="mergeCol.mergeCells">
         <vxe-column type="seq" width="60"></vxe-column>
         <vxe-column v-for="item in configInfo" :field="item.field" :title="item.title"></vxe-column>
@@ -49,5 +49,13 @@ export default defineComponent({
     background-color: #1e88e5;
     color: #fff;
     /* text-align: center; */
+}
+.merge-style .vxe-body--row:nth-child(1){
+    background-color: #1e88e5;
+    color: #fff;
+}
+.merge-style .vxe-body--row:nth-child(2){
+    background-color: #1e88e5;
+    color: #fff;
 }
 </style>

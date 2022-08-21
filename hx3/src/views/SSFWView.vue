@@ -21,7 +21,7 @@
       <div class="title">AWS A5.9, Chemical Composition Max Wt%</div>
       <BasicTable :productdatas="composition" />
     </div>
-     <div class="mytable">
+    <div class="mytable">
       <div class="title">AWS A5.9, Chemical Composition Max Wt%</div>
       <BasicTable :productdatas="composition1" />
     </div>
@@ -119,43 +119,43 @@ export default defineComponent({
         ],
         moredata: [
           {
-            id: 10000, aws: 'ER308', c: '0.08',mn:'1.0-2.5',si:'0.3-0.65',fe:'Bal',cr:'19.5-22',mo:'0.75',ni:'9-11',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10000, aws: 'ER308', c: '0.08', mn: '1.0-2.5', si: '0.3-0.65', fe: 'Bal', cr: '19.5-22', mo: '0.75', ni: '9-11', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10001, aws: 'ER308H', c: '0.04-0.08',mn:'1.0-2.5',si:'0.3-0.65',fe:'Bal',cr:'19.5-22',mo:'0.50',ni:'9.0-11.0',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10001, aws: 'ER308H', c: '0.04-0.08', mn: '1.0-2.5', si: '0.3-0.65', fe: 'Bal', cr: '19.5-22', mo: '0.50', ni: '9.0-11.0', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10002, aws: 'ER308L', c: '0.03',mn:'1.0-2.5',si:'0.3-0.65',fe:'Bal',cr:'19.5-22',mo:'0.75',ni:'9.0-11',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10002, aws: 'ER308L', c: '0.03', mn: '1.0-2.5', si: '0.3-0.65', fe: 'Bal', cr: '19.5-22', mo: '0.75', ni: '9.0-11', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10003, aws: 'ER308Lsi', c: '0.03',mn:'1.0-2.5',si:'0.65-1.0',fe:'Bal',cr:'19.5-22',mo:'0.75',ni:'9.0-11',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10003, aws: 'ER308Lsi', c: '0.03', mn: '1.0-2.5', si: '0.65-1.0', fe: 'Bal', cr: '19.5-22', mo: '0.75', ni: '9.0-11', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10004, aws: 'ER309L', c: '0.03',mn:'1.0-2.5',si:'0.3-0.65',fe:'Bal',cr:'23-25',mo:'0.75',ni:'12-14',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10004, aws: 'ER309L', c: '0.03', mn: '1.0-2.5', si: '0.3-0.65', fe: 'Bal', cr: '23-25', mo: '0.75', ni: '12-14', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10005, aws: 'ER309Lsi', c: '0.03',mn:'1.0-2.5',si:'0.65-1.0',fe:'Bal',cr:'23-25',mo:'0.75',ni:'12-14',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10005, aws: 'ER309Lsi', c: '0.03', mn: '1.0-2.5', si: '0.65-1.0', fe: 'Bal', cr: '23-25', mo: '0.75', ni: '12-14', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10006, aws: 'ER310', c: '0.08-0.15',mn:'1.0-2.5',si:'0.30-0.65',fe:'Bal',cr:'25.0-28.0',mo:'0.75',ni:'20-22.5',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10006, aws: 'ER310', c: '0.08-0.15', mn: '1.0-2.5', si: '0.30-0.65', fe: 'Bal', cr: '25.0-28.0', mo: '0.75', ni: '20-22.5', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10007, aws: 'ER312', c: '0.15',mn:'1.0-2.5',si:'0.3-0.65',fe:'Bal',cr:'28.0-32.0',mo:'0.754',ni:'8.0-10.5',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10007, aws: 'ER312', c: '0.15', mn: '1.0-2.5', si: '0.3-0.65', fe: 'Bal', cr: '28.0-32.0', mo: '0.754', ni: '8.0-10.5', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10008, aws: 'ER316L', c: '0.03',mn:'2.0-3.0',si:'0.30-0.65',fe:'Bal',cr:'18.0-20.0',mo:'1.0-2.5',ni:'11.0-14.0',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10008, aws: 'ER316L', c: '0.03', mn: '2.0-3.0', si: '0.30-0.65', fe: 'Bal', cr: '18.0-20.0', mo: '1.0-2.5', ni: '11.0-14.0', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10009, aws: 'ER316Lsi', c: '0.03',mn:'1.0-2.5',si:'0.65-1.0',fe:'Bal',cr:'18.0-20.0',mo:'2.0-3.0',ni:'11.0-14.0',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10009, aws: 'ER316Lsi', c: '0.03', mn: '1.0-2.5', si: '0.65-1.0', fe: 'Bal', cr: '18.0-20.0', mo: '2.0-3.0', ni: '11.0-14.0', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10010, aws: 'ER347', c: '0.08',mn:'1.0-2.5',si:'0.30-0.65',fe:'Bal',cr:'19.0-21.5',mo:'0.75',ni:'9.0-11.0',n:'',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10010, aws: 'ER347', c: '0.08', mn: '1.0-2.5', si: '0.30-0.65', fe: 'Bal', cr: '19.0-21.5', mo: '0.75', ni: '9.0-11.0', n: '', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10011, aws: 'ER2209', c: '0.03',mn:'0.50-2.0',si:'0.90',fe:'Bal',cr:'21.5-23.5',mo:'2.50-3.50',ni:'7.50-9.50',n:'0.08-0.20',s:'0.03',p:'0.03',cu:'0.75'
+            id: 10011, aws: 'ER2209', c: '0.03', mn: '0.50-2.0', si: '0.90', fe: 'Bal', cr: '21.5-23.5', mo: '2.50-3.50', ni: '7.50-9.50', n: '0.08-0.20', s: '0.03', p: '0.03', cu: '0.75'
           },
           {
-            id: 10012, aws: 'ER2594', c: '0.03',mn:'2.5',si:'1.0',fe:'',cr:'24.0-27.0',mo:'2.5-4.5',ni:'8.0-10.5',n:'0.20-0.30',s:'0.02',p:'0.03',cu:'1.5'
+            id: 10012, aws: 'ER2594', c: '0.03', mn: '2.5', si: '1.0', fe: '', cr: '24.0-27.0', mo: '2.5-4.5', ni: '8.0-10.5', n: '0.20-0.30', s: '0.02', p: '0.03', cu: '1.5'
           }
         ]
       },
@@ -168,40 +168,40 @@ export default defineComponent({
           {
             id: 10000, products: '308L ER308L', info: 'For low carbon 18Cr-8Ni stainless such as ISI 304'
           },
-           {
+          {
             id: 10001, products: '308H ER308H', info: 'Suitable for welding AISI 304 and 308H steel, good strength at high temperature due to higher carbon content.'
           },
-           {
+          {
             id: 10002, products: '308LSi ER308LSi', info: 'Weldability and fluidity are better than 308L, Good crack and corrosion resistance due to moderate ferrite content.'
           },
-           {
+          {
             id: 10003, products: '316L ER316L', info: 'A general purpose wire for welding AISI 316L, and equivalent grades.'
           },
-           {
+          {
             id: 10004, products: '316LSi ER316LSi', info: 'A general purpose wire for welding AISI 316L, and equivalent grades. High silicon content for minimal spatter and weld metal fluidity.'
           },
-           {
+          {
             id: 10005, products: '309L ER309L', info: 'Good crack and corrosion resistance due to moderate ferrite content, superior corrosion at 90c due to more Ni and Cr content.'
           },
-           {
+          {
             id: 10006, products: '309LSi ER309LSi', info: 'Weldability and fluidity are better than 309L'
           },
-           {
+          {
             id: 10007, products: '310 ER310 A 25%Cr 20%', info: 'Ni wire for welding AISI 310s steels and dissimilar metals, also suitable for non magnetic application.'
           },
-           {
+          {
             id: 10008, products: '347Si ER347Si', info: 'A general purpose wire for welding AISI321, 347, and equivalent grades, High silicon content for minimal spatter, and weld fluidity.'
           },
-           {
+          {
             id: 10009, products: '312 ER310', info: 'For 29 Cr-9Ni stainless steels, dissimilar metal welding, it is suitable for, clad steel, stainless steel sheet linings, alloy steel with high hardenability and used as buffer layer before hardfacing.'
           },
-           {
+          {
             id: 10010, products: '2209 ER2209', info: 'A Duplex type stainless steel wire, used for welding 22CR/9Ni type materials, higher strength and excellent resistance to pitting and stress corrosion cracking.'
           },
-           {
+          {
             id: 10011, products: '2594 ER2594', info: 'A Super Duplex type wire used for welding of 25/10/5 material.'
           }
-          
+
         ]
       },
       composition3: {
