@@ -19,15 +19,24 @@
       <div class="title">Stainless Forged Flanges</div>
       <MergeTable :productdatas="composition5" />
     </div>
+    <div class="mytable">
+      <div class="title">Stainless Steel But Welding Pipe Fittings</div>
+      <BasicTable :productdatas="composition" />
+    </div>
+    <div class="mytable">
+      <div class="title">Stainless Steel Forged Fittings</div>
+      <MergeTable :productdatas="composition2" />
+    </div>
+    <div class="mytable">
+      <div class="title">Stainless Steel Cast Fittings (Threaded/Screwed)</div>
+      <BasicTable :productdatas="composition3" />
+    </div>
     <!-- <div class="mytable">
       <div class="title">Chemical Composition</div>
       <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div>
       <BasicTable :productdatas="diameterProducts" />
     </div>
-    <div class="mytable">
-      <div class="title">Mechanical Properties (Long Products, Annealed)</div>
-      <BasicTable :productdatas="composition" />
-    </div> -->
+     -->
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -98,32 +107,72 @@ export default defineComponent({
           }
         ]
       },
+      composition: {
+        config: [
+          { field: 'standards', title: 'Type' },
+          { field: 'asme', title: 'Info' }
+        ],
+        moredata: [
+          {
+            id: 10000, standards: 'Standards', asme: 'ASME B16.9, ASME B16.28, ASME B16.49,EN 10253-4, MSS SP43, Mss SP75,DIN, JIS, GOST'
+          },
+          {
+            id: 10001, standards: 'Materials', asme: 'ASTM/ASME SA403 WP 304, WP 304L, WP 304H, WP 304LN, WP 304N\nASTM/ASME A403 WP 316, WP 316L, WP 316H, WP 316LN, WP 316N, WP 316Ti\nASTM/ASME A403 WP 321, WP 321H ASTM/ASME A403 WP 347, WP 347H'
+          },
+          {
+            id: 10002, standards: 'Sizes', asme: '1/2″ (DN15) ~ 48″ (DN1200)'
+          },
+          {
+            id: 10003, standards: 'Types', asme: 'Elbow, Tee, Cap, Cross, 180 degree Elbow, Reducing Elbow, Pipe Bend, Reducer, Lap Joint Stub End'
+          },
+          {
+            id: 10004, standards: 'Wall Thicknesses', asme: 'SCH 5S, 10S, 40S, 80S; SCH 160, SCH XXS'
+          }
+        ]
+      },
+      composition3: {
+        config: [
+          { field: 'standards', title: 'Type' },
+          { field: 'asme', title: 'Info' }
+        ],
+        moredata: [
+          {
+            id: 10000, standards: 'Threads', asme: 'DIN 2999, ISO 7/1, ISO 228, NPT, BSPT, BSP'
+          },
+          {
+            id: 10001, standards: 'Production Process', asme: 'investment casting'
+          },
+          {
+            id: 10002, standards: 'Materials', asme: '304/304L, 316/316L'
+          }
+        ]
+      },
       composition5: {
         align: 'left',
         config: [
           { field: 'standard', title: 'Standards' },
           { field: 'info1', title: 'Info' },
           { field: 'info2', title: 'Info' },
-         
+
         ],
         moredata: [
           {
-            id: 10001, standard: 'Standards', info1: 'ASME B16.5, ASME B16.47, API 6A, EN 1092-1, BS 4504, BS 10, DIN, JIS, GOST.', info2:''
+            id: 10001, standard: 'Standards', info1: 'ASME B16.5, ASME B16.47, API 6A, EN 1092-1, BS 4504, BS 10, DIN, JIS, GOST.', info2: ''
           },
           {
-            id: 10002, standard: 'Materials', info1: 'Stainless Steel', info2:'A182 F1, F5, F9, F11, F22, F91\nA105, A350 LF1/LF2/LF3, A694 F42/46/52/56/60/65/70\nA182 F304/304L, F316/316L, F321, F321H, F317L, F310, F347'
+            id: 10002, standard: 'Materials', info1: 'Stainless Steel', info2: 'A182 F1, F5, F9, F11, F22, F91\nA105, A350 LF1/LF2/LF3, A694 F42/46/52/56/60/65/70\nA182 F304/304L, F316/316L, F321, F321H, F317L, F310, F347'
           },
           {
-            id: 10003, standard: 'Materials', info1: 'Duplex and Super Duplex', info2:'ASTM/ASME A/SA 182 F44, F45, F51, F53, F55, F60, F61\nS31803, S32205, S32550, S31254, SMO254, S32750, S32760, S32950'
+            id: 10003, standard: 'Materials', info1: 'Duplex and Super Duplex', info2: 'ASTM/ASME A/SA 182 F44, F45, F51, F53, F55, F60, F61\nS31803, S32205, S32550, S31254, SMO254, S32750, S32760, S32950'
           },
           {
-            id: 10004, standard: 'Sizes', info1: 'NPS 1/2 ~ NPS 120 (DN 15 ~ DN 3000)', info2:''
+            id: 10004, standard: 'Sizes', info1: 'NPS 1/2 ~ NPS 120 (DN 15 ~ DN 3000)', info2: ''
           },
           {
-            id: 10005, standard: 'Types', info1: 'weld neck, slip on, blind, socket weld, threaded, lap joint, spectacle,\npaddle, long weld neck, spacer, orifice, reduced, plate.', info2:''
+            id: 10005, standard: 'Types', info1: 'weld neck, slip on, blind, socket weld, threaded, lap joint, spectacle,\npaddle, long weld neck, spacer, orifice, reduced, plate.', info2: ''
           },
           {
-            id: 10006, standard: 'Pressure Ratings', info1: 'Class 150, 300, 400, 600, 900, 1500, 2500', info2:''
+            id: 10006, standard: 'Pressure Ratings', info1: 'Class 150, 300, 400, 600, 900, 1500, 2500', info2: ''
           },
         ],
         mergeRule: [
@@ -132,6 +181,46 @@ export default defineComponent({
           { row: 3, col: 2, rowspan: 0, colspan: 2 },
           { row: 4, col: 2, rowspan: 0, colspan: 2 },
           { row: 5, col: 2, rowspan: 0, colspan: 2 }
+        ]
+      },
+      composition2: {
+        align: 'left',
+        config: [
+          { field: 'standard', title: 'Standards' },
+          { field: 'info1', title: 'Info' },
+          { field: 'info2', title: 'Info' },
+
+        ],
+        moredata: [
+          {
+            id: 10001, standard: 'Standards', info1: 'ASME B16.11, MSS SP97, MSS SP79, MSS SP83, MSS SP95.', info2: ''
+          },
+          {
+            id: 10002, standard: 'Materials', info1: 'Stainless Steel', info2: 'ASTM / ASME A/SA 182 F 304, 304L, 304H, 309H, 310H, 316, 316H, 316L, 316 LN, 317, 317L, 321, 321H, 347, 347H'
+          },
+          {
+            id: 10003, standard: 'Materials', info1: 'Duplex and Super Duplex', info2: 'ASTM / ASME A/SA 182 F44, F45, F51, F53, F55, F60, F61'
+          },
+          {
+            id: 10004, standard: 'Sizes', info1: '1/2″ (DN15) ~ 4″ (DN100)', info2: ''
+          },
+          {
+            id: 10005, standard: 'End Connections', info1: 'Butt weld (BW), socket weld (SW), threaded (THD)', info2: ''
+          },
+          {
+            id: 10006, standard: 'Types', info1: 'elbow, tee, reducer, cross, cap, coupling, half coupling, boss, couplet, street elbows, plug, bushing, nipple, swaged nipple, union, insert, bull plug, weld outlet, socket outlet, threaded outlet, nipolet', info2: ''
+          },
+          {
+            id: 10007, standard: 'Pressure Ratings', info1: 'Class 2000, 3000, 6000, 9000', info2: ''
+          },
+        ],
+        mergeRule: [
+          { row: 0, col: 2, rowspan: 0, colspan: 2 },
+          { row: 1, col: 1, rowspan: 2, colspan: 0 },
+          { row: 3, col: 2, rowspan: 0, colspan: 2 },
+          { row: 4, col: 2, rowspan: 0, colspan: 2 },
+          { row: 5, col: 2, rowspan: 0, colspan: 2 },
+          { row: 6, col: 2, rowspan: 0, colspan: 2 }
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
