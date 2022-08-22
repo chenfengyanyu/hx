@@ -105,6 +105,11 @@ const router = createRouter({
       name: 'na',
       component: () => import('../views/NAView.vue')
     },
+    {
+      path: '/ni',
+      name: 'ni',
+      component: () => import('../views/NIView.vue')
+    },
   ]
 })
 
