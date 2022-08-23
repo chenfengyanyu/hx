@@ -20,14 +20,15 @@
       <div class="title">Tantalum Products (Pure 99.95%-99.99%)</div>
       <BasicTable :productdatas="availableProducts" />
     </div>
-    <!-- <div class="mytable">
+    <div class="mytable">
       <div class="title">Chemical Composition (For Reference)</div>
-      <MergeTable :productdatas="composition2" />
+      <BasicTable :productdatas="availableProducts2" />
     </div>
     <div class="mytable">
       <div class="title">Mechanical Property (For Reference)</div>
-      <MergeTable1 :productdatas="composition3" />
-    </div> -->
+      <div class="subtitle">Bar ,Wire ,Tube the Diameter 0.125” (3.18mm)~2.5" (63.5mm)</div>
+      <BasicTable :productdatas="availableProducts3" />
+    </div>
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -76,106 +77,87 @@ export default defineComponent({
         ],
         moredata: [
           {
-            id: 10001, products: 'Niobium Wire', standard: 'ASTM B392-98',
-            material: 'RO4200-1\nRO4210-2', size: 'Φ03mm-Φ100mm X L'
+            id: 10001, products: 'Tantalum Wire', standard: 'ASTM B365-98',
+            material: 'RO5200\nRO5252(Ta-2.5W)\nRO5255 (Ta-10W)', size: 'Φ0.3mm-Φ100mm X L'
           },
           {
-            id: 10002, products: 'Niobium Bar', standard: 'ASTM B392-98',
-            material: 'RO4200-1\nRO4210-2', size: 'Φ3mm -Φ100mm'
+            id: 10002, products: 'Tantalum Bar', standard: 'ASTM B365-98',
+            material: 'RO5200\nRO5252(Ta-2.5W)\nRO5255 (Ta-10W)', size: 'Φ3mm -Φ100mm'
           },
           {
-            id: 10003, products: 'Niobium Sheet\nNiobium Plate\nNiobium Foil', standard: 'ASTM B393-98',
-            material: 'RO4200-1\nRO4210-2', size: 'THK:0.1-0.5mm x W 300-600mm x L 30-2000mm\nTHK:0.5-10mm x W 50-1000mm x L 50-2000mm\nTHK:0.03-0.09mm x W 30-150mm x L <2000'
+            id: 10003, products: 'Tantalum Sheet\nTantalum Plate\nTantalum Foil', standard: 'ASTM B 708',
+            material: 'RO5200, RO5400\nRO5252(Ta-2.5W)\nRO5255 (Ta-10W)', size: 'THK:0.1-0.5mm x W 30-60mm x L:30-2000mm\nTHK:0.5-0.10mm x W 50-1000mm x L:50-2000mm\nTHK:0.03-0.09mm x W 30-150mm x L: <2000'
           },
           {
-            id: 10004, products: 'Niobium Tube', standard: 'ASTM B394-98',
-            material: 'RO4200-1\nRO4210-2', size: 'Φ2.0-100mm\nThk: 0.2mm-5.0mm\nL : 200mm-8000mm'
+            id: 10004, products: 'Tantalum Tube', standard: 'ASTM B 521',
+            material: 'RO5200, RO5400\nRO5252(Ta-2.5W)\nRO5255 (Ta-10W)', size: 'OD: 2.0-100mm\nThk: 0.2mm-5.0mm\nL: 200mm-8000mm'
           },
         ]
       },
-      composition2: {
-        align: 'center',
+      availableProducts2: {
         config: [
-          { field: 'standard', title: 'Material' },
-          { field: 'info1', title: 'Chemical Requirements' },
-          { field: 'info2', title: 'Chemical Requirements' },
-          { field: 'info3', title: 'Chemical Requirements' },
-          { field: 'info4', title: 'Chemical Requirements' },
-          { field: 'info5', title: 'Chemical Requirements' },
-          { field: 'info6', title: 'Chemical Requirements' },
-          { field: 'info7', title: 'Chemical Requirements' },
-          { field: 'info8', title: 'Chemical Requirements' },
-          { field: 'info9', title: 'Chemical Requirements' },
-          { field: 'info10', title: 'Chemical Requirements' },
-          { field: 'info11', title: 'Chemical Requirements' },
-          { field: 'info12', title: 'Chemical Requirements' }
+          { field: 'material', title: 'Material' },
+          { field: 'ta', title: 'Ta' },
+          { field: 'nb1', title: 'Nb' },
+          { field: 'fe', title: 'Fe' },
+          { field: 'si', title: 'Si' },
+          { field: 'ni', title: 'Ni' },
+          { field: 'w', title: 'W' },
+          { field: 'mo', title: 'Mo' },
+          { field: 'ti', title: 'Ti' },
+          { field: 'nb2', title: 'Nb' },
+          { field: 'o', title: 'O' },
+          { field: 'c', title: 'C' },
+          { field: 'h', title: 'H' },
+          { field: 'n', title: 'N' },
         ],
         moredata: [
           {
-            id: 10001, standard: 'Material', info1: 'Main', info2: 'Main', info3: 'Other Impurities (max)', info4: '', info5: '', info6: '',
-            info7: '', info8: '', info9: '', info10: '', info11: '', info12: ''
+            id: 10001, material: 'Ta1', ta: 'Bal', nb1: '', fe: '0.005', si: '0.05', ni: '0.002',
+            w: '0.01', mo: '0.01', ti: '0.002', nb2: '0.03', o: '0.015', c: '0.01', h: '0.0015', n: '0.01'
           },
           {
-            id: 10002, standard: 'Material', info1: 'Nb', info2: 'Fe', info3: 'Si', info4: 'Ni', info5: 'W', info6: 'Mo',
-            info7: 'Ti', info8: 'Ta', info9: 'O', info10: 'C', info11: 'H', info12: 'N'
+            id: 10002, material: 'Ta2', ta: 'Bal', nb1: '', fe: '0.03', si: '0.02', ni: '0.005',
+            w: '0.04', mo: '0.03', ti: '0.005', nb2: '0.1', o: '0.02', c: '0.01', h: '0.0015', n: '0.01'
           },
           {
-            id: 10003, standard: 'Nb1', info1: 'bal', info2: '0.004', info3: '0.004', info4: '0.002', info5: '0.005', info6: '0.005',
-            info7: '0.002', info8: '0.05', info9: '0.012', info10: '0.0035', info11: '0.0012', info12: '0.003'
+            id: 10003, material: 'TaNb3', ta: 'Bal', nb1: '<3.5', fe: '0.03', si: '0.03', ni: '0.005',
+            w: '0.04', mo: '0.03', ti: '0.005', nb2: '', o: '0.02', c: '0.01', h: '0.0015', n: '0.01'
           },
           {
-            id: 10004, standard: 'Nb2', info1: 'bal', info2: '0.01', info3: '0.01', info4: '0.005', info5: '0.02', info6: '0.01',
-            info7: '0.015', info8: '0.07', info9: '0.012', info10: '0.0035', info11: '0.0012', info12: '0.003'
+            id: 10004, material: 'TaNb20', ta: 'Bal', nb1: '17.0-23.0', fe: '0.03', si: '0.03', ni: '0.005',
+            w: '0.04', mo: '0.03', ti: '0.005', nb2: '', o: '0.02', c: '0.01', h: '0.0015', n: '0.01'
+          },
+          {
+            id: 10005, material: 'Ta2.5W', ta: 'Bal', nb1: '', fe: '0.05', si: '0.05', ni: '0.002',
+            w: '3.0', mo: '0.01', ti: '0.002', nb2: '0.04', o: '0.015', c: '0.01', h: '0.0015', n: '0.01'
+          },
+          {
+            id: 10006, material: 'Ta10W', ta: 'Bal', nb1: '', fe: '0.005', si: '0.005', ni: '0.002',
+            w: '11', mo: '0.01', ti: '0.002', nb2: '0.04', o: '0.015', c: '0.01', h: '0.0015', n: '0.01'
           }
-        ],
-        mergeRule: [
-          { row: 0, col: 1, rowspan: 2, colspan: 0 },
-          { row: 0, col: 2, rowspan: 0, colspan: 2 },
-          { row: 0, col: 4, rowspan: 0, colspan: 10 }
         ]
       },
-      composition3: {
-        align: 'center',
+      availableProducts3: {
         config: [
-          { field: 'col1', title: 'Material' },
-          { field: 'info1', title: 'Tensile Strength, min\npound/inch2(Mpa)' },
-          { field: 'info2', title: 'Yield Strength min\npound/inch2(Mpa)' },
-          { field: 'info3', title: 'Elongation min, %\n(1 inch gauge)' }
+          { field: 'material', title: 'Material' },
+          { field: 'tensile', title: 'Tensile Strength, min\npound/inch2(Mpa)' },
+          { field: 'yield', title: 'Yield Strength min\npound/inch2(Mpa)' },
+          { field: 'elongation', title: 'Elongation min, %\n(1 inch)' }
         ],
         moredata: [
           {
-            id: 10000, col1: 'Material', info1: 'Tensile Strength, min\npound/inch2(Mpa)',
-            info2: 'Yield Strength min\npound/inch2(Mpa)', info3: 'Elongation min, %\n(1 inch gauge)'
+            id: 10001, material: 'RO5200/RO5400', tensile: '25000 (172)', yield: '15000 (103)', elongation: '25'
           },
           {
-            id: 10001, col1: 'Bar with diameter 0.125”(3.18mm) to 2.5”(63.5mm)', info1: '', info2: '', info3: ''
+            id: 10002, material: 'RO5252', tensile: '40000 (276)', yield: '28000 (193)', elongation: '20'
           },
           {
-            id: 10002, col1: 'RO4200-1', info1: '18000(125)', info2: '12000(85)', info3: '25'
+            id: 10003, material: 'RO5255', tensile: '70000 (482)', yield: '55000 (379)', elongation: '20'
           },
           {
-            id: 10003, col1: 'RO4200-2', info1: '18000 (125)', info2: '12000(85)', info3: '25'
+            id: 10004, material: 'RO5240', tensile: '35000 (244)', yield: '15000 (103)', elongation: '25'
           },
-          {
-            id: 10004, col1: 'Wire with diameter is 0.012”(0.3048mm) to 0.124”(3.15mm)', info1: '', info2: '', info3: ''
-          },
-          {
-            id: 10005, col1: 'Type1 & Type2', info1: '18000(125)', info2: '', info3: '20'
-          },
-          {
-            id: 10006, col1: 'Type3 & Type4', info1: '18000(125)', info2: '', info3: '15'
-          },
-          {
-            id: 10007, col1: ' Tube', info1: '', info2: '', info3: ''
-          },
-          {
-            id: 10008, col1: 'RO4200-1\nRO4200-2', info1: '18000(125)', info2: '8500 (59)', info3: '25'
-          }
-        ],
-        mergeRule: [
-          { row: 1, col: 1, rowspan: 0, colspan: 4 },
-          { row: 4, col: 1, rowspan: 0, colspan: 4 },
-          { row: 7, col: 1, rowspan: 0, colspan: 4 },
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
