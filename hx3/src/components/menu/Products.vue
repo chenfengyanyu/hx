@@ -38,7 +38,7 @@
                     <li><a href="na">Nickel Alloy</a></li>
                     <li><a href="ni">Niobium </a></li>
                     <li><a href="ta">Tantalum</a></li>
-                    <li><a href="product">Tungsten</a></li>
+                    <li><a href="tu">Tungsten</a></li>
                     <li><a href="product">Zirconium</a></li>
                 </ol>
             </li>

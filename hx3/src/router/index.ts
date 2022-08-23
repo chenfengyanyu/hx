@@ -115,6 +115,11 @@ const router = createRouter({
       name: 'ta',
       component: () => import('../views/TAView.vue')
     },
+    {
+      path: '/tu',
+      name: 'tu',
+      component: () => import('../views/TUView.vue')
+    },
   ]
 })
 
