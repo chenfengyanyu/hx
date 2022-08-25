@@ -22,7 +22,7 @@
     </div>
     <div class="mytable">
       <div class="title">Tungsten Chemical Composition</div>
-      <MergeTable :productdatas="composition2" />
+      <MergeTable1 :productdatas="composition2" />
     </div>
     <!-- 
     <div class="mytable">
@@ -116,11 +116,27 @@ export default defineComponent({
           {
             id: 10001, col1: 'W (>%)', col2: 'Chemical Content (< %)', col3: '', col4: '', col5: '', col6: '', col7: '',
             col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
+          },
+          {
+            id: 10002, col1: '99.999\nPT74-TBSW1', col2: 'Fe', col3: 'Ca', col4: 'Be', col5: 'Sn', col6: 'Al', col7: 'Ni',
+            col8: 'Zn', col9: 'Sb', col10: 'Pt', col11: 'K', col12: 'Ta', col13: 'Na'
+          },
+          {
+            id: 10003, col1: '99.999\nPT74-TBSW1', col2: '0.0001', col3: '0.00005', col4: '0.000005', col5: '0.000005', col6: '0.00005', col7: '0.00001',
+            col8: '0.00005', col9: '0.00005', col10: '0.00003', col11: '0.000005', col12: '0.0001', col13: '0.00005'
+          },
+          {
+            id: 10004, col1: '99.999\nPT74-TBSW1', col2: 'Cr', col3: 'Pb', col4: 'As', col5: 'Mg', col6: 'Ti', col7: 'Bi',
+            col8: 'Mo', col9: 'Cd', col10: 'Cu', col11: 'Ba', col12: 'Co', col13: 'Mn'
+          },
+          {
+            id: 10005, col1: '99.999\nPT74-TBSW1', col2: '0.000005', col3: '0.00001', col4: '0.00005', col5: '0.00005', col6: '0.000005', col7: '0.00001',
+            col8: '0.00001', col9: '0.000005', col10: '0.000007', col11: '0.00001', col12: '0.000005', col13: '0.000005'
           }
         ],
         mergeRule: [
-          { row: 0, col: 1, rowspan: 2, colspan: 0 },
-          { row: 0, col: 2, rowspan: 0, colspan: 12 }
+          { row: 0, col: 2, rowspan: 0, colspan: 12 },
+          { row: 1, col: 1, rowspan: 4, colspan: 0 }
         ]
       },
       composition3: {
