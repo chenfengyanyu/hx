@@ -120,6 +120,11 @@ const router = createRouter({
       name: 'tu',
       component: () => import('../views/TUView.vue')
     },
+    {
+      path: '/zi',
+      name: 'zi',
+      component: () => import('../views/ZIView.vue')
+    },
   ]
 })
 
