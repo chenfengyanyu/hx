@@ -24,12 +24,10 @@
       <div class="title">Tungsten Chemical Composition</div>
       <MergeTable1 :productdatas="composition2" />
     </div>
-    <!-- 
     <div class="mytable">
-      <div class="title">Tensile Date</div>
-      <div class="subtitle">Mechanical Property Requirements</div>
-      <MergeTable1 :productdatas="composition3" />
-    </div> -->
+      <div class="title">Tungsten Properties</div>
+      <BasicTable :productdatas="availableProducts2" />
+    </div>
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -95,6 +93,26 @@ export default defineComponent({
           }
         ]
       },
+      availableProducts2: {
+        config: [
+          { field: 'products', title: 'Name' },
+          { field: 'phase', title: 'Phase at STP' },
+          { field: 'density', title: 'Density' },
+          { field: 'ultimate', title: 'Ultimate Tensile Strength' },
+          { field: 'yield', title: 'Yield Strength' },
+          { field: 'elasticity', title: 'Young\'s Modulus of Elasticity' },
+          { field: 'brinell', title: 'Brinell Hardness' },
+          { field: 'melting', title: 'Melting Point' },
+          { field: 'thermal', title: 'Thermal Conductivity' },
+          { field: 'heat', title: 'Heat Capacity' },
+        ],
+        moredata: [
+          {
+            id: 10001, products: 'Pure Tungsten', phase: 'solid', density: '19.3 kg/cc', ultimate: '980 MPa',
+            yield: '750 MPa', elasticity: '750 GPa', brinell: '3695 BHN', melting: '3410 °C', thermal: '170 W/mK', heat: '130 J/g K'
+          }
+        ]
+      },
       composition2: {
         align: 'center',
         config: [
@@ -132,81 +150,45 @@ export default defineComponent({
           {
             id: 10005, col1: '99.999\nPT74-TBSW1', col2: '0.000005', col3: '0.00001', col4: '0.00005', col5: '0.00005', col6: '0.000005', col7: '0.00001',
             col8: '0.00001', col9: '0.000005', col10: '0.000007', col11: '0.00001', col12: '0.000005', col13: '0.000005'
+          },
+          {
+            id: 10006, col1: '99.99\nPT74-TBSW2', col2: 'Fe', col3: 'Ca', col4: 'Be', col5: 'Sn', col6: 'Al', col7: 'Ni',
+            col8: 'Zn', col9: 'Sb', col10: 'Pt', col11: 'K', col12: 'O', col13: 'Na'
+          },
+          {
+            id: 10007, col1: '99.99\nPT74-TBSW2', col2: '0.0001', col3: '0.00045', col4: '0.0001', col5: '0.0001', col6: '0.0001', col7: '0.0001',
+            col8: '0.0001', col9: '0.0001', col10: '0.0001', col11: '0.0005', col12: '0.0040', col13: '0.0009'
+          },
+          {
+            id: 10008, col1: '99.99\nPT74-TBSW2', col2: 'Cr', col3: 'Pb', col4: 'As', col5: 'Mg', col6: 'Ti', col7: 'Bi',
+            col8: 'Mo', col9: 'Cd', col10: 'Cu', col11: 'Ba', col12: 'Co', col13: 'Mn'
+          },
+          {
+            id: 10009, col1: '99.99\nPT74-TBSW2', col2: '0.0001', col3: '0.0001', col4: '0.0001', col5: '0.0001', col6: '0.0001', col7: '0.0001',
+            col8: '0.0002', col9: '0.0001', col10: '0.0001', col11: '0.0001', col12: '0.0001', col13: '0.0001'
+          },
+          {
+            id: 10010, col1: '99.95\nPT74-TBW3', col2: 'Fe', col3: 'Ca', col4: 'P', col5: 'Sn', col6: 'Al', col7: 'Ni',
+            col8: 'Zn', col9: 'Sb', col10: 'Si', col11: 'O', col12: 'Pb', col13: 'As'
+          },
+          {
+            id: 10011, col1: '99.95\nPT74-TBW3', col2: '0.005', col3: '0.003', col4: '0.001', col5: '0.0001', col6: '0.002', col7: '0.003',
+            col8: '0.003', col9: '0.001', col10: '0.003', col11: '0.003', col12: '0.0001', col13: '0.002'
+          },
+          {
+            id: 10012, col1: '99.95\nPT74-TBW3', col2: 'Mg', col3: 'C', col4: 'Bi', col5: 'Mo', col6: '', col7: '',
+            col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
+          },
+          {
+            id: 10013, col1: '99.95\nPT74-TBW3', col2: '0.002', col3: '0.005', col4: '0.0001', col5: '0.001', col6: '', col7: '',
+            col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
           }
         ],
         mergeRule: [
           { row: 0, col: 2, rowspan: 0, colspan: 12 },
-          { row: 1, col: 1, rowspan: 4, colspan: 0 }
-        ]
-      },
-      composition3: {
-        align: 'center',
-        config: [
-          { field: 'col1', title: 'Material' },
-          { field: 'col2', title: 'Material' },
-          { field: 'info1', title: 'Requirements' },
-          { field: 'info2', title: 'Requirements' },
-          { field: 'info3', title: 'Requirements' },
-          { field: 'info4', title: 'Requirements' },
-          { field: 'info5', title: 'Requirements' },
-        ],
-        moredata: [
-          {
-            id: 10001, col1: 'Material', col2: '', info1: 'Utimate Tensile\nMpa (min)', info2: 'Yield Strength(0.2% OS)\nMpa (min)',
-            info3: 'Elong.in 2 in(50mm) or 4D\nmin,% (min)', info4: 'R/A', info5: 'Hardness Brinell'
-          },
-          {
-            id: 10002, col1: 'Monel 400', col2: 'Cold', info1: '600', info2: '415',
-            info3: '20B', info4: '', info5: ''
-          },
-          {
-            id: 10003, col1: 'Monel 400', col2: 'Hot', info1: '552', info2: '276',
-            info3: '30D', info4: '', info5: ''
-          },
-          {
-            id: 10004, col1: 'Inconel 600', col2: 'Cold', info1: '760', info2: '585',
-            info3: '10', info4: '', info5: ''
-          },
-          {
-            id: 10005, col1: 'Monel 400', col2: 'Hot', info1: '620', info2: '275',
-            info3: '25', info4: '', info5: ''
-          },
-          {
-            id: 10006, col1: 'Inconel 625', col2: 'Inconel 625', info1: '827', info2: '413',
-            info3: '30', info4: '', info5: ''
-          },
-          {
-            id: 10007, col1: 'Inconel 718', col2: '', info1: '1275', info2: '1034',
-            info3: '12', info4: '15', info5: '331'
-          },
-          {
-            id: 10008, col1: 'Hastelloy 276', col2: '', info1: '600', info2: '283',
-            info3: '40', info4: '', info5: ''
-          },
-          {
-            id: 10009, col1: 'Inconel X-750', col2: '', info1: '1103-1275', info2: '690-897',
-            info3: '20', info4: '', info5: ''
-          },
-          {
-            id: 10010, col1: 'Monel K-500', col2: 'Cold', info1: '965', info2: '690',
-            info3: '17', info4: '', info5: '280'
-          },
-          {
-            id: 10011, col1: 'Monel K-500', col2: 'Hot', info1: '965', info2: '690',
-            info3: '19', info4: '', info5: '265'
-          },
-        ],
-        mergeRule: [
-          { row: 0, col: 1, rowspan: 0, colspan: 2 },
-          { row: 1, col: 1, rowspan: 2, colspan: 0 },
-          { row: 3, col: 1, rowspan: 2, colspan: 0 },
-          { row: 5, col: 1, rowspan: 0, colspan: 2 },
-          { row: 6, col: 1, rowspan: 0, colspan: 2 },
-          { row: 7, col: 1, rowspan: 0, colspan: 2 },
-          { row: 8, col: 1, rowspan: 0, colspan: 2 },
-          { row: 9, col: 1, rowspan: 2, colspan: 0 },
-          { row: 9, col: 3, rowspan: 2, colspan: 0 },
-          { row: 9, col: 4, rowspan: 2, colspan: 0 }
+          { row: 1, col: 1, rowspan: 4, colspan: 0 },
+          { row: 5, col: 1, rowspan: 4, colspan: 0 },
+          { row: 9, col: 1, rowspan: 4, colspan: 0 }
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
