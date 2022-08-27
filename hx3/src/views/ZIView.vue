@@ -19,14 +19,19 @@
       <div class="title">Characteristics of Zr 720</div>
       <BasicTable :productdatas="availableProducts" />
     </div>
-    <!-- <div class="mytable">
-      <div class="title">Tungsten Chemical Composition</div>
+    <div class="mytable">
+      <div class="title">Zr 702 Products Detail</div>
+      <BasicTable :productdatas="availableProducts2" />
+    </div>
+    <div class="mytable">
+      <div class="title">Chemical Composition ( For your reference) %</div>
+      <div class="subtitle">Non-nuclear Industrial Zirconium Chemical Composition</div>
       <MergeTable1 :productdatas="composition2" />
     </div>
     <div class="mytable">
-      <div class="title">Tungsten Properties</div>
-      <BasicTable :productdatas="availableProducts2" />
-    </div> -->
+      <div class="title">Zr Mechanical Properties ( For your reference)</div>
+      <BasicTable :productdatas="availableProducts3" />
+    </div>
     <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
@@ -70,7 +75,7 @@ export default defineComponent({
         config: [
           { field: 'uns', title: 'UNS' },
           { field: 'melting', title: 'Melting Range' },
-           { field: 'density', title: 'Density' }
+          { field: 'density', title: 'Density' }
         ],
         moredata: [
           {
@@ -81,100 +86,93 @@ export default defineComponent({
       },
       availableProducts2: {
         config: [
-          { field: 'products', title: 'Name' },
-          { field: 'phase', title: 'Phase at STP' },
-          { field: 'density', title: 'Density' },
-          { field: 'ultimate', title: 'Ultimate Tensile Strength' },
-          { field: 'yield', title: 'Yield Strength' },
-          { field: 'elasticity', title: 'Young\'s Modulus of Elasticity' },
-          { field: 'brinell', title: 'Brinell Hardness' },
-          { field: 'melting', title: 'Melting Point' },
-          { field: 'thermal', title: 'Thermal Conductivity' },
-          { field: 'heat', title: 'Heat Capacity' },
+          { field: 'products', title: 'Products' },
+          { field: 'standard', title: 'Standard' },
+          { field: 'size', title: 'Size' }
         ],
         moredata: [
           {
-            id: 10001, products: 'Pure Tungsten', phase: 'solid', density: '19.3 kg/cc', ultimate: '980 MPa',
-            yield: '750 MPa', elasticity: '750 GPa', brinell: '3695 BHN', melting: '3410 °C', thermal: '170 W/mK', heat: '130 J/g K'
+            id: 10001, products: 'Zr702Bar', standard: 'ASTM B/ASME /550/ASTM B551\nASTM/ASME B/SB493', size: 'Dia.6-280mm * L ≤ 6000mm'
+          },
+          {
+            id: 10002, products: 'Zr702 Wire', standard: 'ASTMB550/551\nASTM B351/ASTM B352\nAWSA5.24/A5.24M\nASME SFA5.24', size: 'Dia. 0.5-6mm * TIG/ Spool/Coil'
+          },
+          {
+            id: 10003, products: 'Zr702 Plate', standard: 'ASTMB/ASME/551\nASTM B351, ASTM B352', size: 'Thk. 0.5-50mm * W 100-2500mm * L 100-6000mm'
+          },
+          {
+            id: 10004, products: 'Zr702 Tube\nZr702 Pipe', standard: 'ASTMB/ASME/523\nASTM B653\nASTM/ASME B/SB658', size: 'OD.8-152mm *Thk.0.5-15mm * L ≤ 6000mm'
+          },
+          {
+            id: 10005, products: 'Zr702 Foil', standard: 'ASTMB628/ ASTM B551', size: 'Thickness 0 .05-6mm*W20-150mm*L'
+          },
+          {
+            id: 10006, products: 'Zr702 Fitting', standard: 'ASTM/ASME B/SB653', size: 'According to your request'
+          }
+        ]
+      },
+      availableProducts3: {
+        config: [
+          { field: 'grade', title: 'Grade' },
+          { field: 'tensile', title: 'Tensile Strength min Ksi (Mpa)' },
+          { field: 'yield', title: 'Yield Strength, min, ksi( Mpa)' },
+          { field: 'elong', title: 'Elongation in 2 in. min %' }
+        ],
+        moredata: [
+          {
+            id: 10001, grade: 'Zr702', tensile: '55 ( 380)',
+            yield: '30 (205)',elong:'16'
+          },
+          {
+            id: 10002, grade: 'Zr704', tensile: '60 ( 415)',
+            yield: '35 (240)',elong:'14'
+          },
+          {
+            id: 10003, grade: 'Zr705', tensile: '80(550)',
+            yield: '55(380)',elong:'16'
           }
         ]
       },
       composition2: {
         align: 'center',
         config: [
-          { field: 'col1', title: 'W (>%)' },
-          { field: 'col2', title: 'Chemical Content (< %)' },
-          { field: 'col3', title: 'Chemical Content (< %)' },
-          { field: 'col4', title: 'Chemical Content (< %)' },
-          { field: 'col5', title: 'Chemical Content (< %)' },
-          { field: 'col6', title: 'Chemical Content (< %)' },
-          { field: 'col7', title: 'Chemical Content (< %)' },
-          { field: 'col8', title: 'Chemical Content (< %)' },
-          { field: 'col9', title: 'Chemical Content (< %)' },
-          { field: 'col10', title: 'Chemical Content (< %)' },
-          { field: 'col11', title: 'Chemical Content (< %)' },
-          { field: 'col12', title: 'Chemical Content (< %)' },
-          { field: 'col13', title: 'Chemical Content (< %)' },
+          { field: 'col1', title: 'Chemical Composition (wt%) ≤' },
+          { field: 'col2', title: 'Standard' },
+          { field: 'col3', title: 'Standard' },
+          { field: 'col4', title: 'Standard' },
+          { field: 'col5', title: 'Standard' },
+          { field: 'col6', title: 'Standard' },
+          { field: 'col7', title: 'Standard' },
+          { field: 'col8', title: 'Standard' },
+          { field: 'col9', title: 'Standard' },
+          { field: 'col10', title: 'Standard' },
+          { field: 'col11', title: 'Standard' },
         ],
         moredata: [
           {
-            id: 10001, col1: 'W (>%)', col2: 'Chemical Content (< %)', col3: '', col4: '', col5: '', col6: '', col7: '',
-            col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
+            id: 10001, col1: 'Chemical Composition (wt%) ≤', col2: '', col3: '', col4: '', col5: '', col6: '', col7: '',
+            col8: '', col9: '', col10: '', col11: 'Standard'
           },
           {
-            id: 10002, col1: '99.999\nPT74-TBSW1', col2: 'Fe', col3: 'Ca', col4: 'Be', col5: 'Sn', col6: 'Al', col7: 'Ni',
-            col8: 'Zn', col9: 'Sb', col10: 'Pt', col11: 'K', col12: 'Ta', col13: 'Na'
+            id: 10002, col1: 'Grade', col2: 'Zr (min)', col3: 'Hf (max)', col4: 'Fe+Cr (max)', col5: 'Nb', col6: 'Sn', col7: 'H(max)',
+            col8: 'N(max)', col9: 'C(max)', col10: 'O (max)', col11: 'ASTM B 551\nASTM B 551M'
           },
           {
-            id: 10003, col1: '99.999\nPT74-TBSW1', col2: '0.0001', col3: '0.00005', col4: '0.000005', col5: '0.000005', col6: '0.00005', col7: '0.00001',
-            col8: '0.00005', col9: '0.00005', col10: '0.00003', col11: '0.000005', col12: '0.0001', col13: '0.00005'
+            id: 10003, col1: 'Zr702', col2: '99.2', col3: '4.5', col4: '0.2', col5: '', col6: '', col7: '0.005',
+            col8: '0.025', col9: '0.05', col10: '0.16', col11: 'ASTM B 551\nASTM B 551M'
           },
           {
-            id: 10004, col1: '99.999\nPT74-TBSW1', col2: 'Cr', col3: 'Pb', col4: 'As', col5: 'Mg', col6: 'Ti', col7: 'Bi',
-            col8: 'Mo', col9: 'Cd', col10: 'Cu', col11: 'Ba', col12: 'Co', col13: 'Mn'
+            id: 10004, col1: 'Zr704', col2: '97.5', col3: '4.5', col4: '0.20-0.40', col5: '', col6: '1.0-1.2', col7: '0.005',
+            col8: '0.025', col9: '0.05', col10: '0.18', col11: 'ASTM B 551\nASTM B 551M'
           },
           {
-            id: 10005, col1: '99.999\nPT74-TBSW1', col2: '0.000005', col3: '0.00001', col4: '0.00005', col5: '0.00005', col6: '0.000005', col7: '0.00001',
-            col8: '0.00001', col9: '0.000005', col10: '0.000007', col11: '0.00001', col12: '0.000005', col13: '0.000005'
-          },
-          {
-            id: 10006, col1: '99.99\nPT74-TBSW2', col2: 'Fe', col3: 'Ca', col4: 'Be', col5: 'Sn', col6: 'Al', col7: 'Ni',
-            col8: 'Zn', col9: 'Sb', col10: 'Pt', col11: 'K', col12: 'O', col13: 'Na'
-          },
-          {
-            id: 10007, col1: '99.99\nPT74-TBSW2', col2: '0.0001', col3: '0.00045', col4: '0.0001', col5: '0.0001', col6: '0.0001', col7: '0.0001',
-            col8: '0.0001', col9: '0.0001', col10: '0.0001', col11: '0.0005', col12: '0.0040', col13: '0.0009'
-          },
-          {
-            id: 10008, col1: '99.99\nPT74-TBSW2', col2: 'Cr', col3: 'Pb', col4: 'As', col5: 'Mg', col6: 'Ti', col7: 'Bi',
-            col8: 'Mo', col9: 'Cd', col10: 'Cu', col11: 'Ba', col12: 'Co', col13: 'Mn'
-          },
-          {
-            id: 10009, col1: '99.99\nPT74-TBSW2', col2: '0.0001', col3: '0.0001', col4: '0.0001', col5: '0.0001', col6: '0.0001', col7: '0.0001',
-            col8: '0.0002', col9: '0.0001', col10: '0.0001', col11: '0.0001', col12: '0.0001', col13: '0.0001'
-          },
-          {
-            id: 10010, col1: '99.95\nPT74-TBW3', col2: 'Fe', col3: 'Ca', col4: 'P', col5: 'Sn', col6: 'Al', col7: 'Ni',
-            col8: 'Zn', col9: 'Sb', col10: 'Si', col11: 'O', col12: 'Pb', col13: 'As'
-          },
-          {
-            id: 10011, col1: '99.95\nPT74-TBW3', col2: '0.005', col3: '0.003', col4: '0.001', col5: '0.0001', col6: '0.002', col7: '0.003',
-            col8: '0.003', col9: '0.001', col10: '0.003', col11: '0.003', col12: '0.0001', col13: '0.002'
-          },
-          {
-            id: 10012, col1: '99.95\nPT74-TBW3', col2: 'Mg', col3: 'C', col4: 'Bi', col5: 'Mo', col6: '', col7: '',
-            col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
-          },
-          {
-            id: 10013, col1: '99.95\nPT74-TBW3', col2: '0.002', col3: '0.005', col4: '0.0001', col5: '0.001', col6: '', col7: '',
-            col8: '', col9: '', col10: '', col11: '', col12: '', col13: ''
+            id: 10005, col1: 'Zr705', col2: '95.5', col3: '4.5', col4: '0.2', col5: '2.0-3.0', col6: '', col7: '0.005',
+            col8: '0.025', col9: '0.5', col10: '0.18', col11: 'ASTM B 551\nASTM B 551M'
           }
         ],
         mergeRule: [
-          { row: 0, col: 2, rowspan: 0, colspan: 12 },
-          { row: 1, col: 1, rowspan: 4, colspan: 0 },
-          { row: 5, col: 1, rowspan: 4, colspan: 0 },
-          { row: 9, col: 1, rowspan: 4, colspan: 0 }
+          { row: 0, col: 1, rowspan: 0, colspan: 10 },
+          { row: 1, col: 11, rowspan: 4, colspan: 0 },
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]

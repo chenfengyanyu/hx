@@ -38,6 +38,11 @@ const router = createRouter({
       component: () => import('../views/ISOView.vue')
     },
     {
+      path: '/service',
+      name: 'service',
+      component: () => import('../views/ServiceView.vue')
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: () => import('../views/ContactView.vue')
