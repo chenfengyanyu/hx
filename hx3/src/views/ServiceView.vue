@@ -23,7 +23,7 @@ export default defineComponent({
 <template>
   <main>
     <Infobox :imgsrc=InfoImg title="Service" />
-    <div class="show">
+    <!-- <div class="show">
       <div class="left">
         <img src="../assets/service/1.png" width="100%" />
       </div>
@@ -35,8 +35,15 @@ export default defineComponent({
           our business go smoothly.
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="mytable">
+      <div class="hold"></div>
+      <!-- <div class="title">Service</div> -->
+      <div class="desc">Service is an very important part during the sales. Over the years, Advanced Metals Co.,
+        Ltd supply all kinds of service for our customers all over the world.
+        Advanced Metals Co., Ltd solve all kinds of problems for our customers and doing many add values service make
+        our business go smoothly.</div>
+      <div class="alone"><img src="../assets/service/1.png" width="100%" /></div>
       <div class="title">Our service as follows</div>
       <div class="desc">1.we have the very professional International Logistics. Our shipping forwarder are professional
         in Clear the
@@ -159,5 +166,9 @@ export default defineComponent({
   width: 30%;
   border-radius: 1rem;
   margin: 1rem;
+}
+
+.mytable .hold {
+  height: 4rem;
 }
 </style>
