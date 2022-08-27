@@ -64,7 +64,27 @@ export default defineComponent({
     <div class="mytable">
       <div class="title">Contact Us</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
-      <BasicTable :productdatas="contactInfo" />
+      <!-- <BasicTable :productdatas="contactInfo" /> -->
+      <table class="custom">
+        <tr>
+          <th width="30%">Adress</th>
+          <th>Tel</th>
+          <th>WhatsApp</th>
+          <th>Email</th>
+          <th>Web</th>
+        </tr>
+        <tr>
+          <td>Tongda International Building, Hi-Tech Development Zone Xi'an Shaanxi 710065 China</td>
+          <td>(+86)-134 8493 6283</td>
+          <td>(+86)134 8493 6283</td>
+          <td>
+            <a href="mailto: sales@amctitanium.com">sales@amctitanium.com</a><br>
+            <a href="mailto: info@amctitanium.com">info@amctitanium.com</a>
+          </td>
+          <td><a href="http://www.amctitanium.com" target="_blank">www.amctitanium.com</a></td>
+        </tr>
+
+      </table>
     </div>
   </main>
 </template>
@@ -122,5 +142,26 @@ export default defineComponent({
 .mytable .subtitle {
   color: #4a4a4a91;
   margin: 0 0 0.4rem;
+}
+
+.custom {
+  width: 100%;
+  border: 0.1rem solid #e5e6ebc4;
+  border-collapse: collapse;
+}
+
+.custom th {
+  background-color: #1e88e5;
+  color: #fff;
+  padding: 0.5rem;
+  border: 0.05rem solid;
+}
+
+.custom td {
+  padding: 0.5rem;
+  text-align: center;
+}
+.custom a{
+  color: #1e88e5;
 }
 </style>

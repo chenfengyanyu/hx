@@ -5,12 +5,12 @@
                 <img src="../assets/logo.png" />
             </div>
             <ul class="navlist">
-                <li>Home</li>
-                <li>Products</li>
-                <li>Package</li>
-                <li>Service</li>
-                <li>Quality</li>
-                <li>Contact</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="trb">Products</a></li>
+                <!-- <li><a href="">Package</a></li> -->
+                <li><a href="service">Service</a></li>
+                <li><a href="iso">Quality</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
         <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. Shaanxi ICP File 16009787-1</div>
@@ -57,6 +57,10 @@
     margin: 3.5rem 0 1.5rem 1.5rem;
     height: 2rem;
     font-size: 1.1rem;
+}
+.navlist>li>a {
+    color: #fff;
+    text-decoration: none;
 }
 
 .copyright {
