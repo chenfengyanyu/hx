@@ -23,13 +23,8 @@
       <BasicTable :productdatas="availableProducts" />
     </div>
     <div class="mytable">
-      <div class="title">Chemical Composition</div>
-      <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div>
-      <BasicTable :productdatas="chemicalComposition" />
-    </div>
-    <div class="mytable">
-      <div class="title">Mechanical Properties</div>
-      <div class="subtitle">Long Products, Annealed</div>
+      <div class="title">Chemical Composition (max)%</div>
+      <!-- <div class="subtitle">Chemical Properties of Frequently-used Stainless Steel Material Grade</div> -->
       <BasicTable :productdatas="chemicalComposition" />
     </div>
     <div class="mytable">
@@ -67,87 +62,88 @@ export default defineComponent({
       InfoImg: InfoImg,
       availableProducts: {
         config: [
-          { field: 'shape', title: 'Stainless Steel Bar Shape' },
-          { field: 'type', title: 'Stainless Steel Bar Grade/Type' },
-          { field: 'size', title: 'Stainless Steel Bar Sizes' }
+          { field: 'products', title: 'Products' },
+          { field: 'standard', title: 'Standard' },
+          { field: 'size', title: 'Size' },
+          { field: 'grade', title: 'Grade' }
         ],
         moredata: [
-          { id: 10001, shape: 'Stainless Steel Flat Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A, Edge Conditioned, True Mill Edge', size: 'Thickness: 3.175mm - 50.8mm\nWidths: 12.7mm - 203.2mm' },
-          { id: 10002, shape: 'Stainless Steel Half Round Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 4.76mm - 19.3mm' },
-          { id: 10003, shape: 'Stainless Steel Hexagon Bar', type: 'Grades: 303, 304/304L, 316/316L,2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 9.6mm - 76mm' },
-          { id: 10004, shape: 'Stainless Steel Round Bar', type: 'Grades: 303, 304/304L, 316/316L, 410, 416, 440C, 13-8 , 15-5 , 17-4 (630), 17-4 H1150, 2205\nType: Accuracy, Annealed, BSQ, Coiled, Cold Finished, Cond A, Hot Rolled, Rough Turned, TGP, PSQ, Forged', size: 'Diameter: 3.175mm-304.8mm' },
-          { id: 10005, shape: 'Stainless Steel Square Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Diameter: 3.175mm - 76.2mm' },
-          { id: 10006, shape: 'Stainless Steel Angle Bar', type: 'Grades: 303, 304/304L, 316/316L, 2205\nType: Annealed, Cold Finished, Cond A', size: 'Thickness :2mm-16mm\nWidth: 15mm-94mm' }
+          {
+            id: 10001, products: 'Seamless Austenitic Pipe/Tube', standard: 'ASTM A312/A312M\nASMESA312/SA312M\nASTM A269/ASME SA269\nASTM A240 A268 ASME\nSA240 SA268 410',
+            size: 'OD: 6.0~914.0mm\nWT: 0.5~88mm', grade: 'TP304, TP304L, TP304H, TP310, TP310S\nTP316, TP316L, TP316Ti, TP317, TP317L\nTP321, TP321H, TP347, TP347H\nTP410,TP420'
+          },
+          {
+            id: 10002, products: 'Welded Austenitic Pipe', standard: 'ASTM A312 ASTM A312M\nASTM A358, A778, JIS G3459\nASTM A240 A268 ASME\nSA240 SA268 410',
+            size: 'OD: 13.7~1016mm\nWT: 1.65-12.7mm', grade: 'TP304, TP304L, TP316, SUS304TB\nTP410,TP420'
+          },
+          {
+            id: 10003, products: 'Seamless Austenitic Pipe for heat Exchanger', standard: 'ASTM A213/A213M\nASME SA213/SA213M',
+            size: 'OD: 6.0~50.8mm\nWT: 0.8~10.0mm', grade: 'TP304, TP304L, TP304H, TP310, TP310S\nTP316, TP316L, TP316Ti, TP317, TP317L\nTP321, TP321H, TP347, TP347H'
+          },
+
+          {
+            id: 10004, products: 'Welded Austenitic for heat Exchanger Tube', standard: 'ASTM A246, A269\nJISG3463',
+            size: 'OD: 15.9~139.8mm\nWT: 1.6~5.0mm', grade: 'TP304, TP304L, TP316L, SUS304TB'
+          },
+
+          {
+            id: 10005, products: 'Seamless Mechanical Tube/Pipe', standard: 'ASTM A511',
+            size: 'OD: 6.0~50.8mm\nWT: 1.8~10.0mm', grade: 'MT304, MT304L, MT304H, MT310, MT310S, MT316, MT316L, MT317, MT317L, MT321, MT321H, MT347'
+          },
+
+          {
+            id: 10006, products: 'Welded Mechanical Tube/Pipe', standard: 'ASTM A554, JIS G3446',
+            size: 'OD: 7.9~152.4mm\nWT: 0.5~6.5mm', grade: 'MT304, MT304L, MT316L, MT430 Grade 201, 202 as per mill\'s STD SUS304'
+          },
+          {
+            id: 10007, products: 'Seamless/ Welded Duplex Tube & Pipe', standard: 'ASTM A789 / A789M',
+            size: 'OD: 6.0~50.8mm\nWT: 0.8~10.0mm', grade: 'S31803, S32205, S32750'
+          },
+          {
+            id: 10008, products: 'Seamless/ Welded Duplex Tube & Pipe', standard: 'STM A790/A790M',
+            size: 'OD: 21.3~273.1mm\nWT: 1.65~15.09mm', grade: 'S31803, S32205, S32750'
+          },
+          {
+            id: 10009, products: 'Seamless Tubes for Pressure Purposes', standard: 'EN 10216, DIN 17456, 17458',
+            size: 'OD: 6.0~914.0mm\nWT: 0.5~88mm', grade: '1.4301, 1.4307, 1.4541, 1.4401, 1.4404, 1.4571, 1.4878, 1.4432, 1.4462'
+          },
+          {
+            id: 10010, products: 'Square Tube& Pipe(Weled/Seamless)', standard: 'ASTM A554, ASTM A312M',
+            size: 'OD:12.7x12.7~300x300mm\nWT: 0.7~20mm', grade: 'MT304, MT304L, MT316L, MT430 Grade 201, 202 as per mill\'s STD'
+          },
+          {
+            id: 10011, products: 'Rectangular Tubes(Weled/Seamless)', standard: 'ASTM A554, ASTM A312',
+            size: 'OD: 10x20~100x200mm\nWT: 0.7~20mm', grade: 'MT304, MT304L, MT316L, MT430 Grade 201, 202 as per mill\'s STD'
+          },
+          {
+            id: 10012, products: 'Large OD Pipes', standard: 'JIS G3448, JIS G3468',
+            size: 'OD10 -1016mm\nWT:0.8-9.53mm', grade: '304. 316'
+          }
         ]
       },
       chemicalComposition: {
         config: [
-          { field: 'col1', title: 'UNS' },
-          { field: 'col2', title: 'ASTM' },
-          { field: 'col3', title: 'EN' },
-          { field: 'col4', title: 'JIS' },
-          { field: 'col5', title: 'C%' },
-          { field: 'col6', title: 'Mn%' },
-          { field: 'col7', title: 'P%' },
-          { field: 'col8', title: 'S%' },
-          { field: 'col9', title: 'Si%' },
-          { field: 'col10', title: 'Cr%' },
-          { field: 'col11', title: 'Ni%' },
-          { field: 'col12', title: 'Mo%' }
+          { field: 'col1', title: 'Grade' },
+          { field: 'col2', title: 'UNS' },
+          { field: 'col3', title: 'C≤' },
+          { field: 'col4', title: 'Mn' },
+          { field: 'col5', title: 'P≤' },
+          { field: 'col6', title: 'S≤' },
+          { field: 'col7', title: 'Si≤' },
+          { field: 'col8', title: 'Cr' },
+          { field: 'col9', title: 'Mo' },
+          { field: 'col10', title: 'Ni' },
         ],
         moredata: [
           {
-            id: 10003, col1: 'S30100', col2: '301', col3: '1.4319', col4: 'SUS301', col5: '≤0.15', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤1.00', col10: '16.0-18.0', col11: '6.0-8.0', col12: '-'
+            id: 10003, col1: 'TP304', col2: 'S30400', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '18.0-20.0', col9: '-', col10: '8.0-11.0'
           },
           {
-            id: 10004, col1: 'S30400', col2: '304', col3: '1.4301', col4: 'SUS304', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-10.5', col12: '-'
+            id: 10004, col1: 'TP304L', col2: 'S30403', col3: '0.035', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '18.0-20.0', col9: '-', col10: '8.0-12.0'
           },
-          {
-            id: 10005, col1: 'S30403', col2: '304L', col3: '1.4306', col4: 'SUS304L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '8.0-12.0', col12: '-'
-          },
-          {
-            id: 10006, col1: 'S30908', col2: '309S', col3: '1.4833', col4: 'SUS309S', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '22.0-24.0', col11: '12.0-15.0', col12: '-'
-          },
-          {
-            id: 10007, col1: 'S31008', col2: '310S', col3: '1.4845', col4: 'SUS310S', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤1.50', col10: '24.0-26.0', col11: '19.0-22.0', col12: '-'
-          },
-          {
-            id: 10008, col1: 'S31600', col2: '316', col3: '1.4401', col4: 'SUS316', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
-          },
-          {
-            id: 10009, col1: 'S31603', col2: '316L', col3: '1.4404', col4: 'SUS316L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '16.0-18.0', col11: '10.0-14.0', col12: '2.0-3.0'
-          },
-          {
-            id: 10010, col1: 'S31703', col2: '317L', col3: '1.4438', col4: 'SUS317L', col5: '≤0.03', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '18.0-20.0', col11: '11.0-15.0', col12: '3.0-4.0'
-          },
-          {
-            id: 10011, col1: 'S32100', col2: '321', col3: '1.4541', col4: 'SUS321', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-12.0', col12: '-'
-          },
-          {
-            id: 10012, col1: 'S34700', col2: '347', col3: '1.4550', col4: 'SUS347', col5: '≤0.08', col6: '≤2.00',
-            col7: '≤0.045', col8: '≤0.03', col9: '≤0.75', col10: '17.0-19.00', col11: '9.0-13.0', col12: '-'
-          },
-          {
-            id: 10013, col1: 'S32750', col2: 'SAD2507', col3: '1.4410', col4: '-', col5: '≤0.03', col6: '≤1.2',
-            col7: '≤0.035', col8: '≤0.02', col9: '≤0.80', col10: '24.0-26.0', col11: '6.0-8.0', col12: '3.0-5.0'
-          },
-          {
-            id: 10014, col1: 'S31803', col2: 'SAF2205', col3: '1.4462', col4: '-', col5: '≤0.03', col6: '≤2.0',
-            col7: '≤0.03', col8: '≤0.02', col9: '≤1.00', col10: '21.0-23.0', col11: '4.0-6.5', col12: '2.5-3.5'
-          },
-          {
-            id: 10015, col1: 'N08904', col2: '904L', col3: '1.4539', col4: '-', col5: '≤0.03', col6: '≤2.0',
-            col7: '≤0.035', col8: '≤0.03', col9: '≤1.00', col10: '18.0-20.0', col11: '23.0-25.0', col12: '3.0-4.0'
-          },
+          
         ]
       },
       mechanicalProperties: {
