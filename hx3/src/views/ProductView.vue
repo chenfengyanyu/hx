@@ -28,6 +28,10 @@
       <BasicTable :productdatas="chemicalComposition" />
     </div>
     <div class="mytable">
+      <div class="title">Mechanical Property</div>
+      <BasicTable :productdatas="mechanicalProperties" />
+    </div>
+    <div class="mytable">
       <div class="title">Related Products</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
       <ImageBox :lists="productList" />
@@ -136,38 +140,91 @@ export default defineComponent({
         ],
         moredata: [
           {
-            id: 10003, col1: 'TP304', col2: 'S30400', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            id: 10001, col1: 'TP304', col2: 'S30400', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
             col7: '1', col8: '18.0-20.0', col9: '-', col10: '8.0-11.0'
           },
           {
-            id: 10004, col1: 'TP304L', col2: 'S30403', col3: '0.035', col4: '2', col5: '0.045', col6: '0.03',
+            id: 10002, col1: 'TP304L', col2: 'S30403', col3: '0.035', col4: '2', col5: '0.045', col6: '0.03',
             col7: '1', col8: '18.0-20.0', col9: '-', col10: '8.0-12.0'
           },
-          
+          {
+            id: 10003, col1: 'TP316', col2: 'S31600', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '16.0-18.0', col9: '2.00-3.00', col10: '10.0-14.0'
+          },
+          {
+            id: 10004, col1: 'TP316L', col2: 'S31603', col3: '0.035', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '16.0-18.0', col9: '2.00-3.00', col10: '10.0-14.0'
+          },
+          {
+            id: 10005, col1: '316Ti', col2: 'S31668', col3: '0.08', col4: '2', col5: '0.035', col6: '0.03',
+            col7: '1', col8: '16.0-19.0', col9: '1.80-2.50', col10: '10.0-14.0'
+          },
+          {
+            id: 10006, col1: 'TP317', col2: 'S31700', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '18.0-20.0', col9: '3.0-4.0', col10: '11.0-15.0'
+          },
+          {
+            id: 10007, col1: 'TP317L', col2: 'S31703', col3: '0.035', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '18.0-20.0', col9: '3.0-4.0', col10: '11.0-15.0'
+          },
+          {
+            id: 10008, col1: 'TP321', col2: 'S32100', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '17.0-19.0', col9: '-', col10: '9.0-12.0'
+          },
+          {
+            id: 10009, col1: 'TP310S', col2: 'S31008', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '24.0-26.0', col9: '0.75', col10: '19.0-22.0'
+          },
+          {
+            id: 10010, col1: 'TP347', col2: 'S34700', col3: '0.08', col4: '2', col5: '0.045', col6: '0.03',
+            col7: '1', col8: '17.0-19.0', col9: '-', col10: '9.0-13.0'
+          },
+          {
+            id: 10011, col1: '', col2: 'S31254', col3: '0.02', col4: '1', col5: '0.03', col6: '0.01',
+            col7: '1', col8: '24.0-26.0', col9: '0.75', col10: '19.0-22.0'
+          },
+          {
+            id: 10012, col1: '', col2: 'N08367', col3: '0.03', col4: '2', col5: '0.04', col6: '0.03',
+            col7: '1', col8: '20.0-22.0', col9: '6.0-7.0', col10: '23.5-25.5'
+          },
+          {
+            id: 10014, col1: '', col2: 'N08926', col3: '0.02', col4: '2', col5: '0.03', col6: '0.01',
+            col7: '0.5', col8: '24.0-26.00', col9: '6.0-7.0', col10: '19.0-21.0'
+          },
+          {
+            id: 10015, col1: '', col2: 'N08904', col3: '0.02', col4: '2', col5: '0.04', col6: '0.03',
+            col7: '1', col8: '19.0-23.0', col9: '4.0-5.0', col10: '23.0-28.0'
+          },
+          {
+            id: 10016, col1: '', col2: 'N08925', col3: '0.02', col4: '1', col5: '0.045', col6: '0.03',
+            col7: '0.5', col8: '19.0-21.0', col9: '6.0-7.0', col10: '24.0-26.0'
+          }
         ]
       },
       mechanicalProperties: {
         config: [
-          { field: 'col1', title: 'Type No.' },
-          { field: 'col2', title: 'Tensile Strength, Ksi' },
-          { field: 'col3', title: 'Yield Strength, Ksi' },
-          { field: 'col4', title: 'Elongation in 1 inch,%' },
-          { field: 'col5', title: 'Reduction of Area,%' },
-          { field: 'col6', title: 'Brinell Hardness' }
+          { field: 'col1', title: 'Mechanical properties' },
+          { field: 'col2', title: 'Tensile,min,ksi[MPa]' },
+          { field: 'col3', title: 'Yield,min,ksi[MPa]' },
+          { field: 'col4', title: 'Elongation,%(min)' },
+          { field: 'col5', title: 'Hardness,HB(max)' },
         ],
         moredata: [
-          { id: 10001, col1: '301', col2: '110', col3: '40', col4: '60', col5: '70', col6: '165' },
-          { id: 10002, col1: '302', col2: '90', col3: '40', col4: '55', col5: '70', col6: '150' },
-          { id: 10003, col1: '303', col2: '90', col3: '35', col4: '50', col5: '55', col6: '160' },
-          { id: 10004, col1: '304', col2: '85', col3: '35', col4: '55', col5: '70', col6: '150' },
-          { id: 10005, col1: '304L', col2: '80', col3: '30', col4: '55', col5: '70', col6: '140' },
-          { id: 10006, col1: '316', col2: '85', col3: '35', col4: '60', col5: '70', col6: '150' },
-          { id: 10007, col1: '316L', col2: '78', col3: '30', col4: '55', col5: '65', col6: '145' },
-          { id: 10008, col1: '321', col2: '85', col3: '35', col4: '55', col5: '65', col6: '150' },
-          { id: 10009, col1: '410', col2: '75', col3: '40', col4: '35', col5: '70', col6: '155' },
-          { id: 100010, col1: '416', col2: '75', col3: '40', col4: '30', col5: '65', col6: '155' },
-          { id: 100011, col1: '420', col2: '95', col3: '50', col4: '25', col5: '-', col6: '241' },
-          { id: 100012, col1: '2205', col2: '90', col3: '65', col4: '25', col5: '-', col6: '217' },
+          { id: 10001, col1: 'TP304', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 10002, col1: 'TP304L', col2: '70【485】', col3: '25【170】', col4: '35', col5: '192' },
+          { id: 10003, col1: 'TP316', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 10004, col1: 'TP316L', col2: '70【485】', col3: '25【170】', col4: '35', col5: '192' },
+          { id: 10005, col1: '316Ti', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 10006, col1: 'TP317', col2: '75【515】', col3: '30【205】', col4: '34', col5: '192' },
+          { id: 10007, col1: 'TP317L', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 10008, col1: 'TP321', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 10009, col1: 'TP310S', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 100010, col1: 'TP347', col2: '75【515】', col3: '30【205】', col4: '35', col5: '192' },
+          { id: 100011, col1: 'S31254', col2: '98【675】', col3: '43【310】', col4: '35', col5: '220' },
+          { id: 100012, col1: 'N08367', col2: '100【690】', col3: '45【310】', col4: '30', col5: '241' },
+          { id: 100013, col1: 'N08926', col2: '94【650】', col3: '43【295】', col4: '35', col5: '256' },
+          { id: 100014, col1: 'N08904', col2: '71【490】', col3: '31【215】', col4: '35', col5: '192' },
+          { id: 100015, col1: 'N08925', col2: '87【600】', col3: '43【295】', col4: '40', col5: '217' },
         ]
       },
       productList: [ssrb1, ssrb2, ssrb3, ssrb4, ssrb5, ssrb6, ssrb7, ssrb8]
