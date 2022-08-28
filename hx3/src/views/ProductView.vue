@@ -3,14 +3,18 @@
     <Infobox :imgsrc="InfoImg" title="Product" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/stainless-steel-round-bar/1.jpg" />
+        <img src="../assets/product/ssp/1.png" />
       </div>
       <div class="right">
-        <div class="title">Stainless Steel Bar</div>
-        <div class="subtitle">Stainless Steel Round Bar/ Flat Bar/ Hexagon Bar/Square Bar/ Angle Bar</div>
-        <div class="desc">High quality stainless steel bar supplier, Competitive price, ISO system certification, Can
-          accept any Third Party Testing inspection quality. Have 25000 tons inventory of stainless steel products every
-          month, Can delivery within 5 days, 3 times quality detection before shipping
+        <div class="title">Stainless Steel Pipe & Tube</div>
+        <div class="subtitle">Stainless Steel Welded Pipes & Tubes / Stainless Steel Seamless Pipes & Tubes/Stainless
+          Square Pipe</div>
+        <div class="desc">We mainly supply the Seamless and Welded stainless steel Pipes & Tubes according to the
+          Standard ASTM A312, ASTM A213, ASTM A269, ASTM AB676, ASTM B677, the main grades are TP304, TP304L, TP310S,
+          TP316, TP316L, 316Ti, TP317, TP317L, TP321, TP347, TP347H, S31254, N08367, N08926, N08904. Each alloy has a
+          specific structure and chemical composition and mechanical properties.
+          ASTM A312 pipe is the general use stainless steel pipe applied in different industries. It covers diameters
+          from 1/8” to 30” and thickness from SCH 10S to SCH 80S. Common use material grades are TP304/304L, TP316/316L.
         </div>
       </div>
     </div>
@@ -43,14 +47,14 @@ import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
-import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
-import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
-import ssrb3 from '@/assets/product/stainless-steel-round-bar/3.webp'
-import ssrb4 from '@/assets/product/stainless-steel-round-bar/4.webp'
-import ssrb5 from '@/assets/product/stainless-steel-round-bar/5.jpeg'
-import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
-import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
-import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
+import ssrb1 from '@/assets/product/ssp/1.png'
+import ssrb2 from '@/assets/product/ssp/2.jpeg'
+import ssrb3 from '@/assets/product/ssp/3.jpeg'
+import ssrb4 from '@/assets/product/ssp/4.jpeg'
+import ssrb5 from '@/assets/product/ssp/5.jpeg'
+import ssrb6 from '@/assets/product/ssp/6.jpeg'
+import ssrb7 from '@/assets/product/ssp/7.jpeg'
+import ssrb8 from '@/assets/product/ssp/8.jpeg'
 
 export default defineComponent({
   components: {

@@ -1,12 +1,12 @@
 <template>
   <main>
-    <Infobox :imgsrc="InfoImg" title="Stainless Steel Coil/Pate/Sheet" />
+    <Infobox :imgsrc="InfoImg" title="Stainless Steel Coil/Plate/Sheet" />
     <div class="show">
       <div class="left">
         <img src="../assets/product/ssp2/1.jpg" width="100%" />
       </div>
       <div class="right">
-        <div class="title">Stainless Steel Coil/Pate/Sheet</div>
+        <div class="title">Stainless Steel Coil/Plate/Sheet</div>
         <div class="subtitle">Stainless Steel Hot Cold Rolled Coil/ Stainless Steel Hot Hot Rolled Coil</div>
         <div class="desc">This specification covers chromium, chromium-nickel, and chromium-manganese-nickel stainless
           steel plate, sheet, and strip for pressure vessels and for general applications including architectural,
@@ -68,14 +68,14 @@ import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
-import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
-import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
-import ssrb3 from '@/assets/product/stainless-steel-round-bar/3.webp'
-import ssrb4 from '@/assets/product/stainless-steel-round-bar/4.webp'
-import ssrb5 from '@/assets/product/stainless-steel-round-bar/5.jpeg'
-import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
-import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
-import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
+import ssrb1 from '@/assets/product/ssp2/1.jpg'
+import ssrb2 from '@/assets/product/ssp2/2.jpeg'
+import ssrb3 from '@/assets/product/ssp2/3.jpeg'
+import ssrb4 from '@/assets/product/ssp2/4.jpeg'
+import ssrb5 from '@/assets/product/ssp2/5.jpeg'
+import ssrb6 from '@/assets/product/ssp2/6.jpeg'
+import ssrb7 from '@/assets/product/ssp2/7.jpeg'
+import ssrb8 from '@/assets/product/ssp2/8.jpeg'
 import HighTable from '../components/product/HighTable.vue'
 import MergeTable from '../components/product/MergeTable.vue'
 import MergeTable3 from '../components/product/MergeTable3.vue'

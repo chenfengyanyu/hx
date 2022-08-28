@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Ti & Ti Alloy Clad plate" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/tff/1.jpg" width="100%" />
+        <img src="../assets/product/ti/1.jpeg" width="100%" />
       </div>
       <div class="right">
         <div class="title">Ti & Ti Alloy Clad plate</div>
@@ -55,14 +55,14 @@ import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
-import ssrb1 from '@/assets/product/stainless-steel-round-bar/1.webp'
-import ssrb2 from '@/assets/product/stainless-steel-round-bar/2.webp'
-import ssrb3 from '@/assets/product/stainless-steel-round-bar/3.webp'
-import ssrb4 from '@/assets/product/stainless-steel-round-bar/4.webp'
-import ssrb5 from '@/assets/product/stainless-steel-round-bar/5.jpeg'
-import ssrb6 from '@/assets/product/stainless-steel-round-bar/6.jpeg'
-import ssrb7 from '@/assets/product/stainless-steel-round-bar/7.jpeg'
-import ssrb8 from '@/assets/product/stainless-steel-round-bar/8.webp'
+import ssrb1 from '@/assets/product/ti/1.jpeg'
+import ssrb2 from '@/assets/product/ti/2.jpg'
+import ssrb3 from '@/assets/product/ti/3.jpg'
+import ssrb4 from '@/assets/product/ti/4.jpg'
+import ssrb5 from '@/assets/product/ti/5.jpg'
+import ssrb6 from '@/assets/product/ti/6.jpg'
+import ssrb7 from '@/assets/product/ti/7.jpg'
+import ssrb8 from '@/assets/product/ti/8.jpg'
 import HighTable from '../components/product/HighTable.vue'
 
 export default defineComponent({
