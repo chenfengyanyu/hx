@@ -121,7 +121,7 @@ export default defineComponent({
   font-size: 1.5rem;
   color: #000000a3;
   width: 70%;
-  text-align: left;
+  text-align: justify;
   margin: 1rem auto 0;
 }
 
