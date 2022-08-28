@@ -52,6 +52,7 @@ export default {
     data() {
         return {
             menu: [
+                { title: 'About AMC', attributes: { href: '/about' } },
                 { title: 'Home', attributes: { href: '/' } },
                 { title: 'Products', dropdown: 'dropdown-1', content: ProductDropdownMenu },
                 { title: 'Package', dropdown: 'dropdown-2', content: PackageDropdownMenu },

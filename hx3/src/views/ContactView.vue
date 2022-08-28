@@ -44,7 +44,7 @@ export default defineComponent({
     <Infobox :imgsrc=InfoImg title="Contact" />
     <div class="show">
       <div class="left">
-        <img src="../assets/contact.jpeg" />
+        <img src="../assets/contact2.jpeg" width="100%" />
       </div>
       <div class="right">
         <div class="title">ADVANCED METALS CO., LTD</div>
@@ -85,6 +85,8 @@ export default defineComponent({
         </tr>
 
       </table>
+      <!-- <div class="title">Contact Us</div> -->
+      <div class="alone"><img src="../assets/service/2.png" width="100%" /></div>
     </div>
   </main>
 </template>
@@ -105,7 +107,7 @@ export default defineComponent({
 .left img {
   height: 23rem;
   border-radius: 0.5rem;
-  filter: hue-rotate(348deg);
+  /* filter: hue-rotate(348deg); */
 }
 
 .show .right {
@@ -163,5 +165,14 @@ export default defineComponent({
 }
 .custom a{
   color: #1e88e5;
+}
+
+.mytable .alone {
+  /* width: 70%; */
+  margin: 2rem auto;
+}
+
+.alone img{
+  border-radius: 1rem;
 }
 </style>

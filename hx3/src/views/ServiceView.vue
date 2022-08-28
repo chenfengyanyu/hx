@@ -125,8 +125,9 @@ export default defineComponent({
 
 .mytable .title {
   color: #1e88e5;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem 0 0;
+  text-align: center;
   /* border-bottom: 1px dashed #86909c4a; */
 }
 
@@ -136,8 +137,11 @@ export default defineComponent({
 }
 
 .mytable .desc {
-  font-size: 1.2rem;
-  color: #000000c9;
+  font-size: 1.4rem;
+    color: #000000a3;
+    width: 70%;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .mytable .alone {

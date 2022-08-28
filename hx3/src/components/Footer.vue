@@ -5,6 +5,7 @@
                 <img src="../assets/logo.png" />
             </div>
             <ul class="navlist">
+                <li><a href="/about">About AMC</a></li>
                 <li><a href="/">Home</a></li>
                 <li><a href="trb">Products</a></li>
                 <!-- <li><a href="">Package</a></li> -->
