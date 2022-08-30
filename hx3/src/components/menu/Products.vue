@@ -7,13 +7,13 @@
                     <span class="desc">Titanium</span>
                 </div>
                 <ol class="products">
-                    <li><a href="trb">Titanium Round Bar</a></li>
-                    <li><a href="tps">Titanium Plate/Sheet</a></li>
-                    <li><a href="tpt">Titanium Pipe/Tube</a></li>
-                    <li><a href="tww">Titanium Welding wire</a></li>
-                    <li><a href="tf">Titanium Forging</a></li>
-                    <li><a href="tff">Titanium Fitting/Flange</a></li>
-                    <li><a href="ti">Ti & Ti Alloy Clad plate</a></li>
+                    <li><a href="#/trb">Titanium Round Bar</a></li>
+                    <li><a href="#/tps">Titanium Plate/Sheet</a></li>
+                    <li><a href="#/tpt">Titanium Pipe/Tube</a></li>
+                    <li><a href="#/tww">Titanium Welding wire</a></li>
+                    <li><a href="#/tf">Titanium Forging</a></li>
+                    <li><a href="#/tff">Titanium Fitting/Flange</a></li>
+                    <li><a href="#/ti">Ti & Ti Alloy Clad plate</a></li>
                 </ol>
             </li>
             <li>
@@ -22,11 +22,11 @@
                     <span class="desc">Stainless Steel</span>
                 </div>
                 <ol class="products">
-                    <li><a href="product">Stainless Steel Pipe</a></li>
-                    <li><a href="ssp2">Stainless Steel Plate & Sheet</a></li>
-                    <li><a href="ssr">Stainless Steel Round Bar</a></li>
-                    <li><a href="ssff">Stainless Steel Flange/Fitting</a></li>
-                    <li><a href="ssfw">Stainless Steel Filler Wire</a></li>
+                    <li><a href="#/product">Stainless Steel Pipe</a></li>
+                    <li><a href="#/ssp2">Stainless Steel Plate & Sheet</a></li>
+                    <li><a href="#/ssr">Stainless Steel Round Bar</a></li>
+                    <li><a href="#/ssff">Stainless Steel Flange/Fitting</a></li>
+                    <li><a href="#/ssfw">Stainless Steel Filler Wire</a></li>
                 </ol>
             </li>
             <li>
@@ -35,11 +35,11 @@
                     <span class="desc">Other Metals</span>
                 </div>
                 <ol class="products">
-                    <li><a href="na">Nickel Alloy</a></li>
-                    <li><a href="ni">Niobium </a></li>
-                    <li><a href="ta">Tantalum</a></li>
-                    <li><a href="tu">Tungsten</a></li>
-                    <li><a href="zi">Zirconium</a></li>
+                    <li><a href="#/na">Nickel Alloy</a></li>
+                    <li><a href="#/ni">Niobium </a></li>
+                    <li><a href="#/ta">Tantalum</a></li>
+                    <li><a href="#/tu">Tungsten</a></li>
+                    <li><a href="#/zi">Zirconium</a></li>
                 </ol>
             </li>
         </ul>

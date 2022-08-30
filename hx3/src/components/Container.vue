@@ -1,22 +1,22 @@
 <template>
   <div class="banner">
     <tabs @clicked="tabClicked" @changed="tabChanged">
-      <tab name="Titanium">
+      <tab id="#/titanium" name="Titanium">
         <img src="../assets/tab/1.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Stainless Steel">
+      <tab id="#/stainless-steel" name="Stainless Steel">
         <img src="../assets/tab/2.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Nickel Alloy">
+      <tab id="#/nickel-alloy" name="Nickel Alloy">
         <img src="../assets/tab/3.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Zirconium">
+      <tab id="#/zirconium" name="Zirconium">
         <img src="../assets/tab/4.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Niobium">
+      <tab id="#/niobium" name="Niobium">
         <img src="../assets/tab/5.jpeg" width="100%" height="100%">
       </tab>
-      <tab name="Tantalum">
+      <tab id="#/tantalum" name="Tantalum">
         <img src="../assets/tab/6.jpeg" width="100%" height="100%">
       </tab>
     </tabs>
@@ -26,10 +26,10 @@
 <script lang="ts">
 export default {
   methods: {
-    tabClicked(selectedTab) {
+    tabClicked(selectedTab: any) {
       console.log('Current tab re-clicked:' + selectedTab.tab.name)
     },
-    tabChanged(selectedTab) {
+    tabChanged(selectedTab: any) {
       console.log('Tab changed to:' + selectedTab.tab.name)
     }
   }

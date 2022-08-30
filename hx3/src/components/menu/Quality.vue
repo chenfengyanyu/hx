@@ -3,15 +3,15 @@
     <ul class="quality-list">
       <li>
         <img src="../../assets/quality/iso.jpeg" />
-        <div class="desc"><a href="iso">ISO9001:2015 Certificate</a></div>
+        <div class="desc"><a href="#/iso">ISO9001:2015 Certificate</a></div>
       </li>
       <li>
         <img src="../../assets/quality/sgs.png" />
-        <div class="desc"><a href="pdf2">Stainless Steel 316L Square Pipe Inpeection Report</a></div>
+        <div class="desc"><a href="#/pdf2">Stainless Steel 316L Square Pipe Inpeection Report</a></div>
       </li>
       <li>
         <img src="../../assets/quality/sgs.png" />
-        <div class="desc"><a href="pdf">Stainless Steel 316L Square Pipe UT Testing Report</a></div>
+        <div class="desc"><a href="#/pdf">Stainless Steel 316L Square Pipe UT Testing Report</a></div>
       </li>
 
     </ul>

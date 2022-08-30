@@ -18,7 +18,7 @@ import Footer from '@/components/Footer.vue'
 
 #app {
   min-width: 1024px;
-  max-width: 1700px;
+  max-width: 1800px;
   height: 100vh;
   position: relative;
   margin: 0 auto;

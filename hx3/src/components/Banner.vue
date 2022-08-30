@@ -6,7 +6,7 @@
     }" :modules="modules" :speed="600" :parallax="true" :navigation="true" :pagination="{ clickable: true }" autoplay>
         <template #container-start>
             <div class="parallax-bg" data-swiper-parallax="-23%"
-                :style="{ backgroundImage: 'url(../src/assets/banner/4.jpeg)'}"></div>
+                :style=BannerPicStr></div>
         </template>
         <swiper-slide class="slide">
             <h1 class="title" data-swiper-parallax="-300">PROFESSIONAL IN METALS</h1>
@@ -44,6 +44,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import BannerPic from '@/assets/banner/4.jpeg'
 
 // Import Swiper styles
 import 'swiper/css';
@@ -59,7 +60,7 @@ export default {
         SwiperSlide,
     },
     setup() {
-        const onSwiper = (swiper) => {
+        const onSwiper = (swiper: any) => {
             console.log(swiper);
         };
         const onSlideChange = () => {
@@ -68,6 +69,7 @@ export default {
         return {
             onSwiper,
             onSlideChange,
+            BannerPicStr:{ backgroundImage: `url(${BannerPic})`},
             modules: [Navigation, Pagination, Scrollbar, A11y, Autoplay],
         };
     },

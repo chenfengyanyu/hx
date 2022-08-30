@@ -1,9 +1,14 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import VueStripeMenu from 'vue-stripe-menu'
+// const VueStripeMenu = require('vue-stripe-menu')
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// const {Tabs, Tab} = require('vue3-tabs-component')
 import {Tabs, Tab} from 'vue3-tabs-component'
 import { useTable } from './plugins/vxe-table'
+
+// const VideoBackground = require('vue-responsive-video-background-player')
 import VideoBackground from 'vue-responsive-video-background-player'
 // import VuePdf from 'vue3-pdfjs'
 

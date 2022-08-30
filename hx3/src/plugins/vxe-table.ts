@@ -12,6 +12,6 @@ VXETable.setup({
   }
 })
 
-export function useTable (app: App) {
+export function useTable (app: any) {
   app.use(VXETable)
 }
