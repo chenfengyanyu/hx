@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Stainless Steel Bar" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/ssr/1.jpg" width="100%" />
+        <img src="../assets/product/ssr/7.jpeg" width="100%" />
       </div>
       <div class="right">
         <div class="title">Stainless Steel Bar</div>
@@ -42,10 +42,10 @@ import InfoImg from '@/assets/bg.jpeg'
 import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
-import ssrb1 from '@/assets/product/ssr/2.webp'
-import ssrb2 from '@/assets/product/ssr/3.webp'
-import ssrb3 from '@/assets/product/ssr/4.webp'
-import ssrb4 from '@/assets/product/ssr/5.webp'
+import ssrb1 from '@/assets/product/ssr/1.jpg'
+import ssrb2 from '@/assets/product/ssr/2.jpg'
+import ssrb3 from '@/assets/product/ssr/3.jpg'
+import ssrb4 from '@/assets/product/ssr/4.jpg'
 import ssrb5 from '@/assets/product/ssr/6.webp'
 import ssrb6 from '@/assets/product/ssr/7.jpeg'
 import ssrb7 from '@/assets/product/ssr/8.jpeg'

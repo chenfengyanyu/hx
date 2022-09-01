@@ -76,7 +76,7 @@ export default defineComponent({
         ],
         moredata: [
           {
-            id: 10001, products: 'Tantalum Wire', standard: 'ASTM F288-96\nGB_T4187-2017',
+            id: 10001, products: 'Tungsten Wire', standard: 'ASTM F288-96\nGB_T4187-2017',
             material: 'W1≥99.999%\nW2≥99.99%\nW3≥99.95%', size: 'Φ0.4mm-Φ1.8mm\nΦ0.012mm-Φ1.8mm\nΦ0.012mm-Φ1.8mm'
           },
           {

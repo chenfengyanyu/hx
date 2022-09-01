@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Grade 702 Zirconium, Commercially Pure" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/zi/1.jpg" width="100%" />
+        <img src="../assets/product/zi/5.jpeg" width="100%" />
       </div>
       <div class="right">
         <div class="title">Grade 702 Zirconium, Commercially Pure</div>
@@ -49,7 +49,7 @@ import MergeTable from '@/components/product/MergeTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
 import ssrb1 from '@/assets/product/zi/1.jpg'
-import ssrb2 from '@/assets/product/zi/2.png'
+import ssrb2 from '@/assets/product/zi/2.jpg'
 import ssrb3 from '@/assets/product/zi/3.jpeg'
 import ssrb4 from '@/assets/product/zi/4.webp'
 import ssrb5 from '@/assets/product/zi/5.jpeg'

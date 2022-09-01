@@ -40,18 +40,18 @@ export default defineComponent({
       <div class="hold"></div>
       <!-- <div class="title">Service</div> -->
       <div class="title">Welcome to Advanced Metals Co., Ltd</div>
-      <div class="desc">Advanced Metals Co., Ltd, established in 1992 in Xi'an Shaanxi China. We have employs nearly 100
+      <div class="desc">Advanced Metals Co., Ltd, established in 1992 in Xi'an Shaanxi China. We have employees nearly 100
         people. We have 20 years of experiences in supply all kinds of metals products. We produce all kinds of titanium
         metal products, such as titanium bar, plate, sheet, wire, tube and pipe. We also stock and supply large quantity
         of other metal products such as Stainless steel, Nickel-alloy, Zr702, Niobium, Tantalum and Tungsten in plate,
         sheet, coil, bar, welded and seamless pipe/tube, wire, rod and forging products.
         <br><br>
-        We supplied for Aerospace, industrials, defense, energy, automotive, medical, sports and customer applications
+        We supplied for Aerospace, industrials, defence, energy, automotive, medical, sports and customer applications
         for the customers around the world. We could supply you the best quality products with competitive prices. We
         also give all of our customers with the best services, let our customers without any risks in quality and
         shipping.<br><br>
         Nowdays, Advanced Metals Co., Ltd try our best to improve our service and management to supply the best quality
-        metals products to our customers. No matter where you are. No mater you are large or small. We are honor all of
+        metals products to our customers. No matter where you are. No mater you are large or small. We are honour all of
         our customers and metals products.<br><br>
         Advanced Metals Co., Ltd Welcome you as our sales agent in your local markets.
       </div>

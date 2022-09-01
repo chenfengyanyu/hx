@@ -19,13 +19,13 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ImageBox from '../ImageBox.vue'
-import ssrb1 from '@/assets/package/1.jpeg'
+import ssrb1 from '@/assets/package/1.jpg'
 import ssrb2 from '@/assets/package/2.jpeg'
 import ssrb3 from '@/assets/package/3.jpeg'
 import ssrb4 from '@/assets/package/4.jpeg'
 import ssrb5 from '@/assets/package/5.jpeg'
 import ssrb6 from '@/assets/package/6.jpeg'
-import ssrb7 from '@/assets/package/1.jpeg'
+import ssrb7 from '@/assets/package/7.jpeg'
 import ssrb8 from '@/assets/package/5.jpeg'
 
 
