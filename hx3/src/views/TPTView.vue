@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Titanium Pipe & Tube" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/tpt/1.jpg" width="100%" />
+        <img src="../assets/product/tpt/5.jpg" width="100%" />
       </div>
       <div class="right">
         <div class="title">Titanium Pipe & Tube ( Seamless & Welded )</div>
@@ -45,11 +45,11 @@ import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
 import ssrb1 from '@/assets/product/tpt/1.jpg'
-import ssrb2 from '@/assets/product/tpt/2.jpeg'
+import ssrb2 from '@/assets/product/tpt/2.jpg'
 import ssrb3 from '@/assets/product/tpt/3.jpg'
 import ssrb4 from '@/assets/product/tpt/4.jpg'
 import ssrb5 from '@/assets/product/tpt/5.jpg'
-import ssrb6 from '@/assets/product/tpt/6.jpeg'
+import ssrb6 from '@/assets/product/tpt/6.jpg'
 import ssrb7 from '@/assets/product/tpt/7.jpeg'
 import ssrb8 from '@/assets/product/tpt/8.jpeg'
 import HighTable from '../components/product/HighTable.vue'
@@ -85,6 +85,10 @@ export default defineComponent({
           {
             id: 10003, products: 'Corrosion Resistant Tube', od: '5-114', wall: '0.5-4.5',
             length: '≤ 18000', grade: 'Gr7\nGr12\nGr16\nGr23', standard: 'ASTM B338\nASME SB338\nASTM B861\nASTM B862\nAMS4942\nAMS4945\nAMS4943'
+          },
+          {
+            id: 10004, products: 'Titanium Square Pipe(Seamless)\nTitanium Rectangular Pipe(Seamless)', od: 'OD4x4mm-250x250mm', wall: '0.5-12',
+            length: '≤ 12000', grade: 'Gr1\nGr2\nGr5', standard: 'ASTM B338\nASME SB338\nASTM B861\nASTM B862'
           },
         ]
       },

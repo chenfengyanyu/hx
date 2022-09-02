@@ -3,7 +3,7 @@
     <Infobox :imgsrc="InfoImg" title="Titanium Plate/Sheet" />
     <div class="show">
       <div class="left">
-        <img src="../assets/product/tps/1.jpg" width="100%"/>
+        <img src="../assets/product/tps/3.jpg" width="100%"/>
       </div>
       <div class="right">
         <div class="title">Titanium Plate/Sheet</div>
@@ -60,8 +60,8 @@ import ssrb3 from '@/assets/product/tps/3.jpg'
 import ssrb4 from '@/assets/product/tps/4.jpg'
 import ssrb5 from '@/assets/product/tps/5.jpg'
 import ssrb6 from '@/assets/product/tps/6.jpg'
-import ssrb7 from '@/assets/product/tps/7.jpeg'
-import ssrb8 from '@/assets/product/tps/8.jpeg'
+import ssrb7 from '@/assets/product/tps/7.jpg'
+import ssrb8 from '@/assets/product/tps/8.jpg'
 import HighTable from '../components/product/HighTable.vue'
 
 export default defineComponent({

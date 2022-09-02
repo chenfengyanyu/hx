@@ -1,13 +1,13 @@
 <template>
   <main>
-    <Infobox :imgsrc="InfoImg" title="Titanium Round Bar" />
+    <Infobox :imgsrc="InfoImg" title="Titanium Bar" />
     <div class="show">
       <div class="left">
         <img src="../assets/product/trb/1.jpg" width="100%"/>
       </div>
       <div class="right">
-        <div class="title">Titanium Round Bar</div>
-        <div class="subtitle">Titanium Industry Bar/ Medical Bar/ 3D Printing Spherical Powder Bar/ Military Bar</div>
+        <div class="title">Titanium Bar</div>
+        <div class="subtitle">Titanium Industry Bar/ Medical Bar/ 3D Printing Spherical Powder Bar/ Military Bar/ Hexagon Bar/Angel Bar</div>
         <div class="desc">Advanced Metals Co., Ltd is manufacture and export large quantities of all kinds of titanium
           Bar and Rod to the world markets every year. Our titanium bar products system includes: Commercially bar and
           6AL-4V bar including round, square and rectangular bars. Titanium bars are forged by the 2500KN, 3150t
@@ -63,9 +63,9 @@ import ssrb2 from '@/assets/product/trb/2.jpg'
 import ssrb3 from '@/assets/product/trb/3.jpg'
 import ssrb4 from '@/assets/product/trb/4.jpeg'
 import ssrb5 from '@/assets/product/trb/5.jpeg'
-import ssrb6 from '@/assets/product/trb/6.jpeg'
-import ssrb7 from '@/assets/product/trb/7.jpeg'
-import ssrb8 from '@/assets/product/trb/8.jpeg'
+import ssrb6 from '@/assets/product/trb/6.jpg'
+import ssrb7 from '@/assets/product/trb/7.jpg'
+import ssrb8 from '@/assets/product/trb/8.jpg'
 import HighTable from '../components/product/HighTable.vue'
 
 export default defineComponent({

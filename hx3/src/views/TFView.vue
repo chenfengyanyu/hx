@@ -37,7 +37,7 @@ import BasicTable from '@/components/product/BasicTable.vue'
 import ImageBox from '@/components/ImageBox.vue'
 
 import ssrb1 from '@/assets/product/tf/1.jpg'
-import ssrb2 from '@/assets/product/tf/2.jpeg'
+import ssrb2 from '@/assets/product/tf/2.jpg'
 import ssrb3 from '@/assets/product/tf/3.jpg'
 import ssrb4 from '@/assets/product/tf/4.jpeg'
 import ssrb5 from '@/assets/product/tf/5.jpeg'
@@ -142,4 +142,8 @@ export default defineComponent({
   color: #4a4a4a91;
   margin: 0 0 0.4rem;
 }
+
+/* .mytable .vxe-body--column {
+    text-align: center!important;
+} */
 </style>

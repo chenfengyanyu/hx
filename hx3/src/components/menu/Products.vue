@@ -7,7 +7,7 @@
                     <span class="desc">Titanium</span>
                 </div>
                 <ol class="products">
-                    <li><a href="#/trb">Titanium Round Bar</a></li>
+                    <li><a href="#/trb">Titanium Bar</a></li>
                     <li><a href="#/tps">Titanium Plate/Sheet</a></li>
                     <li><a href="#/tpt">Titanium Pipe/Tube</a></li>
                     <li><a href="#/tww">Titanium Welding wire</a></li>
