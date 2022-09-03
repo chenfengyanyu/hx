@@ -14,7 +14,17 @@
                 <li><a href="#/contact">Contact</a></li>
             </ul>
         </div>
-        <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. Shaanxi ICP File 16009787-1</div>
+        <div class="copyright">Copyright © Advanced Metals Co.,Ltd All Rights Reserved. Shaanxi ICP File 16009787-1
+        </div>
+        <div class="total">
+
+            <span id="busuanzi_container_site_uv">
+                <span id="busuanzi_value_site_uv"></span> -
+            </span>
+            <span id="busuanzi_container_site_pv">
+                <span id="busuanzi_value_site_pv"></span>
+            </span>
+        </div>
     </div>
 </template>
 
@@ -24,8 +34,8 @@
     color: #ffffffc9;
     margin: 0 auto;
     width: 100%;
-    height: 12rem;
     text-align: center;
+    padding: 0 0 0.5rem 0;
 }
 
 .footer>.info {
@@ -59,12 +69,18 @@
     height: 2rem;
     font-size: 1.1rem;
 }
+
 .navlist>li>a {
     color: #fff;
     text-decoration: none;
 }
 
-.copyright {
+.copyright,
+.total {
     opacity: 0.7;
+}
+
+.total {
+    font-size: xx-small;
 }
 </style>
