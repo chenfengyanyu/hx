@@ -65,7 +65,37 @@ export default defineComponent({
       <div class="title">Contact Us</div>
       <!-- <div class="subtitle">Long Products, Annealed</div> -->
       <!-- <BasicTable :productdatas="contactInfo" /> -->
-      <table class="custom">
+      <ul class="card">
+        <li>
+          <img src="../assets/contact/add.png" />
+          <div class="title">Adress</div>
+          <div class="info">Tongda International Building, Hi-Tech Development Zone Xi'an Shaanxi 710065 China</div>
+        </li>
+        <li>
+          <img src="../assets/contact/tel.png" />
+          <div class="title">Tel</div>
+          <div class="info">(+86)-134 8493 6283</div>
+        </li>
+        <li>
+          <img src="../assets/contact/weixin.png" />
+          <div class="title">WhatsApp</div>
+          <div class="info">(+86)134 8493 6283</div>
+        </li>
+        <li>
+          <img src="../assets/contact/email.png" />
+          <div class="title">Email</div>
+          <div class="info">
+            <a href="mailto: sales@amctitanium.com">sales@amctitanium.com</a><br>
+            <a href="mailto: info@amctitanium.com">info@amctitanium.com</a>
+          </div>
+        </li>
+        <li>
+          <img src="../assets/contact/web.png" />
+          <div class="title">Web</div>
+          <div class="info"><a href="http://www.amctitanium.com" target="_blank">www.amctitanium.com</a></div>
+        </li>
+      </ul>
+      <!-- <table class="custom">
         <tr>
           <th width="30%">Adress</th>
           <th>Tel</th>
@@ -84,7 +114,7 @@ export default defineComponent({
           <td><a href="http://www.amctitanium.com" target="_blank">www.amctitanium.com</a></td>
         </tr>
 
-      </table>
+      </table> -->
       <!-- <div class="title">Contact Us</div> -->
       <div class="alone"><img src="../assets/service/2.png" width="100%" /></div>
     </div>
@@ -163,7 +193,8 @@ export default defineComponent({
   padding: 0.5rem;
   text-align: center;
 }
-.custom a{
+
+.custom a {
   color: #1e88e5;
 }
 
@@ -172,7 +203,38 @@ export default defineComponent({
   margin: 2rem auto;
 }
 
-.alone img{
+.alone img {
   border-radius: 1rem;
+}
+
+.card {
+  background: #1e88e5;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+
+.card li {
+  flex: 1;
+  border-right: 1px solid #ffffff78;
+  padding: 0.5rem;
+}
+
+.card .info {
+  color: #ffffffb0;
+  font-size: 1.1rem;
+}
+
+.card .title{
+  font-size: 1.8rem;
+}
+
+.card li>img {
+  width: 5rem;
+}
+.card .info>a{
+  color: #ffffffb0;
 }
 </style>
